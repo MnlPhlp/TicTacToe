@@ -1,16 +1,17 @@
 .grid-container {
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 30% 30% 30%;
-    width: 100%;
-    text-align: center;
+    grid-template-columns: 120px 120px 120px;
+    margin-left: calc(50% - 185px);
   }
   
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 35%;
+    height: 120px;
     text-align: center;
+    font-size: 60px;
+    color: rgb(73, 73, 73);
   }
 
 h1{
@@ -20,8 +21,6 @@ h1{
 
 .command_buttons{
     margin-top: 10px;
-    width: 100%;
-    text-align: center;
 }
 
 .start{
@@ -32,4 +31,22 @@ h1{
 .reset{
     margin-left: 5px;
     font-size: 2rem;
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.center{
+    width: 100%;
+    text-align: center;
+}
+
+.settings{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+label {
+    text-align: right;
+    width: 100%;
 }

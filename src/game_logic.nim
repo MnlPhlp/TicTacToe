@@ -1,27 +1,28 @@
 import 
     turn_based_game,
     negamax,
-    tables,
+    strformat,
     strutils,
-    random
+    sequtils
 
 type
     GameOfTicTacToe* = ref object of Game 
-        field: array[3,array[3, int]]
+        field: seq[seq[int]]
         size: int
+        winCount: int
 
     Settings* = ref object
         name1*, name2*: string
         ai*: bool
+        size*: int
+        winCount*: int
 
 const
     desc* = @[" ","X","0"]
 
 
 method resetField(self: GameOfTicTacToe) {.base.} =
-    for y in 0..2:
-        for x in 0..2:
-            self.field[x][y] = 0
+  self.field = newSeqWith(self.size,newSeq[int](self.size))
 
 
 method setup(self: GameOfTicTacToe, players: seq[Player]) =
@@ -30,8 +31,8 @@ method setup(self: GameOfTicTacToe, players: seq[Player]) =
 
 
 method set_possible_moves(self: GameOfTicTacToe, moves: var seq[string]) =
-    for y in 0..2:
-        for x in 0..2:
+    for y in 0..self.size-1:
+        for x in 0..self.size-1:
             if self.field[x][y] == 0:
                 moves.add($(x+1) & $(y+1))
  
@@ -42,44 +43,51 @@ method make_move(self: GameOfTicTacToe, move: string): string =
 
 
 method determine_winner(self: GameOfTicTacToe) =
-    if self.winner_player_number != NO_WINNER_YET:
-        return
-    for line in self.field:
-        # check for vertical lines
-        if line[0]!=0 and line[0] == line[1] and line[1] == line[2]:
-            self.winner_player_number = line[0]
-            return
-    for i in 0..2:
-        #check for horizontal lines
-        if self.field[0][i] != 0 and self.field[0][i] == self.field[1][i] and self.field[1][i] == self.field[2][i]:
-            self.winner_player_number = self.field[0][i]
-            return
-    # check for a tie
-    var staleMate = true
-    for line in self.field:
-      for square in line:
-        if square==0:
-            staleMate = false
-    if staleMate:
-        self.winner_player_number = STALEMATE
+  if self.winner_player_number != NO_WINNER_YET:
+      return
+  var lineLength = 0
+  for line in self.field:
+    # check for vertical lines
+    var startField = line[0]
+    lineLength = 0
+    for field in line:
+      if field == startField:
+        # count line Length
+        inc lineLength
+      else:
+        # reset line Length
+        lineLength = 1
+        startField = field
+    if lineLength == self.winCount:
+      self.winner_player_number = startField
+      return
+  # check for a tie
+  if all(self.field, 
+    proc (line: seq[int]):bool = 
+      all(line, proc (x:int):bool =
+        x != 0)): 
+    self.winner_player_number = STALEMATE
 
 
-method status(self: GameOfTicTacToe): string =
-    echo "  1  2  3"
-    for y in 0..2:
+method status*(self: GameOfTicTacToe):string =
+    var topLine = ""
+    for i in 1..self.size:
+      topLine &= fmt"  {i}"
+    echo topLine
+    for y in 0..self.size-1:
         var line = $(y+1)
-        for x in 0..2:
+        for x in 0..self.size-1:
             line.add("[$1]".format(desc[self.field[x][y]]))
         echo line
 
 method get_state(self: GameOfTicTacToe): string =
-    for y in 0..2:
-        for x in 0..2:
+    for y in 0..self.size-1:
+        for x in 0..self.size-1:
             result.add($self.field[x][y])
 
 method restore_state(self: GameOfTicTacToe, state: string) =
-    for y in 0..2:
-        for x in 0..2:
+    for y in 0..self.size-1:
+        for x in 0..self.size-1:
             self.field[x][y] = ($state[y*3+x]).parseInt()
     
 method scoring(self: GameOfTicTacToe): float =
@@ -91,22 +99,50 @@ method scoring(self: GameOfTicTacToe): float =
           discard
 
 method setup*(self: GameOfTicTacToe, s: Settings) {.base.} =
+  self.size = s.size
+  self.winCount = s.winCount
   if s.ai:
-    self.setup(@[Player(name: s.name1),NegamaxPlayer(name: s.name2)])
+    self.setup(@[Player(name: s.name1),NegamaxPlayer(name: "ai")])
   else:
     self.setup(@[Player(name: s.name1),Player(name: s.name2)])
 
 method playOnCli*(self: GameOfTicTacToe) {.base.} =
   self.play()
 
-method field*(self: GameOfTicTacToe): array[3,array[3, int]] {.base.} =
+method field*(self: GameOfTicTacToe): seq[seq[int]] {.base.} =
   self.field
   
 method size*(self: GameOfTicTacToe): int {.base.}=
   self.size
 
-method currentPlayer*(self: GameOfTicTacToe): string {.base.} =
-  self.current_player
-    
+
+method getPlayer*(self: GameOfTicTacToe): string {.base.} =
+  if self.current_player == nil:
+    "Game is not setup yet"
+  else:
+    self.current_player.name
+
+
+method make_turn*(self: GameOfTicTacToe, move: string): string {.base.} = 
+  result = "playing"
+  if self.is_over:
+    return "Game is Over"
+  discard self.make_move(move)
+  self.determine_winner()
+  if self.is_over():
+    if self.winner_player_number == STALEMATE:
+        result = "It's a tie"
+    else:
+        result = fmt"Winner is {self.winning_player.name}"
+    return
+  self.finish_turn()
+  # if playing agains ai do it's turn
+  if self.current_player of NegamaxPlayer:
+    discard self.make_move(self.current_player.get_move(self))
+    self.finish_turn()
+
+
+method finished*(self: GameOfTicTacToe): bool {.base.}=
+  self.is_over
 
 
