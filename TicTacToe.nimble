@@ -13,8 +13,8 @@ bin           = @["TicTacToe"]
 requires "nim >= 0.19.4"
 requires "karax >= 1.1.0"
 
-task karax_client, "build karax client":
+task karax, "build karax client":
   exec "nim js -o:website/TicTacToe.js src/karax_client"
 
-task cli_client, "build comandline client":
+task cli, "build comandline client":
   exec "nim c -o:cli_client src/cli_client.nim"
