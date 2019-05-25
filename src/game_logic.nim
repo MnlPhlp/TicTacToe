@@ -19,6 +19,8 @@ type
 
 const
     desc* = @[" ","X","0"]
+    winScore = 1_000_000
+    lineScore =1_000
 
 
 method resetField(self: GameOfTicTacToe) {.base.} =
@@ -42,40 +44,46 @@ method make_move(self: GameOfTicTacToe, move: string): string =
     result = "set mark at " & move
 
 
-proc getLines(size: int): seq[seq[(int,int)]] =
-  let s = size-1
-  var vLine: seq[(int,int)] # vetical
-  var hLine: seq[(int,int)] # horizontal
-  var sLine1: seq[(int,int)] # slanted
-  var sLine2: seq[(int,int)] # slanted
-  var sLine3: seq[(int,int)] # slanted
-  var sLine4: seq[(int,int)] # slanted
-  for i in 0..size-1:
+method getLines(self: GameOfTicTacToe): seq[seq[int]] {.base.} =
+  let s = self.size-1
+  var vLine: seq[int] # vetical
+  var hLine: seq[int] # horizontal
+  var sLine1: seq[int] # slanted
+  var sLine2: seq[int] # slanted
+  var sLine3: seq[int] # slanted
+  var sLine4: seq[int] # slanted
+  for i in 0..s:
     vLine = @[]
     hLIne = @[]
     sLine1 = @[]
     sLine2 = @[]
     sLine3 = @[]
     sLine4 = @[]
-    for j in 0..size-1:
+    for j in 0..s:
       # create vertical lines
-      vLine.add((i,j))
+      vLine.add(self.field[i][j])
       # create horizontal lines
-      hLine.add((j,i))
+      hLine.add(self.field[j][i])
       # create slanted lines
-      if i+j < size:
-        sLine1.add((i+j,j))
-        sLine2.add((i+j,s-j))
+      if i+j <= s:
+        sLine1.add(self.field[i+j][j])
+        sLine2.add(self.field[i+j][s-j])
         if i > 0: # avoid double middle line
-          sLine3.add((s-(i+j),j))
-          sLine4.add((s-(i+j),s-j))
-    result.add(hLine)
-    result.add(vLine)
-    result.add(sLine1)
-    result.add(sLine2)
+          sLine3.add(self.field[s-(i+j)][j])
+          sLine4.add(self.field[s-(i+j)][s-j])
+    if hLine.len >= self.winCount:
+      result.add(hLine)
+    if vLine.len >= self.winCount:
+      result.add(vLine)
+    if sLine1.len >= self.winCount:
+      result.add(sLine1)
+    if sLine2.len >= self.winCount:
+      result.add(sLine2)
     if i > 0: # avoid double middle line
-      result.add(sLine3)
-      result.add(sLine4)
+      if sLine3.len >= self.winCount:
+        result.add(sLine3)
+      if sLine4.len >= self.winCount:
+        result.add(sLine4)
 
 
 
@@ -96,7 +104,7 @@ proc maxLineLength(line: seq[int]): (int,int) =
 method determine_winner(self: GameOfTicTacToe) =
   if self.winner_player_number != NO_WINNER_YET:
       return
-  for line in self.field:
+  for line in self.getLines:
     # check for a winning line
     let maxLength = line.maxLineLength
     if  maxLength[0] >= self.winCount:
@@ -132,18 +140,26 @@ method restore_state(self: GameOfTicTacToe, state: string) =
             self.field[x][y] = ($state[y*3+x]).parseInt()
     
 method scoring(self: GameOfTicTacToe): float =
-    for line in self.field:
-      for square in line:
-        # for every square on the field check if marked by current player
-        if square == self.current_player_number:
-          # check every neighbour
-          discard
+  for line in self.getLines:
+    let maxLen = line.maxLineLength
+    if maxLen[0] >= self.winCount: # if a player won 
+      if self.current_player_number == maxLen[1]:
+        result += winScore # good if current player won
+      else: 
+        result -= winScore # bad if opponent won
+    else: # give the player with longer line points depending on line length
+      if maxLen[0] > 1:
+        if self.current_player_number == maxLen[1]:
+          result += lineScore * (float)maxLen[0]
+        else: 
+          result -= lineScore * (float)maxLen[0]
+        
 
 method setup*(self: GameOfTicTacToe, s: Settings) {.base.} =
   self.size = s.size
-  self.winCount = s.winCount
+  self.winCount = if s.winCount == 0: s.size else: s.winCount
   if s.ai:
-    self.setup(@[Player(name: s.name1),NegamaxPlayer(name: "ai")])
+    self.setup(@[Player(name: s.name1),NegamaxPlayer(name: s.name2, depth: 3)])
   else:
     self.setup(@[Player(name: s.name1),Player(name: s.name2)])
 

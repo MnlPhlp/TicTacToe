@@ -3,23 +3,23 @@ include ../src/game_logic
 #######################################
 ##############  Testing    ############
 #######################################
-const testSize = 10
-var testField: array[testSize, array[testSize,int]]
-var tests: seq[array[testSize, array[testSize,int]]]
-let allLines = getLines(testSize)
-for line in allLines:
-  for i in 0..testSize-1:
-    for j in 0..testSize-1:
-      testField[i][j] = 0
-  for pos in line:
-    testField[pos[0]][pos[1]] = 1
-  tests.add(testField)
+let game = new(GameOfTicTacToe)
+game.current_player_number=1
+game.size=3
+game.winCount=3
+game.field = @[@[11,13,15],
+               @[31,33,35],
+               @[51,53,55]]
 
-for line in tests:
-  for example in line:
-    echo $example
+var testField: seq[string]
+for line in game.getLines:
+  testField = @[" | | ","-----"," | | ","-----"," | | "]
+  for field in line:
+    testField[((int)(field/10))-1][(field mod 10)-1] = 'X'
+  for row in testField:
+    echo row
   echo ""
   echo "#############"
   echo ""
 
-echo fmt"total posibilities: {allLines.len}"
+echo fmt"total posibilities: {game.getLines.len}"
