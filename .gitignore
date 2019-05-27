@@ -1,2 +1,8 @@
-cli_client
-tests/getLinesTest
+#exclude all files
+* 
+#include folders
+!/**/ 
+#include nim sourcode
+!*.nim 
+!website/style.css
+!website/TicTacToe.html
