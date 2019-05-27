@@ -5,10 +5,11 @@ import
   game_logic
 
 
-let game = new(GameOfTicTacToe)
-var state = 0
-var message = kstring"Welcome"
+let game = new(GameOfTicTacToe)#
 let settings = new(Settings)
+
+var state = 0
+var fieldBlocked = false
 
 
 proc inputHandler(ev: Event, n: VNode) =
@@ -26,66 +27,77 @@ proc inputHandler(ev: Event, n: VNode) =
 
 proc startGame()=
   game.setup(settings)
-  message = fmt"{game.getPlayerName}'s turn"
   state = 2
 
 
 proc clickField(ev: Event, n: VNode) =
+  if settings.ai:
+    #if playing against ai this might take a short time
+    fieldBlocked = true
+    redraw()
   #make the move
-  message = game.make_turn($n.id)
+  game.make_turn($n.id)
+  fieldBlocked = false
+  if game.finished:
+    window.alert(game.getPlayerName & " won the game")
   
 
 proc setupGUI(): VNode =
-  buildHtml(tdiv(class = "center settings")):
-    tdiv(class="field"):
-      label:
-        text "Player 1: "
-        input(class = "input",placeholder ="player 1", id="name1", onkeyup = inputHandler)
-        br()
-    tdiv(class="field"):
-      label:
-        text "Player 2: "
+  buildHtml(tdiv(class="center")):
+    tdiv(class = "grid-container"):
+      tdiv(class="grid-item"):
+        label(`for`="name1"):
+          text "Player 1: "
+      tdiv(class="grid-item"):
+        input(placeholder ="player 1", id="name1", onkeyup = inputHandler)
+      tdiv(class="grid-item"):
+        label(`for`="name2"):
+          text "Player 2: "
+      tdiv(class="grid-item"):
         input(placeholder="player 2" ,id="name2", onkeyup = inputHandler)
-    label:
-      text "AI"
-      input(type="checkbox", id="AI", onClick = inputHandler)
-      br()
-    tdiv(class="field"):
-      label:
-        text "Field size: "
+        label(style=style(StyleAttr.marginLeft,"5px")):
+          text "AI"
+          input(type="checkbox", id="AI", onClick = inputHandler)
+      tdiv(class="grid-item"):
+        label(`for`="fieldSize"):
+          text "Field size: "
+      tdiv(class="grid-item"):
         input(id="fieldSize", placeholder = "3", onkeyup=inputHandler)
-        br()
-    tdiv(class="field"):
-      label:
-        text "line length to win: "
+      tdiv(class="grid-item"):
+        label(`for`="winCount"):
+          text "Win count: "
+      tdiv(class="grid-item"):
         input(id="winCount", placeholder = "3", onkeyup=inputHandler)
-        br()
-    button(onclick=startGame):
+    button(onclick=startGame, class="finish-setup command-buttons"):
       text "start Game"
     
 
 proc playGUI():VNode =
-  var buttonStyle: VStyle
-  if window.innerHeight > window.innerWidth:
-    buttonStyle = style(
-      (StyleAttr.width, kstring(fmt"calc(70vw/{game.size})")),
-      (StyleAttr.height, kstring(fmt"calc(70vw/{game.size})")),
-      (StyleAttr.lineHeight, kstring(fmt"calc(70vw/{game.size})")),
-      (StyleAttr.fontSize, kstring(fmt"calc(70vw/{game.size})"))
+  # choose smaller side as unit to fit field on page
+  let unit = if window.innerWidth < window.innerHeight : "vw" else: "vh"
+  let buttonStyle = style(
+      (StyleAttr.width, kstring(fmt"calc(70{unit}/{game.size})")),
+      (StyleAttr.height, kstring(fmt"calc(70{unit}/{game.size})")),
+      (StyleAttr.lineHeight, kstring(fmt"calc(70{unit}/{game.size})")),
+      (StyleAttr.fontSize, kstring(fmt"calc(70{unit}/{game.size})"))
     )
-  else:
-    buttonStyle = style(
-      (StyleAttr.width, kstring(fmt"calc(70vh/{game.size})")),
-      (StyleAttr.height, kstring(fmt"calc(70vh/{game.size})")),
-      (StyleAttr.lineHeight, kstring(fmt"calc(70vh/{game.size})")),
-      (StyleAttr.fontSize, kstring(fmt"calc(70vh/{game.size})"))
-    )
-
   buildHtml(tdiv(class = "center")):
-    p(id="status"):
-      text message
-    #tdiv(id="current player"):
-    # text "test"#game.getPlayer
+    p:
+      # show player names and highlight current player
+      if state == 2:
+        if game.getPlayerName == settings.name1:
+          span(style = style((StyleAttr.background,kstring"orange"),(StyleAttr.marginRight,kstring"5px"))):
+            text settings.name1
+          span(style = style((StyleAttr.background,kstring"none"),(StyleAttr.marginRight,kstring"5px"))):
+            text settings.name2
+        else:
+          span(style = style((StyleAttr.background,kstring"none"),(StyleAttr.marginLeft,kstring"5px"))):
+            text settings.name1
+          span(style = style((StyleAttr.background,kstring"orange"),(StyleAttr.marginLeft,kstring"5px"))):
+            text settings.name2
+      else:
+        text "Setup game to play"
+
     if state == 2:
       table:
         for i,line in game.field:
@@ -93,10 +105,10 @@ proc playGUI():VNode =
             for j,field in line:
               td:
                 #create button-grid as field
-                button(style = buttonStyle, class = "fieldButton", id=fmt"{i+1}{j+1}", onclick = clickField,
-                disabled = kstring(toDisabled(state==0 or field != 0 or game.finished))):
+                button(style = buttonStyle, class = "fieldButton", id=fmt"{i+1}.{j+1}", onclick = clickField,
+                disabled = kstring(toDisabled(state==0 or field != 0 or game.finished or fieldBlocked))):
                   text desc[field]
-    tdiv(class="command_buttons"):
+    tdiv(class="command-buttons"):
       button(class = "start"):
         text "setup"
         proc onclick() =

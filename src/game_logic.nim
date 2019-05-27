@@ -44,11 +44,11 @@ method set_possible_moves(self: GameOfTicTacToe, moves: var seq[string]) =
     for y in 0..self.size-1:
         for x in 0..self.size-1:
             if self.field[x][y] == 0:
-                moves.add($(x+1) & $(y+1))
+                moves.add(fmt"{x+1}.{y+1}")
  
 
 method make_move(self: GameOfTicTacToe, move: string): string =
-    self.field[($move[0]).parseInt()-1][($move[1]).parseInt()-1] = self.current_player_number
+    self.field[($move.split('.')[0]).parseInt()-1][($move.split('.')[1]).parseInt()-1] = self.current_player_number
     result = "set mark at " & move
 
 
@@ -188,19 +188,14 @@ method getPlayerName*(self: GameOfTicTacToe): string {.base.} =
     self.current_player.name
 
 
-method make_turn*(self: GameOfTicTacToe, move: string): string {.base.} = 
+method make_turn*(self: GameOfTicTacToe, move: string) {.base.} = 
   if self.is_over:
-    return "Game is Over"
+    return
   discard self.make_move(move)
   self.determine_winner()
   if self.is_over():
-    if self.winner_player_number == STALEMATE:
-        result = "It's a tie"
-    else:
-        result = fmt"Winner is {self.winning_player.name}"
     return
   self.finish_turn()
-  result = fmt"{self.currentPlayer.name}'s turn"
   # if playing agains ai do it's turn
   if self.current_player of NegamaxPlayer:
     discard self.make_move(self.current_player.get_move(self))
