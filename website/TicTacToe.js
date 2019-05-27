@@ -13,22 +13,22 @@ if (typeof Uint32Array === 'undefined') Uint32Array = Array;
 if (typeof Float32Array === 'undefined') Float32Array = Array;
 if (typeof Float64Array === 'undefined') Float64Array = Array;
 var NTI163020 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168148 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168101 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168171 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168124 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
 var NTI162971 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168362 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168360 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168358 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168356 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168352 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168354 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168465 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168450 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168435 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168420 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168405 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI168390 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
 var NTI161160 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168385 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168383 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168381 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168379 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168375 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168377 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168488 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168473 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168458 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168443 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168428 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI168413 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
 var NTI164068 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
 var NTI164138 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
 var NTI164164 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
@@ -38,6 +38,9 @@ var NTI162561 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
 var NTI3886 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI3860 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI168058 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
+var NTI150668 = {size: 0,kind: 16,base: null,node: null,finalizer: null};
+var NTI150202 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
+var NTI151727 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI172772 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
 var NTI183211 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI183207 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
@@ -527,6 +530,202 @@ var NNI183211 = {kind: 2, len: 3, offset: 0, typ: null, name: null, sons: [{kind
 {kind: 1, offset: "pos", len: 0, typ: NTI104, name: "pos", sons: null}]};
 NTI183211.node = NNI183211;
 NTI172772.base = NTI140;
+var NNI150202 = {kind: 2, offset: 0, typ: null, name: null, len: 191, sons: {"0": {kind: 1, offset: 0, typ: NTI150202, name: "alignContent", len: 0, sons: null}, 
+"1": {kind: 1, offset: 1, typ: NTI150202, name: "alignItems", len: 0, sons: null}, 
+"2": {kind: 1, offset: 2, typ: NTI150202, name: "alignSelf", len: 0, sons: null}, 
+"3": {kind: 1, offset: 3, typ: NTI150202, name: "animation", len: 0, sons: null}, 
+"4": {kind: 1, offset: 4, typ: NTI150202, name: "animationDelay", len: 0, sons: null}, 
+"5": {kind: 1, offset: 5, typ: NTI150202, name: "animationDirection", len: 0, sons: null}, 
+"6": {kind: 1, offset: 6, typ: NTI150202, name: "animationDuration", len: 0, sons: null}, 
+"7": {kind: 1, offset: 7, typ: NTI150202, name: "animationFillMode", len: 0, sons: null}, 
+"8": {kind: 1, offset: 8, typ: NTI150202, name: "animationIterationCount", len: 0, sons: null}, 
+"9": {kind: 1, offset: 9, typ: NTI150202, name: "animationName", len: 0, sons: null}, 
+"10": {kind: 1, offset: 10, typ: NTI150202, name: "animationTimingFunction", len: 0, sons: null}, 
+"11": {kind: 1, offset: 11, typ: NTI150202, name: "animationPlayState", len: 0, sons: null}, 
+"12": {kind: 1, offset: 12, typ: NTI150202, name: "background", len: 0, sons: null}, 
+"13": {kind: 1, offset: 13, typ: NTI150202, name: "backgroundAttachment", len: 0, sons: null}, 
+"14": {kind: 1, offset: 14, typ: NTI150202, name: "backgroundColor", len: 0, sons: null}, 
+"15": {kind: 1, offset: 15, typ: NTI150202, name: "backgroundImage", len: 0, sons: null}, 
+"16": {kind: 1, offset: 16, typ: NTI150202, name: "backgroundPosition", len: 0, sons: null}, 
+"17": {kind: 1, offset: 17, typ: NTI150202, name: "backgroundRepeat", len: 0, sons: null}, 
+"18": {kind: 1, offset: 18, typ: NTI150202, name: "backgroundClip", len: 0, sons: null}, 
+"19": {kind: 1, offset: 19, typ: NTI150202, name: "backgroundOrigin", len: 0, sons: null}, 
+"20": {kind: 1, offset: 20, typ: NTI150202, name: "backgroundSize", len: 0, sons: null}, 
+"21": {kind: 1, offset: 21, typ: NTI150202, name: "backfaceVisibility", len: 0, sons: null}, 
+"22": {kind: 1, offset: 22, typ: NTI150202, name: "border", len: 0, sons: null}, 
+"23": {kind: 1, offset: 23, typ: NTI150202, name: "borderBottom", len: 0, sons: null}, 
+"24": {kind: 1, offset: 24, typ: NTI150202, name: "borderBottomColor", len: 0, sons: null}, 
+"25": {kind: 1, offset: 25, typ: NTI150202, name: "borderBottomLeftRadius", len: 0, sons: null}, 
+"26": {kind: 1, offset: 26, typ: NTI150202, name: "borderBottomRightRadius", len: 0, sons: null}, 
+"27": {kind: 1, offset: 27, typ: NTI150202, name: "borderBottomStyle", len: 0, sons: null}, 
+"28": {kind: 1, offset: 28, typ: NTI150202, name: "borderBottomWidth", len: 0, sons: null}, 
+"29": {kind: 1, offset: 29, typ: NTI150202, name: "borderCollapse", len: 0, sons: null}, 
+"30": {kind: 1, offset: 30, typ: NTI150202, name: "borderColor", len: 0, sons: null}, 
+"31": {kind: 1, offset: 31, typ: NTI150202, name: "borderImage", len: 0, sons: null}, 
+"32": {kind: 1, offset: 32, typ: NTI150202, name: "borderImageOutset", len: 0, sons: null}, 
+"33": {kind: 1, offset: 33, typ: NTI150202, name: "borderImageRepeat", len: 0, sons: null}, 
+"34": {kind: 1, offset: 34, typ: NTI150202, name: "borderImageSlice", len: 0, sons: null}, 
+"35": {kind: 1, offset: 35, typ: NTI150202, name: "borderImageSource", len: 0, sons: null}, 
+"36": {kind: 1, offset: 36, typ: NTI150202, name: "borderImageWidth", len: 0, sons: null}, 
+"37": {kind: 1, offset: 37, typ: NTI150202, name: "borderLeft", len: 0, sons: null}, 
+"38": {kind: 1, offset: 38, typ: NTI150202, name: "borderLeftColor", len: 0, sons: null}, 
+"39": {kind: 1, offset: 39, typ: NTI150202, name: "borderLeftStyle", len: 0, sons: null}, 
+"40": {kind: 1, offset: 40, typ: NTI150202, name: "borderLeftWidth", len: 0, sons: null}, 
+"41": {kind: 1, offset: 41, typ: NTI150202, name: "borderRadius", len: 0, sons: null}, 
+"42": {kind: 1, offset: 42, typ: NTI150202, name: "borderRight", len: 0, sons: null}, 
+"43": {kind: 1, offset: 43, typ: NTI150202, name: "borderRightColor", len: 0, sons: null}, 
+"44": {kind: 1, offset: 44, typ: NTI150202, name: "borderRightStyle", len: 0, sons: null}, 
+"45": {kind: 1, offset: 45, typ: NTI150202, name: "borderRightWidth", len: 0, sons: null}, 
+"46": {kind: 1, offset: 46, typ: NTI150202, name: "borderSpacing", len: 0, sons: null}, 
+"47": {kind: 1, offset: 47, typ: NTI150202, name: "borderStyle", len: 0, sons: null}, 
+"48": {kind: 1, offset: 48, typ: NTI150202, name: "borderTop", len: 0, sons: null}, 
+"49": {kind: 1, offset: 49, typ: NTI150202, name: "borderTopColor", len: 0, sons: null}, 
+"50": {kind: 1, offset: 50, typ: NTI150202, name: "borderTopLeftRadius", len: 0, sons: null}, 
+"51": {kind: 1, offset: 51, typ: NTI150202, name: "borderTopRightRadius", len: 0, sons: null}, 
+"52": {kind: 1, offset: 52, typ: NTI150202, name: "borderTopStyle", len: 0, sons: null}, 
+"53": {kind: 1, offset: 53, typ: NTI150202, name: "borderTopWidth", len: 0, sons: null}, 
+"54": {kind: 1, offset: 54, typ: NTI150202, name: "borderWidth", len: 0, sons: null}, 
+"55": {kind: 1, offset: 55, typ: NTI150202, name: "bottom", len: 0, sons: null}, 
+"56": {kind: 1, offset: 56, typ: NTI150202, name: "boxDecorationBreak", len: 0, sons: null}, 
+"57": {kind: 1, offset: 57, typ: NTI150202, name: "boxShadow", len: 0, sons: null}, 
+"58": {kind: 1, offset: 58, typ: NTI150202, name: "boxSizing", len: 0, sons: null}, 
+"59": {kind: 1, offset: 59, typ: NTI150202, name: "captionSide", len: 0, sons: null}, 
+"60": {kind: 1, offset: 60, typ: NTI150202, name: "clear", len: 0, sons: null}, 
+"61": {kind: 1, offset: 61, typ: NTI150202, name: "clip", len: 0, sons: null}, 
+"62": {kind: 1, offset: 62, typ: NTI150202, name: "color", len: 0, sons: null}, 
+"63": {kind: 1, offset: 63, typ: NTI150202, name: "columnCount", len: 0, sons: null}, 
+"64": {kind: 1, offset: 64, typ: NTI150202, name: "columnFill", len: 0, sons: null}, 
+"65": {kind: 1, offset: 65, typ: NTI150202, name: "columnGap", len: 0, sons: null}, 
+"66": {kind: 1, offset: 66, typ: NTI150202, name: "columnRule", len: 0, sons: null}, 
+"67": {kind: 1, offset: 67, typ: NTI150202, name: "columnRuleColor", len: 0, sons: null}, 
+"68": {kind: 1, offset: 68, typ: NTI150202, name: "columnRuleStyle", len: 0, sons: null}, 
+"69": {kind: 1, offset: 69, typ: NTI150202, name: "columnRuleWidth", len: 0, sons: null}, 
+"70": {kind: 1, offset: 70, typ: NTI150202, name: "columns", len: 0, sons: null}, 
+"71": {kind: 1, offset: 71, typ: NTI150202, name: "columnSpan", len: 0, sons: null}, 
+"72": {kind: 1, offset: 72, typ: NTI150202, name: "columnWidth", len: 0, sons: null}, 
+"73": {kind: 1, offset: 73, typ: NTI150202, name: "content", len: 0, sons: null}, 
+"74": {kind: 1, offset: 74, typ: NTI150202, name: "counterIncrement", len: 0, sons: null}, 
+"75": {kind: 1, offset: 75, typ: NTI150202, name: "counterReset", len: 0, sons: null}, 
+"76": {kind: 1, offset: 76, typ: NTI150202, name: "cursor", len: 0, sons: null}, 
+"77": {kind: 1, offset: 77, typ: NTI150202, name: "direction", len: 0, sons: null}, 
+"78": {kind: 1, offset: 78, typ: NTI150202, name: "display", len: 0, sons: null}, 
+"79": {kind: 1, offset: 79, typ: NTI150202, name: "emptyCells", len: 0, sons: null}, 
+"80": {kind: 1, offset: 80, typ: NTI150202, name: "filter", len: 0, sons: null}, 
+"81": {kind: 1, offset: 81, typ: NTI150202, name: "flex", len: 0, sons: null}, 
+"82": {kind: 1, offset: 82, typ: NTI150202, name: "flexBasis", len: 0, sons: null}, 
+"83": {kind: 1, offset: 83, typ: NTI150202, name: "flexDirection", len: 0, sons: null}, 
+"84": {kind: 1, offset: 84, typ: NTI150202, name: "flexFlow", len: 0, sons: null}, 
+"85": {kind: 1, offset: 85, typ: NTI150202, name: "flexGrow", len: 0, sons: null}, 
+"86": {kind: 1, offset: 86, typ: NTI150202, name: "flexShrink", len: 0, sons: null}, 
+"87": {kind: 1, offset: 87, typ: NTI150202, name: "flexWrap", len: 0, sons: null}, 
+"88": {kind: 1, offset: 88, typ: NTI150202, name: "cssFloat", len: 0, sons: null}, 
+"89": {kind: 1, offset: 89, typ: NTI150202, name: "font", len: 0, sons: null}, 
+"90": {kind: 1, offset: 90, typ: NTI150202, name: "fontFamily", len: 0, sons: null}, 
+"91": {kind: 1, offset: 91, typ: NTI150202, name: "fontSize", len: 0, sons: null}, 
+"92": {kind: 1, offset: 92, typ: NTI150202, name: "fontSizeAdjust", len: 0, sons: null}, 
+"93": {kind: 1, offset: 93, typ: NTI150202, name: "fontStretch", len: 0, sons: null}, 
+"94": {kind: 1, offset: 94, typ: NTI150202, name: "fontStyle", len: 0, sons: null}, 
+"95": {kind: 1, offset: 95, typ: NTI150202, name: "fontVariant", len: 0, sons: null}, 
+"96": {kind: 1, offset: 96, typ: NTI150202, name: "fontWeight", len: 0, sons: null}, 
+"97": {kind: 1, offset: 97, typ: NTI150202, name: "hangingPunctuation", len: 0, sons: null}, 
+"98": {kind: 1, offset: 98, typ: NTI150202, name: "height", len: 0, sons: null}, 
+"99": {kind: 1, offset: 99, typ: NTI150202, name: "hyphens", len: 0, sons: null}, 
+"100": {kind: 1, offset: 100, typ: NTI150202, name: "icon", len: 0, sons: null}, 
+"101": {kind: 1, offset: 101, typ: NTI150202, name: "imageOrientation", len: 0, sons: null}, 
+"102": {kind: 1, offset: 102, typ: NTI150202, name: "justifyContent", len: 0, sons: null}, 
+"103": {kind: 1, offset: 103, typ: NTI150202, name: "left", len: 0, sons: null}, 
+"104": {kind: 1, offset: 104, typ: NTI150202, name: "letterSpacing", len: 0, sons: null}, 
+"105": {kind: 1, offset: 105, typ: NTI150202, name: "lineHeight", len: 0, sons: null}, 
+"106": {kind: 1, offset: 106, typ: NTI150202, name: "listStyle", len: 0, sons: null}, 
+"107": {kind: 1, offset: 107, typ: NTI150202, name: "listStyleImage", len: 0, sons: null}, 
+"108": {kind: 1, offset: 108, typ: NTI150202, name: "listStylePosition", len: 0, sons: null}, 
+"109": {kind: 1, offset: 109, typ: NTI150202, name: "listStyleType", len: 0, sons: null}, 
+"110": {kind: 1, offset: 110, typ: NTI150202, name: "margin", len: 0, sons: null}, 
+"111": {kind: 1, offset: 111, typ: NTI150202, name: "marginBottom", len: 0, sons: null}, 
+"112": {kind: 1, offset: 112, typ: NTI150202, name: "marginLeft", len: 0, sons: null}, 
+"113": {kind: 1, offset: 113, typ: NTI150202, name: "marginRight", len: 0, sons: null}, 
+"114": {kind: 1, offset: 114, typ: NTI150202, name: "marginTop", len: 0, sons: null}, 
+"115": {kind: 1, offset: 115, typ: NTI150202, name: "maxHeight", len: 0, sons: null}, 
+"116": {kind: 1, offset: 116, typ: NTI150202, name: "maxWidth", len: 0, sons: null}, 
+"117": {kind: 1, offset: 117, typ: NTI150202, name: "minHeight", len: 0, sons: null}, 
+"118": {kind: 1, offset: 118, typ: NTI150202, name: "minWidth", len: 0, sons: null}, 
+"119": {kind: 1, offset: 119, typ: NTI150202, name: "navDown", len: 0, sons: null}, 
+"120": {kind: 1, offset: 120, typ: NTI150202, name: "navIndex", len: 0, sons: null}, 
+"121": {kind: 1, offset: 121, typ: NTI150202, name: "navLeft", len: 0, sons: null}, 
+"122": {kind: 1, offset: 122, typ: NTI150202, name: "navRight", len: 0, sons: null}, 
+"123": {kind: 1, offset: 123, typ: NTI150202, name: "navUp", len: 0, sons: null}, 
+"124": {kind: 1, offset: 124, typ: NTI150202, name: "opacity", len: 0, sons: null}, 
+"125": {kind: 1, offset: 125, typ: NTI150202, name: "order", len: 0, sons: null}, 
+"126": {kind: 1, offset: 126, typ: NTI150202, name: "orphans", len: 0, sons: null}, 
+"127": {kind: 1, offset: 127, typ: NTI150202, name: "outline", len: 0, sons: null}, 
+"128": {kind: 1, offset: 128, typ: NTI150202, name: "outlineColor", len: 0, sons: null}, 
+"129": {kind: 1, offset: 129, typ: NTI150202, name: "outlineOffset", len: 0, sons: null}, 
+"130": {kind: 1, offset: 130, typ: NTI150202, name: "outlineStyle", len: 0, sons: null}, 
+"131": {kind: 1, offset: 131, typ: NTI150202, name: "outlineWidth", len: 0, sons: null}, 
+"132": {kind: 1, offset: 132, typ: NTI150202, name: "overflow", len: 0, sons: null}, 
+"133": {kind: 1, offset: 133, typ: NTI150202, name: "overflowX", len: 0, sons: null}, 
+"134": {kind: 1, offset: 134, typ: NTI150202, name: "overflowY", len: 0, sons: null}, 
+"135": {kind: 1, offset: 135, typ: NTI150202, name: "padding", len: 0, sons: null}, 
+"136": {kind: 1, offset: 136, typ: NTI150202, name: "paddingBottom", len: 0, sons: null}, 
+"137": {kind: 1, offset: 137, typ: NTI150202, name: "paddingLeft", len: 0, sons: null}, 
+"138": {kind: 1, offset: 138, typ: NTI150202, name: "paddingRight", len: 0, sons: null}, 
+"139": {kind: 1, offset: 139, typ: NTI150202, name: "paddingTop", len: 0, sons: null}, 
+"140": {kind: 1, offset: 140, typ: NTI150202, name: "pageBreakAfter", len: 0, sons: null}, 
+"141": {kind: 1, offset: 141, typ: NTI150202, name: "pageBreakBefore", len: 0, sons: null}, 
+"142": {kind: 1, offset: 142, typ: NTI150202, name: "pageBreakInside", len: 0, sons: null}, 
+"143": {kind: 1, offset: 143, typ: NTI150202, name: "perspective", len: 0, sons: null}, 
+"144": {kind: 1, offset: 144, typ: NTI150202, name: "perspectiveOrigin", len: 0, sons: null}, 
+"145": {kind: 1, offset: 145, typ: NTI150202, name: "pointerEvents", len: 0, sons: null}, 
+"146": {kind: 1, offset: 146, typ: NTI150202, name: "position", len: 0, sons: null}, 
+"147": {kind: 1, offset: 147, typ: NTI150202, name: "quotes", len: 0, sons: null}, 
+"148": {kind: 1, offset: 148, typ: NTI150202, name: "resize", len: 0, sons: null}, 
+"149": {kind: 1, offset: 149, typ: NTI150202, name: "right", len: 0, sons: null}, 
+"150": {kind: 1, offset: 150, typ: NTI150202, name: "scrollbar3dLightColor", len: 0, sons: null}, 
+"151": {kind: 1, offset: 151, typ: NTI150202, name: "scrollbarArrowColor", len: 0, sons: null}, 
+"152": {kind: 1, offset: 152, typ: NTI150202, name: "scrollbarBaseColor", len: 0, sons: null}, 
+"153": {kind: 1, offset: 153, typ: NTI150202, name: "scrollbarDarkshadowColor", len: 0, sons: null}, 
+"154": {kind: 1, offset: 154, typ: NTI150202, name: "scrollbarFaceColor", len: 0, sons: null}, 
+"155": {kind: 1, offset: 155, typ: NTI150202, name: "scrollbarHighlightColor", len: 0, sons: null}, 
+"156": {kind: 1, offset: 156, typ: NTI150202, name: "scrollbarShadowColor", len: 0, sons: null}, 
+"157": {kind: 1, offset: 157, typ: NTI150202, name: "scrollbarTrackColor", len: 0, sons: null}, 
+"158": {kind: 1, offset: 158, typ: NTI150202, name: "tableLayout", len: 0, sons: null}, 
+"159": {kind: 1, offset: 159, typ: NTI150202, name: "tabSize", len: 0, sons: null}, 
+"160": {kind: 1, offset: 160, typ: NTI150202, name: "textAlign", len: 0, sons: null}, 
+"161": {kind: 1, offset: 161, typ: NTI150202, name: "textAlignLast", len: 0, sons: null}, 
+"162": {kind: 1, offset: 162, typ: NTI150202, name: "textDecoration", len: 0, sons: null}, 
+"163": {kind: 1, offset: 163, typ: NTI150202, name: "textDecorationColor", len: 0, sons: null}, 
+"164": {kind: 1, offset: 164, typ: NTI150202, name: "textDecorationLine", len: 0, sons: null}, 
+"165": {kind: 1, offset: 165, typ: NTI150202, name: "textDecorationStyle", len: 0, sons: null}, 
+"166": {kind: 1, offset: 166, typ: NTI150202, name: "textIndent", len: 0, sons: null}, 
+"167": {kind: 1, offset: 167, typ: NTI150202, name: "textJustify", len: 0, sons: null}, 
+"168": {kind: 1, offset: 168, typ: NTI150202, name: "textOverflow", len: 0, sons: null}, 
+"169": {kind: 1, offset: 169, typ: NTI150202, name: "textShadow", len: 0, sons: null}, 
+"170": {kind: 1, offset: 170, typ: NTI150202, name: "textTransform", len: 0, sons: null}, 
+"171": {kind: 1, offset: 171, typ: NTI150202, name: "top", len: 0, sons: null}, 
+"172": {kind: 1, offset: 172, typ: NTI150202, name: "transform", len: 0, sons: null}, 
+"173": {kind: 1, offset: 173, typ: NTI150202, name: "transformOrigin", len: 0, sons: null}, 
+"174": {kind: 1, offset: 174, typ: NTI150202, name: "transformStyle", len: 0, sons: null}, 
+"175": {kind: 1, offset: 175, typ: NTI150202, name: "transition", len: 0, sons: null}, 
+"176": {kind: 1, offset: 176, typ: NTI150202, name: "transitionDelay", len: 0, sons: null}, 
+"177": {kind: 1, offset: 177, typ: NTI150202, name: "transitionDuration", len: 0, sons: null}, 
+"178": {kind: 1, offset: 178, typ: NTI150202, name: "transitionProperty", len: 0, sons: null}, 
+"179": {kind: 1, offset: 179, typ: NTI150202, name: "transitionTimingFunction", len: 0, sons: null}, 
+"180": {kind: 1, offset: 180, typ: NTI150202, name: "unicodeBidi", len: 0, sons: null}, 
+"181": {kind: 1, offset: 181, typ: NTI150202, name: "userSelect", len: 0, sons: null}, 
+"182": {kind: 1, offset: 182, typ: NTI150202, name: "verticalAlign", len: 0, sons: null}, 
+"183": {kind: 1, offset: 183, typ: NTI150202, name: "visibility", len: 0, sons: null}, 
+"184": {kind: 1, offset: 184, typ: NTI150202, name: "whiteSpace", len: 0, sons: null}, 
+"185": {kind: 1, offset: 185, typ: NTI150202, name: "width", len: 0, sons: null}, 
+"186": {kind: 1, offset: 186, typ: NTI150202, name: "wordBreak", len: 0, sons: null}, 
+"187": {kind: 1, offset: 187, typ: NTI150202, name: "wordSpacing", len: 0, sons: null}, 
+"188": {kind: 1, offset: 188, typ: NTI150202, name: "wordWrap", len: 0, sons: null}, 
+"189": {kind: 1, offset: 189, typ: NTI150202, name: "widows", len: 0, sons: null}, 
+"190": {kind: 1, offset: 190, typ: NTI150202, name: "zIndex", len: 0, sons: null}}};
+NTI150202.node = NNI150202;
+var NNI151727 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI150202, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI140, name: "Field1", sons: null}]};
+NTI151727.node = NNI151727;
+NTI150668.base = NTI140;
 NTI168058.base = NTI138;
 var NNI3860 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI3860.node = NNI3860;
@@ -546,22 +745,22 @@ NTI164164.node = NNI164164;
 NTI164164.base = NTI161025;
 NTI164138.base = NTI138;
 NTI164068.base = NTI138;
+NTI168413.base = NTI104;
+NTI168428.base = NTI104;
+NTI168443.base = NTI104;
+NTI168458.base = NTI104;
+NTI168473.base = NTI104;
+NTI168488.base = NTI104;
+NTI168377.base = NTI104;
+NTI168375.base = NTI104;
+NTI168379.base = NTI104;
+NTI168381.base = NTI104;
+NTI168383.base = NTI104;
+NTI168385.base = NTI104;
 NTI161160.base = NTI138;
-NTI168390.base = NTI104;
-NTI168405.base = NTI104;
-NTI168420.base = NTI104;
-NTI168435.base = NTI104;
-NTI168450.base = NTI104;
-NTI168465.base = NTI104;
-NTI168354.base = NTI104;
-NTI168352.base = NTI104;
-NTI168356.base = NTI104;
-NTI168358.base = NTI104;
-NTI168360.base = NTI104;
-NTI168362.base = NTI104;
 NTI162971.base = NTI161017;
-NTI168101.base = NTI104;
-NTI168148.base = NTI168101;
+NTI168124.base = NTI104;
+NTI168171.base = NTI168124;
 NTI163020.base = NTI138;
 
 function cstrToNimstr(c_16242) {
@@ -860,6 +1059,7 @@ function mnewString(len_16276) {
 
 	
 }
+		var to_style_attr_name_150665 = nimCopy(null, ["alignContent", "alignItems", "alignSelf", "animation", "animationDelay", "animationDirection", "animationDuration", "animationFillMode", "animationIterationCount", "animationName", "animationTimingFunction", "animationPlayState", "background", "backgroundAttachment", "backgroundColor", "backgroundImage", "backgroundPosition", "backgroundRepeat", "backgroundClip", "backgroundOrigin", "backgroundSize", "backfaceVisibility", "border", "borderBottom", "borderBottomColor", "borderBottomLeftRadius", "borderBottomRightRadius", "borderBottomStyle", "borderBottomWidth", "borderCollapse", "borderColor", "borderImage", "borderImageOutset", "borderImageRepeat", "borderImageSlice", "borderImageSource", "borderImageWidth", "borderLeft", "borderLeftColor", "borderLeftStyle", "borderLeftWidth", "borderRadius", "borderRight", "borderRightColor", "borderRightStyle", "borderRightWidth", "borderSpacing", "borderStyle", "borderTop", "borderTopColor", "borderTopLeftRadius", "borderTopRightRadius", "borderTopStyle", "borderTopWidth", "borderWidth", "bottom", "boxDecorationBreak", "boxShadow", "boxSizing", "captionSide", "clear", "clip", "color", "columnCount", "columnFill", "columnGap", "columnRule", "columnRuleColor", "columnRuleStyle", "columnRuleWidth", "columns", "columnSpan", "columnWidth", "content", "counterIncrement", "counterReset", "cursor", "direction", "display", "emptyCells", "filter", "flex", "flexBasis", "flexDirection", "flexFlow", "flexGrow", "flexShrink", "flexWrap", "cssFloat", "font", "fontFamily", "fontSize", "fontSizeAdjust", "fontStretch", "fontStyle", "fontVariant", "fontWeight", "hangingPunctuation", "height", "hyphens", "icon", "imageOrientation", "justifyContent", "left", "letterSpacing", "lineHeight", "listStyle", "listStyleImage", "listStylePosition", "listStyleType", "margin", "marginBottom", "marginLeft", "marginRight", "marginTop", "maxHeight", "maxWidth", "minHeight", "minWidth", "navDown", "navIndex", "navLeft", "navRight", "navUp", "opacity", "order", "orphans", "outline", "outlineColor", "outlineOffset", "outlineStyle", "outlineWidth", "overflow", "overflowX", "overflowY", "padding", "paddingBottom", "paddingLeft", "paddingRight", "paddingTop", "pageBreakAfter", "pageBreakBefore", "pageBreakInside", "perspective", "perspectiveOrigin", "pointerEvents", "position", "quotes", "resize", "right", "scrollbar3dLightColor", "scrollbarArrowColor", "scrollbarBaseColor", "scrollbarDarkshadowColor", "scrollbarFaceColor", "scrollbarHighlightColor", "scrollbarShadowColor", "scrollbarTrackColor", "tableLayout", "tabSize", "textAlign", "textAlignLast", "textDecoration", "textDecorationColor", "textDecorationLine", "textDecorationStyle", "textIndent", "textJustify", "textOverflow", "textShadow", "textTransform", "top", "transform", "transformOrigin", "transformStyle", "transition", "transitionDelay", "transitionDuration", "transitionProperty", "transitionTimingFunction", "unicodeBidi", "userSelect", "verticalAlign", "visibility", "whiteSpace", "width", "wordBreak", "wordSpacing", "wordWrap", "widows", "zIndex"], NTI150668);
 										var desc_168046 = nimCopy(null, [makeNimstrLit(" "), makeNimstrLit("X"), makeNimstrLit("0")], NTI168058);
 
 function isObj(obj_17838, subclass_17839) {
@@ -3125,75 +3325,6 @@ function text_174375(s_174377) {
 
 }
 
-function add_event_listener_174760(n_174762, event_174763, handler_174764) {
-	var F={procname:"vdom.addEventListener",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/vdom.nim",line:0};
-	framePtr = F;
-		F.line = 295;
-		if (n_174762.events != null) { n_174762.events.push({Field0: event_174763, Field1: handler_174764, Field2: null}); } else { n_174762.events = [{Field0: event_174763, Field1: handler_174764, Field2: null}]; };
-	framePtr = F.prev;
-
-	
-}
-
-function add_event_handler_193454(n_193456, k_193457, action_193458, kxi_193459) {
-
-		function wrapper_193460(ev_193462, n_193463) {
-			var F={procname:"addEventHandler.wrapper",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/karax.nim",line:0};
-			framePtr = F;
-				F.line = 700;
-				action_193458(ev_193462, n_193463);
-				if (!(kxi_193459.surpressRedraws)) {
-				F.line = 701;
-				redraw_192814(kxi_193459);
-				}
-				
-			framePtr = F.prev;
-
-			
-		}
-
-	var F={procname:"karax.addEventHandler",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/karax.nim",line:0};
-	framePtr = F;
-		F.line = 702;
-		add_event_listener_174760(n_193456, k_193457, wrapper_193460);
-	framePtr = F.prev;
-
-	
-}
-
-function input_handler_196439(ev_196441, n_196442) {
-	var F={procname:"karax_client.inputHandler",prev:framePtr,filename:"karax_client.nim",line:0};
-	framePtr = F;
-		F.line = 18;
-		switch (toJSStr(cstrToNimstr(n_196442.id))) {
-		case "name1":
-			F.line = 20;
-			settings_196423.name1 = nimCopy(null, cstrToNimstr(value_172013(n_196442)), NTI138);
-			break;
-		case "name2":
-			F.line = 22;
-			settings_196423.name2 = nimCopy(null, cstrToNimstr(value_172013(n_196442)), NTI138);
-			break;
-		case "AI":
-			F.line = 24;
-			settings_196423.ai = eqStrings(cstrToNimstr(value_172013(n_196442)), makeNimstrLit("on"));
-			break;
-		case "fieldSize":
-			F.line = 26;
-			settings_196423.size = parseInt(value_172013(n_196442), 10);
-			break;
-		case "winCount":
-			F.line = 28;
-			settings_196423.winCount = parseInt(value_172013(n_196442), 10);
-			break;
-		default: 
-			break;
-		}
-	framePtr = F.prev;
-
-	
-}
-
 function set_attr_172749(n_172751, key_172752, val_172753) {
 	var F={procname:"vdom.setAttr",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/vdom.nim",line:0};
 	framePtr = F;
@@ -3244,6 +3375,108 @@ function set_attr_172749(n_172751, key_172752, val_172753) {
 	
 }
 
+function add_event_listener_174760(n_174762, event_174763, handler_174764) {
+	var F={procname:"vdom.addEventListener",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/vdom.nim",line:0};
+	framePtr = F;
+		F.line = 295;
+		if (n_174762.events != null) { n_174762.events.push({Field0: event_174763, Field1: handler_174764, Field2: null}); } else { n_174762.events = [{Field0: event_174763, Field1: handler_174764, Field2: null}]; };
+	framePtr = F.prev;
+
+	
+}
+
+function add_event_handler_193454(n_193456, k_193457, action_193458, kxi_193459) {
+
+		function wrapper_193460(ev_193462, n_193463) {
+			var F={procname:"addEventHandler.wrapper",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/karax.nim",line:0};
+			framePtr = F;
+				F.line = 700;
+				action_193458(ev_193462, n_193463);
+				if (!(kxi_193459.surpressRedraws)) {
+				F.line = 701;
+				redraw_192814(kxi_193459);
+				}
+				
+			framePtr = F.prev;
+
+			
+		}
+
+	var F={procname:"karax.addEventHandler",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/karax.nim",line:0};
+	framePtr = F;
+		F.line = 702;
+		add_event_listener_174760(n_193456, k_193457, wrapper_193460);
+	framePtr = F.prev;
+
+	
+}
+
+function input_handler_196439(ev_196441, n_196442) {
+			var Tmp1;
+			var Tmp2;
+			var Tmp3;
+			var Tmp4;
+
+	var F={procname:"karax_client.inputHandler",prev:framePtr,filename:"karax_client.nim",line:0};
+	framePtr = F;
+		F.line = 18;
+		switch (toJSStr(cstrToNimstr(n_196442.id))) {
+		case "name1":
+			F.line = 20;
+			if (!(eqStrings(cstrToNimstr(value_172013(n_196442)), []))) {
+			Tmp1 = cstrToNimstr(value_172013(n_196442));
+			}
+			else {
+			Tmp1 = makeNimstrLit("player 1");
+			}
+			
+			settings_196423.name1 = nimCopy(null, Tmp1, NTI138);
+			break;
+		case "name2":
+			F.line = 22;
+			if (!(eqStrings(cstrToNimstr(value_172013(n_196442)), []))) {
+			Tmp2 = cstrToNimstr(value_172013(n_196442));
+			}
+			else {
+			Tmp2 = makeNimstrLit("player 2");
+			}
+			
+			settings_196423.name2 = nimCopy(null, Tmp2, NTI138);
+			break;
+		case "AI":
+			F.line = 24;
+			settings_196423.ai = !(settings_196423.ai);
+			break;
+		case "fieldSize":
+			F.line = 26;
+			if (!(eqStrings(cstrToNimstr(value_172013(n_196442)), []))) {
+			Tmp3 = parseInt(value_172013(n_196442), 10);
+			}
+			else {
+			Tmp3 = 3;
+			}
+			
+			settings_196423.size = Tmp3;
+			break;
+		case "winCount":
+			F.line = 28;
+			if (!(eqStrings(cstrToNimstr(value_172013(n_196442)), []))) {
+			Tmp4 = parseInt(value_172013(n_196442), 10);
+			}
+			else {
+			Tmp4 = 3;
+			}
+			
+			settings_196423.winCount = Tmp4;
+			break;
+		default: 
+			break;
+		}
+	framePtr = F.prev;
+
+	
+}
+
 function add_event_handler_193490(n_193492, k_193493, action_193496, kxi_193497) {
 
 		function wrapper_193498(ev_193500, n_193501) {
@@ -3270,142 +3503,284 @@ function add_event_handler_193490(n_193492, k_193493, action_193496, kxi_193497)
 	
 }
 
-function start_game_196458() {
+function start_game_196464() {
 	var F={procname:"karax_client.startGame",prev:framePtr,filename:"karax_client.nim",line:0};
 	framePtr = F;
 		F.line = 31;
-		setup_169639(game_196223, settings_196423);
+		setup_169686(game_196223, settings_196423);
 		F.line = 32;
+		F.line = 32;
+		var fmt_res_196468 = mnewString(0);
+		F.line = 260;
+		if (fmt_res_196468 != null) { fmt_res_196468 = (fmt_res_196468).concat(get_player_name_169799(game_196223)); } else { fmt_res_196468 = get_player_name_169799(game_196223).slice(); };
+		F.line = 32;
+		if (fmt_res_196468 != null) { fmt_res_196468 = (fmt_res_196468).concat(makeNimstrLit("\'s turn")); } else { fmt_res_196468 = makeNimstrLit("\'s turn"); };
+		message_196226[0] = toJSStr(fmt_res_196468);
+		F.line = 33;
 		state_196225[0] = 2;
 	framePtr = F.prev;
 
 	
 }
 
-function setup_gui_196490() {
-	var result_196492 = null;
+function setup_gui_196631() {
+	var result_196633 = null;
 
 	var F={procname:"karax_client.setupGUI",prev:framePtr,filename:"karax_client.nim",line:0};
 	framePtr = F;
-		F.line = 41;
-		F.line = 41;
-		var tmp_196515 = tree_174248(43, []);
-		F.line = 41;
-		tmp_196515.class = "center";
 		F.line = 42;
-		var tmp_196521 = tree_174248(43, []);
 		F.line = 42;
-		tmp_196521.class = "settings";
+		var tmp_196659 = tree_174248(43, []);
+		F.line = 42;
+		tmp_196659.class = "center settings";
 		F.line = 43;
-		var tmp_196527 = tree_174248(104, []);
+		var tmp_196665 = tree_174248(43, []);
+		F.line = 43;
+		tmp_196665.class = "field";
 		F.line = 44;
-		add_172977(tmp_196527, text_174375(makeNimstrLit("Player 1: ")));
+		var tmp_196671 = tree_174248(104, []);
 		F.line = 45;
-		var tmp_196533 = tree_174248(105, []);
-		F.line = 45;
-		valueHEX3D_172030(tmp_196533, "player 1");
-		F.line = 45;
-		tmp_196533.id = "name1";
-		F.line = 45;
-		add_event_handler_193454(tmp_196533, 8, input_handler_196439, kxi_183324[0]);
-		F.line = 45;
-		add_172977(tmp_196527, tmp_196533);
+		add_172977(tmp_196671, text_174375(makeNimstrLit("Player 1: ")));
 		F.line = 46;
-		var tmp_196540 = tree_174248(71, []);
+		var tmp_196677 = tree_174248(105, []);
 		F.line = 46;
-		add_172977(tmp_196527, tmp_196540);
+		tmp_196677.class = "input";
 		F.line = 46;
-		add_172977(tmp_196521, tmp_196527);
+		set_attr_172749(tmp_196677, "placeholder", "player 1");
+		F.line = 46;
+		tmp_196677.id = "name1";
+		F.line = 46;
+		add_event_handler_193454(tmp_196677, 3, input_handler_196439, kxi_183324[0]);
+		F.line = 46;
+		add_172977(tmp_196671, tmp_196677);
 		F.line = 47;
-		var tmp_196546 = tree_174248(104, []);
+		var tmp_196684 = tree_174248(71, []);
+		F.line = 47;
+		add_172977(tmp_196671, tmp_196684);
+		F.line = 47;
+		add_172977(tmp_196665, tmp_196671);
+		F.line = 47;
+		add_172977(tmp_196659, tmp_196665);
 		F.line = 48;
-		add_172977(tmp_196546, text_174375(makeNimstrLit("Player 2: ")));
+		var tmp_196690 = tree_174248(43, []);
+		F.line = 48;
+		tmp_196690.class = "field";
 		F.line = 49;
-		var tmp_196552 = tree_174248(105, []);
-		F.line = 49;
-		valueHEX3D_172030(tmp_196552, "player 2");
-		F.line = 49;
-		tmp_196552.id = "name2";
-		F.line = 49;
-		add_event_handler_193454(tmp_196552, 8, input_handler_196439, kxi_183324[0]);
-		F.line = 49;
-		add_172977(tmp_196546, tmp_196552);
-		F.line = 49;
-		add_172977(tmp_196521, tmp_196546);
+		var tmp_196696 = tree_174248(104, []);
 		F.line = 50;
-		var tmp_196559 = tree_174248(104, []);
+		add_172977(tmp_196696, text_174375(makeNimstrLit("Player 2: ")));
 		F.line = 51;
-		add_172977(tmp_196559, text_174375(makeNimstrLit("AI")));
+		var tmp_196702 = tree_174248(105, []);
+		F.line = 51;
+		set_attr_172749(tmp_196702, "placeholder", "player 2");
+		F.line = 51;
+		tmp_196702.id = "name2";
+		F.line = 51;
+		add_event_handler_193454(tmp_196702, 3, input_handler_196439, kxi_183324[0]);
+		F.line = 51;
+		add_172977(tmp_196696, tmp_196702);
+		F.line = 51;
+		add_172977(tmp_196690, tmp_196696);
+		F.line = 51;
+		add_172977(tmp_196659, tmp_196690);
 		F.line = 52;
-		var tmp_196565 = tree_174248(105, []);
-		F.line = 52;
-		set_attr_172749(tmp_196565, "type", "checkbox");
-		F.line = 52;
-		tmp_196565.id = "AI";
-		F.line = 52;
-		add_event_handler_193454(tmp_196565, 8, input_handler_196439, kxi_183324[0]);
-		F.line = 52;
-		add_172977(tmp_196559, tmp_196565);
+		var tmp_196709 = tree_174248(104, []);
 		F.line = 53;
-		var tmp_196572 = tree_174248(71, []);
-		F.line = 53;
-		add_172977(tmp_196559, tmp_196572);
-		F.line = 53;
-		add_172977(tmp_196521, tmp_196559);
+		add_172977(tmp_196709, text_174375(makeNimstrLit("AI")));
 		F.line = 54;
-		var tmp_196578 = tree_174248(104, []);
+		var tmp_196715 = tree_174248(105, []);
+		F.line = 54;
+		set_attr_172749(tmp_196715, "type", "checkbox");
+		F.line = 54;
+		tmp_196715.id = "AI";
+		F.line = 54;
+		add_event_handler_193454(tmp_196715, 0, input_handler_196439, kxi_183324[0]);
+		F.line = 54;
+		add_172977(tmp_196709, tmp_196715);
 		F.line = 55;
-		add_172977(tmp_196578, text_174375(makeNimstrLit("Field size: ")));
+		var tmp_196722 = tree_174248(71, []);
+		F.line = 55;
+		add_172977(tmp_196709, tmp_196722);
+		F.line = 55;
+		add_172977(tmp_196659, tmp_196709);
 		F.line = 56;
-		var tmp_196584 = tree_174248(105, []);
+		var tmp_196728 = tree_174248(43, []);
 		F.line = 56;
-		tmp_196584.id = "fieldSize";
-		F.line = 56;
-		valueHEX3D_172030(tmp_196584, "3");
-		F.line = 56;
-		add_event_handler_193454(tmp_196584, 8, input_handler_196439, kxi_183324[0]);
-		F.line = 56;
-		add_172977(tmp_196578, tmp_196584);
+		tmp_196728.class = "field";
 		F.line = 57;
-		var tmp_196591 = tree_174248(71, []);
-		F.line = 57;
-		add_172977(tmp_196578, tmp_196591);
-		F.line = 57;
-		add_172977(tmp_196521, tmp_196578);
+		var tmp_196734 = tree_174248(104, []);
 		F.line = 58;
-		var tmp_196597 = tree_174248(104, []);
+		add_172977(tmp_196734, text_174375(makeNimstrLit("Field size: ")));
 		F.line = 59;
-		add_172977(tmp_196597, text_174375(makeNimstrLit("line length to win: ")));
+		var tmp_196740 = tree_174248(105, []);
+		F.line = 59;
+		tmp_196740.id = "fieldSize";
+		F.line = 59;
+		set_attr_172749(tmp_196740, "placeholder", "3");
+		F.line = 59;
+		add_event_handler_193454(tmp_196740, 3, input_handler_196439, kxi_183324[0]);
+		F.line = 59;
+		add_172977(tmp_196734, tmp_196740);
 		F.line = 60;
-		var tmp_196603 = tree_174248(105, []);
+		var tmp_196747 = tree_174248(71, []);
 		F.line = 60;
-		tmp_196603.id = "winCount";
+		add_172977(tmp_196734, tmp_196747);
 		F.line = 60;
-		valueHEX3D_172030(tmp_196603, "3");
+		add_172977(tmp_196728, tmp_196734);
 		F.line = 60;
-		add_event_handler_193454(tmp_196603, 8, input_handler_196439, kxi_183324[0]);
-		F.line = 60;
-		add_172977(tmp_196597, tmp_196603);
+		add_172977(tmp_196659, tmp_196728);
 		F.line = 61;
-		var tmp_196610 = tree_174248(71, []);
+		var tmp_196753 = tree_174248(43, []);
 		F.line = 61;
-		add_172977(tmp_196597, tmp_196610);
-		F.line = 61;
-		add_172977(tmp_196521, tmp_196597);
+		tmp_196753.class = "field";
 		F.line = 62;
-		var tmp_196616 = tree_174248(106, []);
-		F.line = 62;
-		add_event_handler_193490(tmp_196616, 0, start_game_196458, kxi_183324[0]);
+		var tmp_196759 = tree_174248(104, []);
 		F.line = 63;
-		add_172977(tmp_196616, text_174375(makeNimstrLit("start Game")));
-		F.line = 63;
-		add_172977(tmp_196521, tmp_196616);
-		F.line = 63;
-		add_172977(tmp_196515, tmp_196521);
-		result_196492 = tmp_196515;
+		add_172977(tmp_196759, text_174375(makeNimstrLit("line length to win: ")));
+		F.line = 64;
+		var tmp_196765 = tree_174248(105, []);
+		F.line = 64;
+		tmp_196765.id = "winCount";
+		F.line = 64;
+		set_attr_172749(tmp_196765, "placeholder", "3");
+		F.line = 64;
+		add_event_handler_193454(tmp_196765, 3, input_handler_196439, kxi_183324[0]);
+		F.line = 64;
+		add_172977(tmp_196759, tmp_196765);
+		F.line = 65;
+		var tmp_196772 = tree_174248(71, []);
+		F.line = 65;
+		add_172977(tmp_196759, tmp_196772);
+		F.line = 65;
+		add_172977(tmp_196753, tmp_196759);
+		F.line = 65;
+		add_172977(tmp_196659, tmp_196753);
+		F.line = 66;
+		var tmp_196778 = tree_174248(106, []);
+		F.line = 66;
+		add_event_handler_193490(tmp_196778, 0, start_game_196464, kxi_183324[0]);
+		F.line = 67;
+		add_172977(tmp_196778, text_174375(makeNimstrLit("start Game")));
+		F.line = 67;
+		add_172977(tmp_196659, tmp_196778);
+		result_196633 = tmp_196659;
 	framePtr = F.prev;
 
-	return result_196492;
+	return result_196633;
+
+}
+
+function set_attr_150994(s_150996, a_150997, value_150998) {
+	var F={procname:"vstyles.setAttr",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/vstyles.nim",line:0};
+	framePtr = F;
+	BeforeRet: do {
+		F.line = 238;
+		var i_151000 = 0;
+		L1: do {
+			F.line = 239;
+				L2: while (true) {
+				if (!(i_151000 < s_150996.length)) break L2;
+					if ((s_150996[i_151000] == a_150997)) {
+					F.line = 241;
+					s_150996[addInt(i_151000, 1)] = value_150998;
+					F.line = 242;
+					break BeforeRet;
+					}
+					else {
+					if ((a_150997 < s_150996[i_151000])) {
+					F.line = 244;
+					s_150996.push("");
+					F.line = 245;
+					s_150996.push("");
+					L3: do {
+						F.line = 247;
+						var j_151147 = 0;
+						F.line = 2065;
+						var colontmp__151287 = 0;
+						F.line = 247;
+						colontmp__151287 = subInt(s_150996.length, 1);
+						F.line = 2077;
+						var res_151290 = colontmp__151287;
+						L4: do {
+							F.line = 2078;
+								L5: while (true) {
+								if (!(i_151000 <= res_151290)) break L5;
+									F.line = 2079;
+									j_151147 = res_151290;
+									F.line = 248;
+									s_150996[j_151147] = s_150996[subInt(j_151147, 2)];
+									F.line = 249;
+									s_150996[subInt(j_151147, 1)] = s_150996[subInt(j_151147, 3)];
+									F.line = 2080;
+									res_151290 = subInt(res_151290, 2);
+								}
+						} while(false);
+					} while(false);
+					F.line = 250;
+					s_150996[i_151000] = a_150997;
+					F.line = 251;
+					s_150996[addInt(i_151000, 1)] = value_150998;
+					F.line = 252;
+					break BeforeRet;
+					}
+					}
+					F.line = 253;
+					i_151000 = addInt(i_151000, 2);
+				}
+		} while(false);
+		F.line = 254;
+		s_150996.push(a_150997);
+		F.line = 255;
+		s_150996.push(value_150998);
+	} while (false);
+	framePtr = F.prev;
+
+	
+}
+
+function set_attr_151307(s_151309, attr_151310, value_151311) {
+	var F={procname:"vstyles.setAttr",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/vstyles.nim",line:0};
+	framePtr = F;
+		if (!(!((value_151311 == null)))) {
+		F.line = 259;
+		failed_assert_impl_20481(makeNimstrLit("/home/manuel/.nimble/pkgs/karax-1.1.0/karax/vstyles.nim(259, 12) `\x0Anot (value == nil)` value must not be nil"));
+		}
+		
+		F.line = 260;
+		set_attr_150994(s_151309, to_style_attr_name_150665[chckIndx(attr_151310, 0, to_style_attr_name_150665.length+0-1)-0], value_151311);
+	framePtr = F.prev;
+
+	
+}
+
+function style_151724(pairs_151728) {
+	var result_151729 = null;
+
+	var F={procname:"vstyles.style",prev:framePtr,filename:"../../../../.nimble/pkgs/karax-1.1.0/karax/vstyles.nim",line:0};
+	framePtr = F;
+		F.line = 276;
+		result_151729 = new Array(0);
+		L1: do {
+			F.line = 280;
+			var x_151847 = {Field0: 0, Field1: null};
+			F.line = 2247;
+			var i_151851 = 0;
+			L2: do {
+				F.line = 2248;
+					L3: while (true) {
+					if (!(i_151851 < (pairs_151728 != null ? pairs_151728.length : 0))) break L3;
+						F.line = 2249;
+						nimCopy(x_151847, pairs_151728[chckIndx(i_151851, 0, pairs_151728.length+0-1)-0], NTI151727);
+						F.line = 281;
+						set_attr_151307(result_151729, x_151847["Field0"], x_151847["Field1"]);
+						F.line = 2250;
+						i_151851 = addInt(i_151851, 1);
+					}
+			} while(false);
+		} while(false);
+	framePtr = F.prev;
+
+	return result_151729;
 
 }
 
@@ -3422,11 +3797,11 @@ function text_174401(s_174403) {
 
 }
 
-function click_field_196473(ev_196475, n_196476) {
+function click_field_196614(ev_196616, n_196617) {
 	var F={procname:"karax_client.clickField",prev:framePtr,filename:"karax_client.nim",line:0};
 	framePtr = F;
-		F.line = 37;
-		message_196226[0] = toJSStr(make_turn_169786(game_196223, cstrToNimstr(n_196476.id)));
+		F.line = 38;
+		message_196226[0] = toJSStr(make_turn_169833(game_196223, cstrToNimstr(n_196617.id)));
 	framePtr = F.prev;
 
 	
@@ -3454,201 +3829,268 @@ function to_disabled_193773(disabled_193775) {
 
 }
 
-function play_gui_196648() {
+function play_gui_196813() {
 										var Tmp7;
 										var Tmp8;
 
-		function HEX3Aanonymous_197015() {
+		function HEX3Aanonymous_198815() {
 			var F={procname:"playGUI.:anonymous",prev:framePtr,filename:"karax_client.nim",line:0};
 			framePtr = F;
-				F.line = 83;
+				F.line = 106;
 				state_196225[0] = 1;
+				F.line = 107;
+				set_default_168080(settings_196423);
 			framePtr = F.prev;
 
 			
 		}
 
-		function HEX3Aanonymous_197037() {
+		function HEX3Aanonymous_198837() {
 			var F={procname:"playGUI.:anonymous",prev:framePtr,filename:"karax_client.nim",line:0};
 			framePtr = F;
-				F.line = 87;
-				setup_169639(game_196223, settings_196423);
+				F.line = 111;
+				setup_169686(game_196223, settings_196423);
 			framePtr = F.prev;
 
 			
 		}
 
-	var result_196650 = null;
+	var result_196815 = null;
 
 	var F={procname:"karax_client.playGUI",prev:framePtr,filename:"karax_client.nim",line:0};
 	framePtr = F;
-		F.line = 67;
-		F.line = 67;
-		var tmp_196663 = tree_174248(43, []);
-		F.line = 67;
-		tmp_196663.class = "center";
-		F.line = 68;
-		var tmp_196669 = tree_174248(31, []);
-		F.line = 68;
-		tmp_196669.id = "status";
-		F.line = 69;
-		add_172977(tmp_196669, text_174401(message_196226[0]));
-		F.line = 69;
-		add_172977(tmp_196663, tmp_196669);
-		F.line = 72;
-		var tmp_196675 = tree_174248(43, []);
-		F.line = 72;
-		tmp_196675.class = "grid-container";
+		F.line = 71;
+		F.line = 71;
+		var button_style_196816 = null;
+		if ((window.innerWidth < window.innerHeight)) {
+		F.line = 73;
+		F.line = 74;
+		var fmt_res_196821 = mnewString(0);
+		F.line = 74;
+		if (fmt_res_196821 != null) { fmt_res_196821 = (fmt_res_196821).concat(makeNimstrLit("calc(70vw/")); } else { fmt_res_196821 = makeNimstrLit("calc(70vw/"); };
+		F.line = 270;
+		if (fmt_res_196821 != null) { fmt_res_196821 = (fmt_res_196821).concat(cstrToNimstr((size_169777(game_196223))+"")); } else { fmt_res_196821 = cstrToNimstr((size_169777(game_196223))+"").slice(); };
+		F.line = 74;
+		if (fmt_res_196821 != null) { fmt_res_196821 = (fmt_res_196821).concat(makeNimstrLit(")")); } else { fmt_res_196821 = makeNimstrLit(")"); };
+		F.line = 75;
+		var fmt_res_197007 = mnewString(0);
+		F.line = 75;
+		if (fmt_res_197007 != null) { fmt_res_197007 = (fmt_res_197007).concat(makeNimstrLit("calc(70vw/")); } else { fmt_res_197007 = makeNimstrLit("calc(70vw/"); };
+		F.line = 270;
+		if (fmt_res_197007 != null) { fmt_res_197007 = (fmt_res_197007).concat(cstrToNimstr((size_169777(game_196223))+"")); } else { fmt_res_197007 = cstrToNimstr((size_169777(game_196223))+"").slice(); };
+		F.line = 75;
+		if (fmt_res_197007 != null) { fmt_res_197007 = (fmt_res_197007).concat(makeNimstrLit(")")); } else { fmt_res_197007 = makeNimstrLit(")"); };
+		F.line = 76;
+		var fmt_res_197205 = mnewString(0);
+		F.line = 76;
+		if (fmt_res_197205 != null) { fmt_res_197205 = (fmt_res_197205).concat(makeNimstrLit("calc(70vw/")); } else { fmt_res_197205 = makeNimstrLit("calc(70vw/"); };
+		F.line = 270;
+		if (fmt_res_197205 != null) { fmt_res_197205 = (fmt_res_197205).concat(cstrToNimstr((size_169777(game_196223))+"")); } else { fmt_res_197205 = cstrToNimstr((size_169777(game_196223))+"").slice(); };
+		F.line = 76;
+		if (fmt_res_197205 != null) { fmt_res_197205 = (fmt_res_197205).concat(makeNimstrLit(")")); } else { fmt_res_197205 = makeNimstrLit(")"); };
+		F.line = 77;
+		var fmt_res_197405 = mnewString(0);
+		F.line = 77;
+		if (fmt_res_197405 != null) { fmt_res_197405 = (fmt_res_197405).concat(makeNimstrLit("calc(70vw/")); } else { fmt_res_197405 = makeNimstrLit("calc(70vw/"); };
+		F.line = 270;
+		if (fmt_res_197405 != null) { fmt_res_197405 = (fmt_res_197405).concat(cstrToNimstr((size_169777(game_196223))+"")); } else { fmt_res_197405 = cstrToNimstr((size_169777(game_196223))+"").slice(); };
+		F.line = 77;
+		if (fmt_res_197405 != null) { fmt_res_197405 = (fmt_res_197405).concat(makeNimstrLit(")")); } else { fmt_res_197405 = makeNimstrLit(")"); };
+		button_style_196816 = style_151724([{Field0: 185, Field1: toJSStr(fmt_res_196821)}, {Field0: 98, Field1: toJSStr(fmt_res_197007)}, {Field0: 105, Field1: toJSStr(fmt_res_197205)}, {Field0: 91, Field1: toJSStr(fmt_res_197405)}]);
+		}
+		else {
+			F.line = 80;
+			F.line = 81;
+			var fmt_res_197605 = mnewString(0);
+			F.line = 81;
+			if (fmt_res_197605 != null) { fmt_res_197605 = (fmt_res_197605).concat(makeNimstrLit("calc(70vh/")); } else { fmt_res_197605 = makeNimstrLit("calc(70vh/"); };
+			F.line = 270;
+			if (fmt_res_197605 != null) { fmt_res_197605 = (fmt_res_197605).concat(cstrToNimstr((size_169777(game_196223))+"")); } else { fmt_res_197605 = cstrToNimstr((size_169777(game_196223))+"").slice(); };
+			F.line = 81;
+			if (fmt_res_197605 != null) { fmt_res_197605 = (fmt_res_197605).concat(makeNimstrLit(")")); } else { fmt_res_197605 = makeNimstrLit(")"); };
+			F.line = 82;
+			var fmt_res_197807 = mnewString(0);
+			F.line = 82;
+			if (fmt_res_197807 != null) { fmt_res_197807 = (fmt_res_197807).concat(makeNimstrLit("calc(70vh/")); } else { fmt_res_197807 = makeNimstrLit("calc(70vh/"); };
+			F.line = 270;
+			if (fmt_res_197807 != null) { fmt_res_197807 = (fmt_res_197807).concat(cstrToNimstr((size_169777(game_196223))+"")); } else { fmt_res_197807 = cstrToNimstr((size_169777(game_196223))+"").slice(); };
+			F.line = 82;
+			if (fmt_res_197807 != null) { fmt_res_197807 = (fmt_res_197807).concat(makeNimstrLit(")")); } else { fmt_res_197807 = makeNimstrLit(")"); };
+			F.line = 83;
+			var fmt_res_198005 = mnewString(0);
+			F.line = 83;
+			if (fmt_res_198005 != null) { fmt_res_198005 = (fmt_res_198005).concat(makeNimstrLit("calc(70vh/")); } else { fmt_res_198005 = makeNimstrLit("calc(70vh/"); };
+			F.line = 270;
+			if (fmt_res_198005 != null) { fmt_res_198005 = (fmt_res_198005).concat(cstrToNimstr((size_169777(game_196223))+"")); } else { fmt_res_198005 = cstrToNimstr((size_169777(game_196223))+"").slice(); };
+			F.line = 83;
+			if (fmt_res_198005 != null) { fmt_res_198005 = (fmt_res_198005).concat(makeNimstrLit(")")); } else { fmt_res_198005 = makeNimstrLit(")"); };
+			F.line = 84;
+			var fmt_res_198205 = mnewString(0);
+			F.line = 84;
+			if (fmt_res_198205 != null) { fmt_res_198205 = (fmt_res_198205).concat(makeNimstrLit("calc(70vh/")); } else { fmt_res_198205 = makeNimstrLit("calc(70vh/"); };
+			F.line = 270;
+			if (fmt_res_198205 != null) { fmt_res_198205 = (fmt_res_198205).concat(cstrToNimstr((size_169777(game_196223))+"")); } else { fmt_res_198205 = cstrToNimstr((size_169777(game_196223))+"").slice(); };
+			F.line = 84;
+			if (fmt_res_198205 != null) { fmt_res_198205 = (fmt_res_198205).concat(makeNimstrLit(")")); } else { fmt_res_198205 = makeNimstrLit(")"); };
+			button_style_196816 = style_151724([{Field0: 185, Field1: toJSStr(fmt_res_197605)}, {Field0: 98, Field1: toJSStr(fmt_res_197807)}, {Field0: 105, Field1: toJSStr(fmt_res_198005)}, {Field0: 91, Field1: toJSStr(fmt_res_198205)}]);
+		}
+		
+		F.line = 87;
+		var tmp_198415 = tree_174248(43, []);
+		F.line = 87;
+		tmp_198415.class = "center";
+		F.line = 88;
+		var tmp_198421 = tree_174248(31, []);
+		F.line = 88;
+		tmp_198421.id = "status";
+		F.line = 89;
+		add_172977(tmp_198421, text_174401(message_196226[0]));
+		F.line = 89;
+		add_172977(tmp_198415, tmp_198421);
+		if ((state_196225[0] == 2)) {
+		F.line = 93;
+		var tmp_198427 = tree_174248(91, []);
 		L1: do {
-			F.line = 73;
-			var i_196722 = 0;
-			F.line = 73;
-			var line_196723 = null;
+			F.line = 94;
+			var i_198474 = 0;
+			F.line = 94;
+			var line_198475 = null;
 			F.line = 2352;
-			var colontmp__197062 = null;
-			F.line = 73;
-			colontmp__197062 = field_169708(game_196223);
+			var colontmp__198864 = null;
+			F.line = 94;
+			colontmp__198864 = field_169755(game_196223);
 			F.line = 2354;
-			var i_197065 = 0;
+			var i_198867 = 0;
 			L2: do {
 				F.line = 2355;
 					L3: while (true) {
-					if (!(i_197065 < (colontmp__197062 != null ? colontmp__197062.length : 0))) break L3;
+					if (!(i_198867 < (colontmp__198864 != null ? colontmp__198864.length : 0))) break L3;
 						F.line = 2356;
-						i_196722 = i_197065;
+						i_198474 = i_198867;
 						F.line = 2356;
-						line_196723 = colontmp__197062[chckIndx(i_197065, 0, colontmp__197062.length+0-1)-0];
+						line_198475 = colontmp__198864[chckIndx(i_198867, 0, colontmp__198864.length+0-1)-0];
+						F.line = 95;
+						var tmp_198481 = tree_174248(98, []);
 						L4: do {
-							F.line = 74;
-							var j_196770 = 0;
-							F.line = 74;
-							var field_196771 = 0;
+							F.line = 96;
+							var j_198528 = 0;
+							F.line = 96;
+							var field_198529 = 0;
 							F.line = 2354;
-							var i_197061 = 0;
+							var i_198863 = 0;
 							L5: do {
 								F.line = 2355;
 									L6: while (true) {
-									if (!(i_197061 < (line_196723 != null ? line_196723.length : 0))) break L6;
+									if (!(i_198863 < (line_198475 != null ? line_198475.length : 0))) break L6;
 										F.line = 2356;
-										j_196770 = i_197061;
+										j_198528 = i_198863;
 										F.line = 2356;
-										field_196771 = line_196723[chckIndx(i_197061, 0, line_196723.length+0-1)-0];
-										F.line = 76;
-										var tmp_196777 = tree_174248(106, []);
-										F.line = 76;
-										tmp_196777.class = "grid-item";
-										F.line = 76;
-										F.line = 76;
-										var fmt_res_196780 = mnewString(0);
+										field_198529 = line_198475[chckIndx(i_198863, 0, line_198475.length+0-1)-0];
+										F.line = 97;
+										var tmp_198535 = tree_174248(99, []);
+										F.line = 99;
+										var tmp_198541 = tree_174248(106, []);
+										F.line = 99;
+										tmp_198541.style = button_style_196816;
+										F.line = 99;
+										tmp_198541.class = "fieldButton";
+										F.line = 99;
+										F.line = 99;
+										var fmt_res_198544 = mnewString(0);
 										F.line = 270;
-										if (fmt_res_196780 != null) { fmt_res_196780 = (fmt_res_196780).concat(cstrToNimstr((addInt(i_196722, 1))+"")); } else { fmt_res_196780 = cstrToNimstr((addInt(i_196722, 1))+"").slice(); };
+										if (fmt_res_198544 != null) { fmt_res_198544 = (fmt_res_198544).concat(cstrToNimstr((addInt(i_198474, 1))+"")); } else { fmt_res_198544 = cstrToNimstr((addInt(i_198474, 1))+"").slice(); };
 										F.line = 270;
-										if (fmt_res_196780 != null) { fmt_res_196780 = (fmt_res_196780).concat(cstrToNimstr((addInt(j_196770, 1))+"")); } else { fmt_res_196780 = cstrToNimstr((addInt(j_196770, 1))+"").slice(); };
-										tmp_196777.id = toJSStr(fmt_res_196780);
-										F.line = 76;
-										add_event_handler_193454(tmp_196777, 0, click_field_196473, kxi_183324[0]);
-										F.line = 77;
-										if ((state_196225[0] == 0)) Tmp8 = true; else {											Tmp8 = !((field_196771 == 0));										}										if (Tmp8) Tmp7 = true; else {											Tmp7 = finished_170031(game_196223);										}										set_attr_172749(tmp_196777, "disabled", to_disabled_193773(Tmp7));
-										F.line = 78;
-										add_172977(tmp_196777, text_174375(desc_168046[chckIndx(field_196771, 0, desc_168046.length+0-1)-0]));
-										F.line = 78;
-										add_172977(tmp_196675, tmp_196777);
+										if (fmt_res_198544 != null) { fmt_res_198544 = (fmt_res_198544).concat(cstrToNimstr((addInt(j_198528, 1))+"")); } else { fmt_res_198544 = cstrToNimstr((addInt(j_198528, 1))+"").slice(); };
+										tmp_198541.id = toJSStr(fmt_res_198544);
+										F.line = 99;
+										add_event_handler_193454(tmp_198541, 0, click_field_196614, kxi_183324[0]);
+										F.line = 100;
+										if ((state_196225[0] == 0)) Tmp8 = true; else {											Tmp8 = !((field_198529 == 0));										}										if (Tmp8) Tmp7 = true; else {											Tmp7 = finished_170231(game_196223);										}										set_attr_172749(tmp_198541, "disabled", to_disabled_193773(Tmp7));
+										F.line = 101;
+										add_172977(tmp_198541, text_174375(desc_168046[chckIndx(field_198529, 0, desc_168046.length+0-1)-0]));
+										F.line = 101;
+										add_172977(tmp_198535, tmp_198541);
+										F.line = 101;
+										add_172977(tmp_198481, tmp_198535);
 										F.line = 2357;
-										i_197061 = addInt(i_197061, 1);
+										i_198863 = addInt(i_198863, 1);
 									}
 							} while(false);
 						} while(false);
+						F.line = 101;
+						add_172977(tmp_198427, tmp_198481);
 						F.line = 2357;
-						i_197065 = addInt(i_197065, 1);
+						i_198867 = addInt(i_198867, 1);
 					}
 			} while(false);
 		} while(false);
-		F.line = 78;
-		add_172977(tmp_196663, tmp_196675);
-		F.line = 79;
-		var tmp_197007 = tree_174248(43, []);
-		F.line = 79;
-		tmp_197007.class = "command_buttons";
-		F.line = 80;
-		var tmp_197013 = tree_174248(106, []);
-		F.line = 80;
-		tmp_197013.class = "start";
-		F.line = 81;
-		add_172977(tmp_197013, text_174375(makeNimstrLit("setup")));
-		F.line = 82;
-		add_event_handler_193490(tmp_197013, 0, HEX3Aanonymous_197015, kxi_183324[0]);
-		F.line = 82;
-		add_172977(tmp_197007, tmp_197013);
-		F.line = 84;
-		var tmp_197035 = tree_174248(106, []);
-		F.line = 84;
-		tmp_197035.class = "reset";
-		F.line = 84;
-		tmp_197035.id = "reset";
-		F.line = 85;
-		add_172977(tmp_197035, text_174375(makeNimstrLit("reset")));
-		F.line = 86;
-		add_event_handler_193490(tmp_197035, 0, HEX3Aanonymous_197037, kxi_183324[0]);
-		F.line = 86;
-		add_172977(tmp_197007, tmp_197035);
-		F.line = 86;
-		add_172977(tmp_196663, tmp_197007);
-		result_196650 = tmp_196663;
+		F.line = 101;
+		add_172977(tmp_198415, tmp_198427);
+		}
+		
+		F.line = 102;
+		var tmp_198807 = tree_174248(43, []);
+		F.line = 102;
+		tmp_198807.class = "command_buttons";
+		F.line = 103;
+		var tmp_198813 = tree_174248(106, []);
+		F.line = 103;
+		tmp_198813.class = "start";
+		F.line = 104;
+		add_172977(tmp_198813, text_174375(makeNimstrLit("setup")));
+		F.line = 105;
+		add_event_handler_193490(tmp_198813, 0, HEX3Aanonymous_198815, kxi_183324[0]);
+		F.line = 105;
+		add_172977(tmp_198807, tmp_198813);
+		F.line = 108;
+		var tmp_198835 = tree_174248(106, []);
+		F.line = 108;
+		tmp_198835.class = "reset";
+		F.line = 108;
+		tmp_198835.id = "reset";
+		F.line = 109;
+		add_172977(tmp_198835, text_174375(makeNimstrLit("reset")));
+		F.line = 110;
+		add_event_handler_193490(tmp_198835, 0, HEX3Aanonymous_198837, kxi_183324[0]);
+		F.line = 110;
+		add_172977(tmp_198807, tmp_198835);
+		F.line = 110;
+		add_172977(tmp_198415, tmp_198807);
+		result_196815 = tmp_198415;
 	framePtr = F.prev;
 
-	return result_196650;
+	return result_196815;
 
 }
 
-function create_dom_197083() {
-				var Tmp1;
-
-	var result_197085 = null;
+function create_dom_198886() {
+	var result_198888 = null;
 
 	var F={procname:"karax_client.createDom",prev:framePtr,filename:"karax_client.nim",line:0};
 	framePtr = F;
-		F.line = 91;
+		F.line = 115;
 		switch (state_196225[0]) {
 		case 1:
-			F.line = 93;
-			result_197085 = setup_gui_196490();
-			F.line = 95;
-			settings_196423.name1 = nimCopy(null, makeNimstrLit("player 1"), NTI138);
-			F.line = 96;
-			settings_196423.name2 = nimCopy(null, makeNimstrLit("player 2"), NTI138);
-			F.line = 97;
-			settings_196423.size = 3;
-			F.line = 98;
-			settings_196423.winCount = 3;
+			F.line = 117;
+			result_198888 = setup_gui_196631();
 			break;
 		case 0:
-			F.line = 100;
-			result_197085 = play_gui_196648();
+			F.line = 119;
+			result_198888 = play_gui_196813();
 			break;
 		case 2:
-				if (eqStrings(settings_196423.name1, [])) Tmp1 = true; else {					Tmp1 = eqStrings(settings_196423.name2, []);				}			if (Tmp1) {
-			F.line = 103;
-			window.alert("fill out player names");
-			F.line = 104;
-			state_196225[0] = 1;
-			F.line = 105;
-			result_197085 = setup_gui_196490();
-			}
-			else {
-				F.line = 107;
-				result_197085 = play_gui_196648();
-			}
-			
+			F.line = 121;
+			result_198888 = play_gui_196813();
 			break;
 		default: 
 			break;
 		}
 	framePtr = F.prev;
 
-	return result_197085;
+	return result_198888;
 
 }
-set_renderer_193277(create_dom_197083, "ROOT", null);
+set_renderer_193277(create_dom_198886, "ROOT", null);
 
 function set_possible_moves_161055(self_161057, moves_161092) {
 	var F={procname:"turn_based_game.set_possible_moves",prev:framePtr,filename:"../../../../.nimble/pkgs/turn_based_game-1.1.3/turn_based_game.nim",line:0};
@@ -3703,51 +4145,51 @@ function chckNilDisp(p_16976, p_16976_Idx) {
 	
 }
 
-function set_possible_moves_168253(self_168255, moves_168258, moves_168258_Idx) {
+function set_possible_moves_168276(self_168278, moves_168281, moves_168281_Idx) {
 	var F={procname:"game_logic.set_possible_moves",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 		L1: do {
-			F.line = 34;
-			var y_168270 = 0;
+			F.line = 44;
+			var y_168293 = 0;
 			F.line = 2104;
-			var colontmp__168302 = 0;
-			F.line = 34;
-			colontmp__168302 = subInt(self_168255.size, 1);
+			var colontmp__168325 = 0;
+			F.line = 44;
+			colontmp__168325 = subInt(self_168278.size, 1);
 			F.line = 2107;
-			var res_168305 = 0;
+			var res_168328 = 0;
 			L2: do {
 				F.line = 2108;
 					L3: while (true) {
-					if (!(res_168305 <= colontmp__168302)) break L3;
+					if (!(res_168328 <= colontmp__168325)) break L3;
 						F.line = 2109;
-						y_168270 = res_168305;
+						y_168293 = res_168328;
 						L4: do {
-							F.line = 35;
-							var x_168282 = 0;
+							F.line = 45;
+							var x_168305 = 0;
 							F.line = 2104;
-							var colontmp__168295 = 0;
-							F.line = 35;
-							colontmp__168295 = subInt(self_168255.size, 1);
+							var colontmp__168318 = 0;
+							F.line = 45;
+							colontmp__168318 = subInt(self_168278.size, 1);
 							F.line = 2107;
-							var res_168298 = 0;
+							var res_168321 = 0;
 							L5: do {
 								F.line = 2108;
 									L6: while (true) {
-									if (!(res_168298 <= colontmp__168295)) break L6;
+									if (!(res_168321 <= colontmp__168318)) break L6;
 										F.line = 2109;
-										x_168282 = res_168298;
-										if ((self_168255.field[chckIndx(x_168282, 0, self_168255.field.length+0-1)-0][chckIndx(y_168270, 0, self_168255.field[chckIndx(x_168282, 0, self_168255.field.length+0-1)-0].length+0-1)-0] == 0)) {
-										F.line = 37;
-										if (moves_168258[moves_168258_Idx] != null) { moves_168258[moves_168258_Idx].push((cstrToNimstr((addInt(x_168282, 1))+"")).concat(cstrToNimstr((addInt(y_168270, 1))+""))); } else { moves_168258[moves_168258_Idx] = [(cstrToNimstr((addInt(x_168282, 1))+"")).concat(cstrToNimstr((addInt(y_168270, 1))+""))]; };
+										x_168305 = res_168321;
+										if ((self_168278.field[chckIndx(x_168305, 0, self_168278.field.length+0-1)-0][chckIndx(y_168293, 0, self_168278.field[chckIndx(x_168305, 0, self_168278.field.length+0-1)-0].length+0-1)-0] == 0)) {
+										F.line = 47;
+										if (moves_168281[moves_168281_Idx] != null) { moves_168281[moves_168281_Idx].push((cstrToNimstr((addInt(x_168305, 1))+"")).concat(cstrToNimstr((addInt(y_168293, 1))+""))); } else { moves_168281[moves_168281_Idx] = [(cstrToNimstr((addInt(x_168305, 1))+"")).concat(cstrToNimstr((addInt(y_168293, 1))+""))]; };
 										}
 										
 										F.line = 2110;
-										res_168298 = addInt(res_168298, 1);
+										res_168321 = addInt(res_168321, 1);
 									}
 							} while(false);
 						} while(false);
 						F.line = 2110;
-						res_168305 = addInt(res_168305, 1);
+						res_168328 = addInt(res_168328, 1);
 					}
 			} while(false);
 		} while(false);
@@ -3773,7 +4215,7 @@ function set_possible_moves_161103(self_161098, moves_161101, moves_161101_Idx) 
 		chckNilDisp(self_161098);
 		if (isObj(self_161098.m_type, NTI168018)) {
 		F.line = 174;
-		set_possible_moves_168253(self_161098, moves_161101, moves_161101_Idx);
+		set_possible_moves_168276(self_161098, moves_161101, moves_161101_Idx);
 		}
 		else {
 		if (isObj(self_161098.m_type, NTI161018)) {
@@ -4315,14 +4757,14 @@ function status_169218(self_169220) {
 
 	var F={procname:"game_logic.status",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 114;
+		F.line = 130;
 		var top_line_169222 = [];
 		L1: do {
-			F.line = 115;
+			F.line = 131;
 			var i_169234 = 0;
 			F.line = 2104;
 			var colontmp__169436 = 0;
-			F.line = 115;
+			F.line = 131;
 			colontmp__169436 = self_169220.size;
 			F.line = 2107;
 			var res_169439 = 1;
@@ -4332,10 +4774,10 @@ function status_169218(self_169220) {
 					if (!(res_169439 <= colontmp__169436)) break L3;
 						F.line = 2109;
 						i_169234 = res_169439;
-						F.line = 116;
-						F.line = 116;
+						F.line = 132;
+						F.line = 132;
 						var fmt_res_169237 = mnewString(0);
-						F.line = 116;
+						F.line = 132;
 						if (fmt_res_169237 != null) { fmt_res_169237 = (fmt_res_169237).concat(makeNimstrLit("  ")); } else { fmt_res_169237 = makeNimstrLit("  "); };
 						F.line = 270;
 						if (fmt_res_169237 != null) { fmt_res_169237 = (fmt_res_169237).concat(cstrToNimstr((i_169234)+"")); } else { fmt_res_169237 = cstrToNimstr((i_169234)+"").slice(); };
@@ -4345,14 +4787,14 @@ function status_169218(self_169220) {
 					}
 			} while(false);
 		} while(false);
-		F.line = 117;
+		F.line = 133;
 		rawEcho(top_line_169222);
 		L4: do {
-			F.line = 118;
+			F.line = 134;
 			var y_169415 = 0;
 			F.line = 2104;
 			var colontmp__169452 = 0;
-			F.line = 118;
+			F.line = 134;
 			colontmp__169452 = subInt(self_169220.size, 1);
 			F.line = 2107;
 			var res_169455 = 0;
@@ -4362,14 +4804,14 @@ function status_169218(self_169220) {
 					if (!(res_169455 <= colontmp__169452)) break L6;
 						F.line = 2109;
 						y_169415 = res_169455;
-						F.line = 119;
+						F.line = 135;
 						var line_169416 = cstrToNimstr((addInt(y_169415, 1))+"");
 						L7: do {
-							F.line = 120;
+							F.line = 136;
 							var x_169428 = 0;
 							F.line = 2104;
 							var colontmp__169445 = 0;
-							F.line = 120;
+							F.line = 136;
 							colontmp__169445 = subInt(self_169220.size, 1);
 							F.line = 2107;
 							var res_169448 = 0;
@@ -4379,14 +4821,14 @@ function status_169218(self_169220) {
 									if (!(res_169448 <= colontmp__169445)) break L9;
 										F.line = 2109;
 										x_169428 = res_169448;
-										F.line = 121;
+										F.line = 137;
 										if (line_169416 != null) { line_169416 = (line_169416).concat(nsuFormatVarargs(makeNimstrLit("[$1]"), [desc_168046[chckIndx(self_169220.field[chckIndx(x_169428, 0, self_169220.field.length+0-1)-0][chckIndx(y_169415, 0, self_169220.field[chckIndx(x_169428, 0, self_169220.field.length+0-1)-0].length+0-1)-0], 0, desc_168046.length+0-1)-0]])); } else { line_169416 = nsuFormatVarargs(makeNimstrLit("[$1]"), [desc_168046[chckIndx(self_169220.field[chckIndx(x_169428, 0, self_169220.field.length+0-1)-0][chckIndx(y_169415, 0, self_169220.field[chckIndx(x_169428, 0, self_169220.field.length+0-1)-0].length+0-1)-0], 0, desc_168046.length+0-1)-0]]).slice(); };
 										F.line = 2110;
 										res_169448 = addInt(res_169448, 1);
 									}
 							} while(false);
 						} while(false);
-						F.line = 122;
+						F.line = 138;
 						rawEcho(line_169416);
 						F.line = 2110;
 						res_169455 = addInt(res_169455, 1);
@@ -4505,57 +4947,191 @@ function display_161116(self_161113, msg_161114) {
 	
 }
 
-function scoring_169586(self_169588) {
-	var result_169589 = 0.0;
+function get_lines_168363(self_168365) {
+	var result_168368 = null;
 
-	var F={procname:"game_logic.scoring",prev:framePtr,filename:"game_logic.nim",line:0};
+	var F={procname:"game_logic.getLines",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
+		F.line = 56;
+		var s_168374 = subInt(self_168365.size, 1);
+		F.line = 57;
+		var v_line_168376 = null;
+		F.line = 58;
+		var h_line_168378 = null;
+		F.line = 59;
+		var s_line1_168380 = null;
+		F.line = 60;
+		var s_line2_168382 = null;
+		F.line = 61;
+		var s_line3_168384 = null;
+		F.line = 62;
+		var s_line4_168386 = null;
 		L1: do {
-			F.line = 135;
-			var line_169598 = null;
-			F.line = 3909;
-			var colontmp__169615 = null;
-			F.line = 135;
-			colontmp__169615 = self_169588.field;
-			F.line = 3911;
-			var i_169618 = 0;
-			F.line = 3912;
-			var l_169620 = (colontmp__169615 != null ? colontmp__169615.length : 0);
+			F.line = 63;
+			var i_168398 = 0;
+			F.line = 2107;
+			var res_168677 = 0;
 			L2: do {
-				F.line = 3913;
+				F.line = 2108;
 					L3: while (true) {
-					if (!(i_169618 < l_169620)) break L3;
-						F.line = 3914;
-						line_169598 = colontmp__169615[chckIndx(i_169618, 0, colontmp__169615.length+0-1)-0];
+					if (!(res_168677 <= s_168374)) break L3;
+						F.line = 2109;
+						i_168398 = res_168677;
+						F.line = 64;
+						v_line_168376 = nimCopy(null, [], NTI168413);
+						F.line = 65;
+						h_line_168378 = nimCopy(null, [], NTI168428);
+						F.line = 66;
+						s_line1_168380 = nimCopy(null, [], NTI168443);
+						F.line = 67;
+						s_line2_168382 = nimCopy(null, [], NTI168458);
+						F.line = 68;
+						s_line3_168384 = nimCopy(null, [], NTI168473);
+						F.line = 69;
+						s_line4_168386 = nimCopy(null, [], NTI168488);
 						L4: do {
-							F.line = 136;
-							var square_169607 = 0;
-							F.line = 3911;
-							var i_169612 = 0;
-							F.line = 3912;
-							var l_169614 = (line_169598 != null ? line_169598.length : 0);
+							F.line = 70;
+							var j_168500 = 0;
+							F.line = 2107;
+							var res_168671 = 0;
 							L5: do {
-								F.line = 3913;
+								F.line = 2108;
 									L6: while (true) {
-									if (!(i_169612 < l_169614)) break L6;
-										F.line = 3914;
-										square_169607 = line_169598[chckIndx(i_169612, 0, line_169598.length+0-1)-0];
-										if ((square_169607 == self_169588.current_player_number)) {
+									if (!(res_168671 <= s_168374)) break L6;
+										F.line = 2109;
+										j_168500 = res_168671;
+										F.line = 72;
+										var Tmp7 = nimCopy(null, self_168365.field[chckIndx(i_168398, 0, self_168365.field.length+0-1)-0][chckIndx(j_168500, 0, self_168365.field[chckIndx(i_168398, 0, self_168365.field.length+0-1)-0].length+0-1)-0], NTI104);
+										if (v_line_168376 != null) { v_line_168376.push(Tmp7); } else { v_line_168376 = [Tmp7]; };
+										F.line = 74;
+										var Tmp8 = nimCopy(null, self_168365.field[chckIndx(j_168500, 0, self_168365.field.length+0-1)-0][chckIndx(i_168398, 0, self_168365.field[chckIndx(j_168500, 0, self_168365.field.length+0-1)-0].length+0-1)-0], NTI104);
+										if (h_line_168378 != null) { h_line_168378.push(Tmp8); } else { h_line_168378 = [Tmp8]; };
+										if ((addInt(i_168398, j_168500) <= s_168374)) {
+										F.line = 77;
+										var Tmp9 = nimCopy(null, self_168365.field[chckIndx(addInt(i_168398, j_168500), 0, self_168365.field.length+0-1)-0][chckIndx(j_168500, 0, self_168365.field[chckIndx(addInt(i_168398, j_168500), 0, self_168365.field.length+0-1)-0].length+0-1)-0], NTI104);
+										if (s_line1_168380 != null) { s_line1_168380.push(Tmp9); } else { s_line1_168380 = [Tmp9]; };
+										F.line = 78;
+										var Tmp10 = nimCopy(null, self_168365.field[chckIndx(addInt(i_168398, j_168500), 0, self_168365.field.length+0-1)-0][chckIndx(subInt(s_168374, j_168500), 0, self_168365.field[chckIndx(addInt(i_168398, j_168500), 0, self_168365.field.length+0-1)-0].length+0-1)-0], NTI104);
+										if (s_line2_168382 != null) { s_line2_168382.push(Tmp10); } else { s_line2_168382 = [Tmp10]; };
+										if ((0 < i_168398)) {
+										F.line = 80;
+										var Tmp11 = nimCopy(null, self_168365.field[chckIndx(subInt(s_168374, addInt(i_168398, j_168500)), 0, self_168365.field.length+0-1)-0][chckIndx(j_168500, 0, self_168365.field[chckIndx(subInt(s_168374, addInt(i_168398, j_168500)), 0, self_168365.field.length+0-1)-0].length+0-1)-0], NTI104);
+										if (s_line3_168384 != null) { s_line3_168384.push(Tmp11); } else { s_line3_168384 = [Tmp11]; };
+										F.line = 81;
+										var Tmp12 = nimCopy(null, self_168365.field[chckIndx(subInt(s_168374, addInt(i_168398, j_168500)), 0, self_168365.field.length+0-1)-0][chckIndx(subInt(s_168374, j_168500), 0, self_168365.field[chckIndx(subInt(s_168374, addInt(i_168398, j_168500)), 0, self_168365.field.length+0-1)-0].length+0-1)-0], NTI104);
+										if (s_line4_168386 != null) { s_line4_168386.push(Tmp12); } else { s_line4_168386 = [Tmp12]; };
 										}
 										
-										F.line = 3915;
-										i_169612 = addInt(i_169612, 1);
-										if (!(((line_169598 != null ? line_169598.length : 0) == l_169614))) {
-										F.line = 3916;
-										failed_assert_impl_20481(makeNimstrLit("/home/manuel/.choosenim/toolchains/nim-0.19.4/lib/system.nim(3916, 11) `len(a) == L` seq modified while iterating over it"));
 										}
 										
+										F.line = 2110;
+										res_168671 = addInt(res_168671, 1);
 									}
 							} while(false);
 						} while(false);
+						if ((self_168365.winCount <= (h_line_168378 != null ? h_line_168378.length : 0))) {
+						F.line = 83;
+						var Tmp13 = nimCopy(null, h_line_168378, NTI168377);
+						if (result_168368 != null) { result_168368.push(Tmp13); } else { result_168368 = [Tmp13]; };
+						}
+						
+						if ((self_168365.winCount <= (v_line_168376 != null ? v_line_168376.length : 0))) {
+						F.line = 85;
+						var Tmp14 = nimCopy(null, v_line_168376, NTI168375);
+						if (result_168368 != null) { result_168368.push(Tmp14); } else { result_168368 = [Tmp14]; };
+						}
+						
+						if ((self_168365.winCount <= (s_line1_168380 != null ? s_line1_168380.length : 0))) {
+						F.line = 87;
+						var Tmp15 = nimCopy(null, s_line1_168380, NTI168379);
+						if (result_168368 != null) { result_168368.push(Tmp15); } else { result_168368 = [Tmp15]; };
+						}
+						
+						if ((self_168365.winCount <= (s_line2_168382 != null ? s_line2_168382.length : 0))) {
+						F.line = 89;
+						var Tmp16 = nimCopy(null, s_line2_168382, NTI168381);
+						if (result_168368 != null) { result_168368.push(Tmp16); } else { result_168368 = [Tmp16]; };
+						}
+						
+						if ((0 < i_168398)) {
+						if ((self_168365.winCount <= (s_line3_168384 != null ? s_line3_168384.length : 0))) {
+						F.line = 92;
+						var Tmp17 = nimCopy(null, s_line3_168384, NTI168383);
+						if (result_168368 != null) { result_168368.push(Tmp17); } else { result_168368 = [Tmp17]; };
+						}
+						
+						if ((self_168365.winCount <= (s_line4_168386 != null ? s_line4_168386.length : 0))) {
+						F.line = 94;
+						var Tmp18 = nimCopy(null, s_line4_168386, NTI168385);
+						if (result_168368 != null) { result_168368.push(Tmp18); } else { result_168368 = [Tmp18]; };
+						}
+						
+						}
+						
+						F.line = 2110;
+						res_168677 = addInt(res_168677, 1);
+					}
+			} while(false);
+		} while(false);
+	framePtr = F.prev;
+
+	return result_168368;
+
+}
+
+function get_lines_168370(self_168365) {
+	var result_168373 = null;
+
+	var F={procname:"game_logic.getLines",prev:framePtr,filename:"game_logic.nim",line:0};
+	framePtr = F;
+	BeforeRet: do {
+		F.line = 55;
+		result_168373 = get_lines_168363(self_168365);
+		break BeforeRet;
+	} while (false);
+	framePtr = F.prev;
+
+	return result_168373;
+
+}
+
+function max_line_length_168694(line_168697) {
+	var result_168699 = {Field0: 0, Field1: 0};
+
+	var F={procname:"game_logic.maxLineLength",prev:framePtr,filename:"game_logic.nim",line:0};
+	framePtr = F;
+		F.line = 100;
+		result_168699["Field1"] = line_168697[chckIndx(0, 0, line_168697.length+0-1)-0];
+		L1: do {
+			F.line = 101;
+			var field_168815 = 0;
+			F.line = 3911;
+			var i_168828 = 0;
+			F.line = 3912;
+			var l_168830 = (line_168697 != null ? line_168697.length : 0);
+			L2: do {
+				F.line = 3913;
+					L3: while (true) {
+					if (!(i_168828 < l_168830)) break L3;
+						F.line = 3914;
+						field_168815 = line_168697[chckIndx(i_168828, 0, line_168697.length+0-1)-0];
+						if (!((field_168815 == 0))) {
+						if ((field_168815 == result_168699["Field1"])) {
+						F.line = 105;
+						result_168699["Field0"] = addInt(result_168699["Field0"], 1);
+						}
+						else {
+							F.line = 108;
+							result_168699["Field0"] = 1;
+							F.line = 109;
+							result_168699["Field1"] = field_168815;
+						}
+						
+						}
+						
 						F.line = 3915;
-						i_169618 = addInt(i_169618, 1);
-						if (!(((colontmp__169615 != null ? colontmp__169615.length : 0) == l_169620))) {
+						i_168828 = addInt(i_168828, 1);
+						if (!(((line_168697 != null ? line_168697.length : 0) == l_168830))) {
 						F.line = 3916;
 						failed_assert_impl_20481(makeNimstrLit("/home/manuel/.choosenim/toolchains/nim-0.19.4/lib/system.nim(3916, 11) `len(a) == L` seq modified while iterating over it"));
 						}
@@ -4565,7 +5141,93 @@ function scoring_169586(self_169588) {
 		} while(false);
 	framePtr = F.prev;
 
-	return result_169589;
+	return result_168699;
+
+}
+
+function HEX2BHEX3D_130910(x_130915, x_130915_Idx, y_130917) {
+	var F={procname:"+=.+=",prev:framePtr,filename:"../../../../.choosenim/toolchains/nim-0.19.4/lib/system.nim",line:0};
+	framePtr = F;
+		F.line = 3801;
+		x_130915[x_130915_Idx] = (x_130915[x_130915_Idx] + y_130917);
+	framePtr = F.prev;
+
+	
+}
+
+function HEX2DHEX3D_169611(x_169616, x_169616_Idx, y_169618) {
+	var F={procname:"-=.-=",prev:framePtr,filename:"../../../../.choosenim/toolchains/nim-0.19.4/lib/system.nim",line:0};
+	framePtr = F;
+		F.line = 3806;
+		x_169616[x_169616_Idx] = (x_169616[x_169616_Idx] - y_169618);
+	framePtr = F.prev;
+
+	
+}
+
+function scoring_169586(self_169588) {
+	var result_169589 = [0.0];
+
+	var F={procname:"game_logic.scoring",prev:framePtr,filename:"game_logic.nim",line:0};
+	framePtr = F;
+		L1: do {
+			F.line = 151;
+			var line_169598 = null;
+			F.line = 3909;
+			var colontmp__169662 = null;
+			F.line = 151;
+			colontmp__169662 = get_lines_168370(self_169588);
+			F.line = 3911;
+			var i_169665 = 0;
+			F.line = 3912;
+			var l_169667 = (colontmp__169662 != null ? colontmp__169662.length : 0);
+			L2: do {
+				F.line = 3913;
+					L3: while (true) {
+					if (!(i_169665 < l_169667)) break L3;
+						F.line = 3914;
+						line_169598 = colontmp__169662[chckIndx(i_169665, 0, colontmp__169662.length+0-1)-0];
+						F.line = 152;
+						var max_len_169599 = max_line_length_168694(line_169598);
+						if ((self_169588.winCount <= max_len_169599["Field0"])) {
+						if ((self_169588.current_player_number == max_len_169599["Field1"])) {
+						F.line = 155;
+						HEX2BHEX3D_130910(result_169589, 0, 1.0000000000000000e+06);
+						}
+						else {
+							F.line = 157;
+						HEX2DHEX3D_169611(result_169589, 0, 1.0000000000000000e+06);
+						}
+						
+						}
+						else {
+							if ((1 < max_len_169599["Field0"])) {
+							if ((self_169588.current_player_number == max_len_169599["Field1"])) {
+							F.line = 161;
+							HEX2BHEX3D_130910(result_169589, 0, (1.0000000000000000e+03 * max_len_169599["Field0"]));
+							}
+							else {
+								F.line = 163;
+							HEX2DHEX3D_169611(result_169589, 0, (1.0000000000000000e+03 * max_len_169599["Field0"]));
+							}
+							
+							}
+							
+						}
+						
+						F.line = 3915;
+						i_169665 = addInt(i_169665, 1);
+						if (!(((colontmp__169662 != null ? colontmp__169662.length : 0) == l_169667))) {
+						F.line = 3916;
+						failed_assert_impl_20481(makeNimstrLit("/home/manuel/.choosenim/toolchains/nim-0.19.4/lib/system.nim(3916, 11) `len(a) == L` seq modified while iterating over it"));
+						}
+						
+					}
+			} while(false);
+		} while(false);
+	framePtr = F.prev;
+
+	return result_169589[0];
 
 }
 
@@ -4623,11 +5285,11 @@ function get_state_169472(self_169474) {
 	var F={procname:"game_logic.get_state",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 		L1: do {
-			F.line = 125;
+			F.line = 141;
 			var y_169487 = 0;
 			F.line = 2104;
 			var colontmp__169509 = 0;
-			F.line = 125;
+			F.line = 141;
 			colontmp__169509 = subInt(self_169474.size, 1);
 			F.line = 2107;
 			var res_169512 = 0;
@@ -4638,11 +5300,11 @@ function get_state_169472(self_169474) {
 						F.line = 2109;
 						y_169487 = res_169512;
 						L4: do {
-							F.line = 126;
+							F.line = 142;
 							var x_169499 = 0;
 							F.line = 2104;
 							var colontmp__169502 = 0;
-							F.line = 126;
+							F.line = 142;
 							colontmp__169502 = subInt(self_169474.size, 1);
 							F.line = 2107;
 							var res_169505 = 0;
@@ -4652,7 +5314,7 @@ function get_state_169472(self_169474) {
 									if (!(res_169505 <= colontmp__169502)) break L6;
 										F.line = 2109;
 										x_169499 = res_169505;
-										F.line = 127;
+										F.line = 143;
 										if (result_169475 != null) { result_169475 = (result_169475).concat(cstrToNimstr((self_169474.field[chckIndx(x_169499, 0, self_169474.field.length+0-1)-0][chckIndx(y_169487, 0, self_169474.field[chckIndx(x_169499, 0, self_169474.field.length+0-1)-0].length+0-1)-0])+"")); } else { result_169475 = cstrToNimstr((self_169474.field[chckIndx(x_169499, 0, self_169474.field.length+0-1)-0][chckIndx(y_169487, 0, self_169474.field[chckIndx(x_169499, 0, self_169474.field.length+0-1)-0].length+0-1)-0])+"").slice(); };
 										F.line = 2110;
 										res_169505 = addInt(res_169505, 1);
@@ -4850,18 +5512,18 @@ function nsuParseInt(s_125490) {
 
 }
 
-function make_move_168322(self_168324, move_168325) {
-	var result_168326 = null;
+function make_move_168345(self_168347, move_168348) {
+	var result_168349 = null;
 
 	var F={procname:"game_logic.make_move",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 41;
-		self_168324.field[chckIndx(subInt(nsuParseInt(nimCharToStr(move_168325[chckIndx(0, 0, move_168325.length+0-1)-0])), 1), 0, self_168324.field.length+0-1)-0][chckIndx(subInt(nsuParseInt(nimCharToStr(move_168325[chckIndx(1, 0, move_168325.length+0-1)-0])), 1), 0, self_168324.field[chckIndx(subInt(nsuParseInt(nimCharToStr(move_168325[chckIndx(0, 0, move_168325.length+0-1)-0])), 1), 0, self_168324.field.length+0-1)-0].length+0-1)-0] = self_168324.current_player_number;
-		F.line = 42;
-		result_168326 = nimCopy(null, (makeNimstrLit("set mark at ")).concat(move_168325), NTI138);
+		F.line = 51;
+		self_168347.field[chckIndx(subInt(nsuParseInt(nimCharToStr(move_168348[chckIndx(0, 0, move_168348.length+0-1)-0])), 1), 0, self_168347.field.length+0-1)-0][chckIndx(subInt(nsuParseInt(nimCharToStr(move_168348[chckIndx(1, 0, move_168348.length+0-1)-0])), 1), 0, self_168347.field[chckIndx(subInt(nsuParseInt(nimCharToStr(move_168348[chckIndx(0, 0, move_168348.length+0-1)-0])), 1), 0, self_168347.field.length+0-1)-0].length+0-1)-0] = self_168347.current_player_number;
+		F.line = 52;
+		result_168349 = nimCopy(null, (makeNimstrLit("set mark at ")).concat(move_168348), NTI138);
 	framePtr = F.prev;
 
-	return result_168326;
+	return result_168349;
 
 }
 
@@ -4896,7 +5558,7 @@ function make_move_162718(self_162714, move_162715) {
 		chckNilDisp(self_162714);
 		if (isObj(self_162714.m_type, NTI168018)) {
 		F.line = 274;
-		result_162721 = make_move_168322(self_162714, move_162715);
+		result_162721 = make_move_168345(self_162714, move_162715);
 		break BeforeRet;
 		}
 		else {
@@ -4966,11 +5628,11 @@ function restore_state_169529(self_169531, state_169532) {
 	var F={procname:"game_logic.restore_state",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 		L1: do {
-			F.line = 130;
+			F.line = 146;
 			var y_169544 = 0;
 			F.line = 2104;
 			var colontmp__169566 = 0;
-			F.line = 130;
+			F.line = 146;
 			colontmp__169566 = subInt(self_169531.size, 1);
 			F.line = 2107;
 			var res_169569 = 0;
@@ -4981,11 +5643,11 @@ function restore_state_169529(self_169531, state_169532) {
 						F.line = 2109;
 						y_169544 = res_169569;
 						L4: do {
-							F.line = 131;
+							F.line = 147;
 							var x_169556 = 0;
 							F.line = 2104;
 							var colontmp__169559 = 0;
-							F.line = 131;
+							F.line = 147;
 							colontmp__169559 = subInt(self_169531.size, 1);
 							F.line = 2107;
 							var res_169562 = 0;
@@ -4995,7 +5657,7 @@ function restore_state_169529(self_169531, state_169532) {
 									if (!(res_169562 <= colontmp__169559)) break L6;
 										F.line = 2109;
 										x_169556 = res_169562;
-										F.line = 132;
+										F.line = 148;
 										self_169531.field[chckIndx(x_169556, 0, self_169531.field.length+0-1)-0][chckIndx(y_169544, 0, self_169531.field[chckIndx(x_169556, 0, self_169531.field.length+0-1)-0].length+0-1)-0] = nsuParseInt(nimCharToStr(state_169532[chckIndx(addInt(mulInt(y_169544, 3), x_169556), 0, state_169532.length+0-1)-0]));
 										F.line = 2110;
 										res_169562 = addInt(res_169562, 1);
@@ -5618,186 +6280,6 @@ function winning_player_162642(self_162639) {
 
 }
 
-function get_lines_168340(self_168342) {
-	var result_168345 = null;
-
-	var F={procname:"game_logic.getLines",prev:framePtr,filename:"game_logic.nim",line:0};
-	framePtr = F;
-		F.line = 46;
-		var s_168351 = subInt(self_168342.size, 1);
-		F.line = 47;
-		var v_line_168353 = null;
-		F.line = 48;
-		var h_line_168355 = null;
-		F.line = 49;
-		var s_line1_168357 = null;
-		F.line = 50;
-		var s_line2_168359 = null;
-		F.line = 51;
-		var s_line3_168361 = null;
-		F.line = 52;
-		var s_line4_168363 = null;
-		L1: do {
-			F.line = 53;
-			var i_168375 = 0;
-			F.line = 2107;
-			var res_168612 = 0;
-			L2: do {
-				F.line = 2108;
-					L3: while (true) {
-					if (!(res_168612 <= s_168351)) break L3;
-						F.line = 2109;
-						i_168375 = res_168612;
-						F.line = 54;
-						v_line_168353 = nimCopy(null, [], NTI168390);
-						F.line = 55;
-						h_line_168355 = nimCopy(null, [], NTI168405);
-						F.line = 56;
-						s_line1_168357 = nimCopy(null, [], NTI168420);
-						F.line = 57;
-						s_line2_168359 = nimCopy(null, [], NTI168435);
-						F.line = 58;
-						s_line3_168361 = nimCopy(null, [], NTI168450);
-						F.line = 59;
-						s_line4_168363 = nimCopy(null, [], NTI168465);
-						L4: do {
-							F.line = 60;
-							var j_168477 = 0;
-							F.line = 2107;
-							var res_168606 = 0;
-							L5: do {
-								F.line = 2108;
-									L6: while (true) {
-									if (!(res_168606 <= s_168351)) break L6;
-										F.line = 2109;
-										j_168477 = res_168606;
-										F.line = 62;
-										var Tmp7 = nimCopy(null, self_168342.field[chckIndx(i_168375, 0, self_168342.field.length+0-1)-0][chckIndx(j_168477, 0, self_168342.field[chckIndx(i_168375, 0, self_168342.field.length+0-1)-0].length+0-1)-0], NTI104);
-										if (v_line_168353 != null) { v_line_168353.push(Tmp7); } else { v_line_168353 = [Tmp7]; };
-										F.line = 64;
-										var Tmp8 = nimCopy(null, self_168342.field[chckIndx(j_168477, 0, self_168342.field.length+0-1)-0][chckIndx(i_168375, 0, self_168342.field[chckIndx(j_168477, 0, self_168342.field.length+0-1)-0].length+0-1)-0], NTI104);
-										if (h_line_168355 != null) { h_line_168355.push(Tmp8); } else { h_line_168355 = [Tmp8]; };
-										if ((addInt(i_168375, j_168477) <= s_168351)) {
-										F.line = 67;
-										var Tmp9 = nimCopy(null, self_168342.field[chckIndx(addInt(i_168375, j_168477), 0, self_168342.field.length+0-1)-0][chckIndx(j_168477, 0, self_168342.field[chckIndx(addInt(i_168375, j_168477), 0, self_168342.field.length+0-1)-0].length+0-1)-0], NTI104);
-										if (s_line1_168357 != null) { s_line1_168357.push(Tmp9); } else { s_line1_168357 = [Tmp9]; };
-										F.line = 68;
-										var Tmp10 = nimCopy(null, self_168342.field[chckIndx(addInt(i_168375, j_168477), 0, self_168342.field.length+0-1)-0][chckIndx(subInt(s_168351, j_168477), 0, self_168342.field[chckIndx(addInt(i_168375, j_168477), 0, self_168342.field.length+0-1)-0].length+0-1)-0], NTI104);
-										if (s_line2_168359 != null) { s_line2_168359.push(Tmp10); } else { s_line2_168359 = [Tmp10]; };
-										if ((0 < i_168375)) {
-										F.line = 70;
-										var Tmp11 = nimCopy(null, self_168342.field[chckIndx(subInt(s_168351, addInt(i_168375, j_168477)), 0, self_168342.field.length+0-1)-0][chckIndx(j_168477, 0, self_168342.field[chckIndx(subInt(s_168351, addInt(i_168375, j_168477)), 0, self_168342.field.length+0-1)-0].length+0-1)-0], NTI104);
-										if (s_line3_168361 != null) { s_line3_168361.push(Tmp11); } else { s_line3_168361 = [Tmp11]; };
-										F.line = 71;
-										var Tmp12 = nimCopy(null, self_168342.field[chckIndx(subInt(s_168351, addInt(i_168375, j_168477)), 0, self_168342.field.length+0-1)-0][chckIndx(subInt(s_168351, j_168477), 0, self_168342.field[chckIndx(subInt(s_168351, addInt(i_168375, j_168477)), 0, self_168342.field.length+0-1)-0].length+0-1)-0], NTI104);
-										if (s_line4_168363 != null) { s_line4_168363.push(Tmp12); } else { s_line4_168363 = [Tmp12]; };
-										}
-										
-										}
-										
-										F.line = 2110;
-										res_168606 = addInt(res_168606, 1);
-									}
-							} while(false);
-						} while(false);
-						F.line = 72;
-						var Tmp13 = nimCopy(null, h_line_168355, NTI168354);
-						if (result_168345 != null) { result_168345.push(Tmp13); } else { result_168345 = [Tmp13]; };
-						F.line = 73;
-						var Tmp14 = nimCopy(null, v_line_168353, NTI168352);
-						if (result_168345 != null) { result_168345.push(Tmp14); } else { result_168345 = [Tmp14]; };
-						F.line = 74;
-						var Tmp15 = nimCopy(null, s_line1_168357, NTI168356);
-						if (result_168345 != null) { result_168345.push(Tmp15); } else { result_168345 = [Tmp15]; };
-						F.line = 75;
-						var Tmp16 = nimCopy(null, s_line2_168359, NTI168358);
-						if (result_168345 != null) { result_168345.push(Tmp16); } else { result_168345 = [Tmp16]; };
-						if ((0 < i_168375)) {
-						F.line = 77;
-						var Tmp17 = nimCopy(null, s_line3_168361, NTI168360);
-						if (result_168345 != null) { result_168345.push(Tmp17); } else { result_168345 = [Tmp17]; };
-						F.line = 78;
-						var Tmp18 = nimCopy(null, s_line4_168363, NTI168362);
-						if (result_168345 != null) { result_168345.push(Tmp18); } else { result_168345 = [Tmp18]; };
-						}
-						
-						F.line = 2110;
-						res_168612 = addInt(res_168612, 1);
-					}
-			} while(false);
-		} while(false);
-	framePtr = F.prev;
-
-	return result_168345;
-
-}
-
-function get_lines_168347(self_168342) {
-	var result_168350 = null;
-
-	var F={procname:"game_logic.getLines",prev:framePtr,filename:"game_logic.nim",line:0};
-	framePtr = F;
-	BeforeRet: do {
-		F.line = 45;
-		result_168350 = get_lines_168340(self_168342);
-		break BeforeRet;
-	} while (false);
-	framePtr = F.prev;
-
-	return result_168350;
-
-}
-
-function max_line_length_168629(line_168632) {
-	var result_168634 = {Field0: 0, Field1: 0};
-
-	var F={procname:"game_logic.maxLineLength",prev:framePtr,filename:"game_logic.nim",line:0};
-	framePtr = F;
-		F.line = 84;
-		result_168634["Field1"] = line_168632[chckIndx(0, 0, line_168632.length+0-1)-0];
-		L1: do {
-			F.line = 85;
-			var field_168815 = 0;
-			F.line = 3911;
-			var i_168828 = 0;
-			F.line = 3912;
-			var l_168830 = (line_168632 != null ? line_168632.length : 0);
-			L2: do {
-				F.line = 3913;
-					L3: while (true) {
-					if (!(i_168828 < l_168830)) break L3;
-						F.line = 3914;
-						field_168815 = line_168632[chckIndx(i_168828, 0, line_168632.length+0-1)-0];
-						if (!((field_168815 == 0))) {
-						if ((field_168815 == result_168634["Field1"])) {
-						F.line = 89;
-						result_168634["Field0"] = addInt(result_168634["Field0"], 1);
-						}
-						else {
-							F.line = 92;
-							result_168634["Field0"] = 1;
-							F.line = 93;
-							result_168634["Field1"] = field_168815;
-						}
-						
-						}
-						
-						F.line = 3915;
-						i_168828 = addInt(i_168828, 1);
-						if (!(((line_168632 != null ? line_168632.length : 0) == l_168830))) {
-						F.line = 3916;
-						failed_assert_impl_20481(makeNimstrLit("/home/manuel/.choosenim/toolchains/nim-0.19.4/lib/system.nim(3916, 11) `len(a) == L` seq modified while iterating over it"));
-						}
-						
-					}
-			} while(false);
-		} while(false);
-	framePtr = F.prev;
-
-	return result_168634;
-
-}
-
 function all_169130(s_169135, pred_169140) {
 	var result_169141 = false;
 
@@ -5883,7 +6365,7 @@ function determine_winner_168844(self_168846) {
 
 						var F={procname:":anonymous.:anonymous",prev:framePtr,filename:"game_logic.nim",line:0};
 						framePtr = F;
-							F.line = 109;
+							F.line = 125;
 							result_169027 = !((x_169026 == 0));
 						framePtr = F.prev;
 
@@ -5895,7 +6377,7 @@ function determine_winner_168844(self_168846) {
 
 				var F={procname:"determine_winner.:anonymous",prev:framePtr,filename:"game_logic.nim",line:0};
 				framePtr = F;
-					F.line = 108;
+					F.line = 124;
 					result_169022 = all_169045(line_169021, HEX3Aanonymous_169024);
 				framePtr = F.prev;
 
@@ -5907,17 +6389,17 @@ function determine_winner_168844(self_168846) {
 	framePtr = F;
 	BeforeRet: do {
 		if (!((self_168846.winner_player_number == 0))) {
-		F.line = 98;
+		F.line = 114;
 		break BeforeRet;
 		}
 		
 		L1: do {
-			F.line = 99;
+			F.line = 115;
 			var line_169015 = null;
 			F.line = 3909;
 			var colontmp__169199 = null;
-			F.line = 99;
-			colontmp__169199 = get_lines_168347(self_168846);
+			F.line = 115;
+			colontmp__169199 = get_lines_168370(self_168846);
 			F.line = 3911;
 			var i_169202 = 0;
 			F.line = 3912;
@@ -5928,12 +6410,12 @@ function determine_winner_168844(self_168846) {
 					if (!(i_169202 < l_169204)) break L3;
 						F.line = 3914;
 						line_169015 = colontmp__169199[chckIndx(i_169202, 0, colontmp__169199.length+0-1)-0];
-						F.line = 101;
-						var max_length_169016 = max_line_length_168629(line_169015);
+						F.line = 117;
+						var max_length_169016 = max_line_length_168694(line_169015);
 						if ((self_168846.winCount <= max_length_169016["Field0"])) {
-						F.line = 103;
+						F.line = 119;
 						self_168846.winner_player_number = max_length_169016["Field1"];
-						F.line = 104;
+						F.line = 120;
 						break BeforeRet;
 						}
 						
@@ -5948,7 +6430,7 @@ function determine_winner_168844(self_168846) {
 			} while(false);
 		} while(false);
 		if (all_169130(self_168846.field, HEX3Aanonymous_169018)) {
-		F.line = 110;
+		F.line = 126;
 		self_168846.winner_player_number = -1;
 		}
 		
@@ -6022,81 +6504,81 @@ function default_setup_162974(self_162970, players_162972) {
 	
 }
 
-function new_seq_168143(len_168147) {
-	var result_168149 = null;
+function new_seq_168166(len_168170) {
+	var result_168172 = null;
 
 	var F={procname:"newSeq.newSeq",prev:framePtr,filename:"../../../../.choosenim/toolchains/nim-0.19.4/lib/system.nim",line:0};
 	framePtr = F;
 		F.line = 763;
-		result_168149 = new Array(len_168147); for (var i=0;i<len_168147;++i) {result_168149[i]=null;}	framePtr = F.prev;
+		result_168172 = new Array(len_168170); for (var i=0;i<len_168170;++i) {result_168172[i]=null;}	framePtr = F.prev;
 
-	return result_168149;
+	return result_168172;
 
 }
 
-function new_seq_168096(len_168100) {
-	var result_168102 = null;
+function new_seq_168119(len_168123) {
+	var result_168125 = null;
 
 	var F={procname:"newSeq.newSeq",prev:framePtr,filename:"../../../../.choosenim/toolchains/nim-0.19.4/lib/system.nim",line:0};
 	framePtr = F;
 		F.line = 763;
-		result_168102 = new Array(len_168100); for (var i=0;i<len_168100;++i) {result_168102[i]=0;}	framePtr = F.prev;
+		result_168125 = new Array(len_168123); for (var i=0;i<len_168123;++i) {result_168125[i]=0;}	framePtr = F.prev;
 
-	return result_168102;
+	return result_168125;
 
 }
 
-function reset_field_168072(self_168074) {
+function reset_field_168095(self_168097) {
 	var F={procname:"game_logic.resetField",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 25;
+		F.line = 35;
 		F.line = 731;
-		var result_168174 = new_seq_168143(chckRange(self_168074.size, 0, 2147483647));
+		var result_168197 = new_seq_168166(chckRange(self_168097.size, 0, 2147483647));
 		L1: do {
 			F.line = 732;
-			var i_168185 = 0;
+			var i_168208 = 0;
 			F.line = 3616;
-			var colontmp__168217 = 0;
-			F.line = 25;
-			colontmp__168217 = self_168074.size;
+			var colontmp__168240 = 0;
+			F.line = 35;
+			colontmp__168240 = self_168097.size;
 			F.line = 3617;
-			var i_168220 = 0;
+			var i_168243 = 0;
 			L2: do {
 				F.line = 3618;
 					L3: while (true) {
-					if (!(i_168220 < colontmp__168217)) break L3;
+					if (!(i_168243 < colontmp__168240)) break L3;
 						F.line = 3619;
-						i_168185 = i_168220;
-						F.line = 25;
-						result_168174[chckIndx(i_168185, 0, result_168174.length+0-1)-0] = nimCopy(null, new_seq_168096(chckRange(self_168074.size, 0, 2147483647)), NTI168101);
+						i_168208 = i_168243;
+						F.line = 35;
+						result_168197[chckIndx(i_168208, 0, result_168197.length+0-1)-0] = nimCopy(null, new_seq_168119(chckRange(self_168097.size, 0, 2147483647)), NTI168124);
 						F.line = 3620;
-						i_168220 = addInt(i_168220, 1);
+						i_168243 = addInt(i_168243, 1);
 					}
 			} while(false);
 		} while(false);
-		self_168074.field = nimCopy(null, result_168174, NTI168148);
+		self_168097.field = nimCopy(null, result_168197, NTI168171);
 	framePtr = F.prev;
 
 	
 }
 
-function reset_field_168076(self_168074) {
+function reset_field_168099(self_168097) {
 	var F={procname:"game_logic.resetField",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 24;
-		reset_field_168072(self_168074);
+		F.line = 34;
+		reset_field_168095(self_168097);
 	framePtr = F.prev;
 
 	
 }
 
-function setup_168235(self_168237, players_168239) {
+function setup_168258(self_168260, players_168262) {
 	var F={procname:"game_logic.setup",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 29;
-		default_setup_162974(self_168237, players_168239);
-		F.line = 30;
-		reset_field_168076(self_168237);
+		F.line = 39;
+		default_setup_162974(self_168260, players_168262);
+		F.line = 40;
+		reset_field_168099(self_168260);
 	framePtr = F.prev;
 
 	
@@ -6127,7 +6609,7 @@ function setup_162938(self_162934, players_162936) {
 		chckNilDisp(self_162934);
 		if (isObj(self_162934.m_type, NTI168018)) {
 		F.line = 333;
-		setup_168235(self_162934, players_162936);
+		setup_168258(self_162934, players_162936);
 		}
 		else {
 		if (isObj(self_162934.m_type, NTI161018)) {
@@ -6215,29 +6697,55 @@ function play_163002(self_162998) {
 
 }
 
-function setup_169634(self_169636, s_169637) {
+function set_default_168076(self_168078) {
+	var F={procname:"game_logic.setDefault",prev:framePtr,filename:"game_logic.nim",line:0};
+	framePtr = F;
+		F.line = 28;
+		self_168078.name1 = nimCopy(null, makeNimstrLit("player 1"), NTI138);
+		F.line = 29;
+		self_168078.name2 = nimCopy(null, makeNimstrLit("player 2"), NTI138);
+		F.line = 30;
+		self_168078.size = 3;
+		F.line = 31;
+		self_168078.winCount = 3;
+	framePtr = F.prev;
+
+	
+}
+
+function set_default_168080(self_168078) {
+	var F={procname:"game_logic.setDefault",prev:framePtr,filename:"game_logic.nim",line:0};
+	framePtr = F;
+		F.line = 26;
+		set_default_168076(self_168078);
+	framePtr = F.prev;
+
+	
+}
+
+function setup_169681(self_169683, s_169684) {
 		var Tmp1;
 
 	var F={procname:"game_logic.setup",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 143;
-		self_169636.size = s_169637.size;
-		F.line = 144;
-		if ((s_169637.winCount == 0)) {
-		Tmp1 = s_169637.size;
+		F.line = 167;
+		self_169683.size = s_169684.size;
+		F.line = 168;
+		if ((s_169684.winCount == 0)) {
+		Tmp1 = s_169684.size;
 		}
 		else {
-		Tmp1 = s_169637.winCount;
+		Tmp1 = s_169684.winCount;
 		}
 		
-		self_169636.winCount = Tmp1;
-		if (s_169637.ai) {
-		F.line = 146;
-		setup_162938(self_169636, [{name: nimCopy(null, s_169637.name1, NTI138), m_type: NTI161025}, {name: nimCopy(null, s_169637.name2, NTI138), m_type: NTI164164, depth: 0}]);
+		self_169683.winCount = Tmp1;
+		if (s_169684.ai) {
+		F.line = 170;
+		setup_162938(self_169683, [{name: nimCopy(null, s_169684.name1, NTI138), m_type: NTI161025}, {name: nimCopy(null, s_169684.name2, NTI138), depth: 3, m_type: NTI164164}]);
 		}
 		else {
-			F.line = 148;
-		setup_162938(self_169636, [{name: nimCopy(null, s_169637.name1, NTI138), m_type: NTI161025}, {name: nimCopy(null, s_169637.name2, NTI138), m_type: NTI161025}]);
+			F.line = 172;
+		setup_162938(self_169683, [{name: nimCopy(null, s_169684.name1, NTI138), m_type: NTI161025}, {name: nimCopy(null, s_169684.name2, NTI138), m_type: NTI161025}]);
 		}
 		
 	framePtr = F.prev;
@@ -6245,226 +6753,232 @@ function setup_169634(self_169636, s_169637) {
 	
 }
 
-function setup_169639(self_169636, s_169637) {
+function setup_169686(self_169683, s_169684) {
 	var F={procname:"game_logic.setup",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 142;
-		setup_169634(self_169636, s_169637);
+		F.line = 166;
+		setup_169681(self_169683, s_169684);
 	framePtr = F.prev;
 
 	
 }
 
-function play_on_cli_169682(self_169684) {
+function play_on_cli_169729(self_169731) {
 	var F={procname:"game_logic.playOnCli",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		play_163002(self_169684);
+		play_163002(self_169731);
 	framePtr = F.prev;
 
 	
 }
 
-function play_on_cli_169686(self_169684) {
+function play_on_cli_169733(self_169731) {
 	var F={procname:"game_logic.playOnCli",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 150;
-		play_on_cli_169682(self_169684);
+		F.line = 174;
+		play_on_cli_169729(self_169731);
 	framePtr = F.prev;
 
 	
 }
 
-function field_169701(self_169703) {
-	var result_169706 = null;
+function field_169748(self_169750) {
+	var result_169753 = null;
 
 	var F={procname:"game_logic.field",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 154;
-		result_169706 = nimCopy(null, self_169703.field, NTI168019);
+		F.line = 178;
+		result_169753 = nimCopy(null, self_169750.field, NTI168019);
 	framePtr = F.prev;
 
-	return result_169706;
+	return result_169753;
 
 }
 
-function field_169708(self_169703) {
-	var result_169711 = null;
+function field_169755(self_169750) {
+	var result_169758 = null;
 
 	var F={procname:"game_logic.field",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 153;
-		result_169711 = field_169701(self_169703);
+		F.line = 177;
+		result_169758 = field_169748(self_169750);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_169711;
+	return result_169758;
 
 }
 
-function size_169725(self_169727) {
-	var result_169728 = 0;
+function size_169772(self_169774) {
+	var result_169775 = 0;
 
 	var F={procname:"game_logic.size",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 157;
-		result_169728 = self_169727.size;
+		F.line = 181;
+		result_169775 = self_169774.size;
 	framePtr = F.prev;
 
-	return result_169728;
+	return result_169775;
 
 }
 
-function size_169730(self_169727) {
-	var result_169733 = 0;
+function size_169777(self_169774) {
+	var result_169780 = 0;
 
 	var F={procname:"game_logic.size",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 156;
-		result_169733 = size_169725(self_169727);
+		F.line = 180;
+		result_169780 = size_169772(self_169774);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_169733;
+	return result_169780;
 
 }
 
-function get_player_169747(self_169749) {
+function get_player_name_169794(self_169796) {
 		var Tmp1;
 
-	var result_169750 = null;
+	var result_169797 = null;
 
-	var F={procname:"game_logic.getPlayer",prev:framePtr,filename:"game_logic.nim",line:0};
+	var F={procname:"game_logic.getPlayerName",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 161;
-		if ((current_player_162620(self_169749) == null)) {
+		F.line = 185;
+		if ((current_player_162620(self_169796) == null)) {
 		Tmp1 = makeNimstrLit("Game is not setup yet");
 		}
 		else {
-		Tmp1 = current_player_162620(self_169749).name;
+		Tmp1 = current_player_162620(self_169796).name;
 		}
 		
-		result_169750 = nimCopy(null, Tmp1, NTI138);
+		result_169797 = nimCopy(null, Tmp1, NTI138);
 	framePtr = F.prev;
 
-	return result_169750;
+	return result_169797;
 
 }
 
-function get_player_169752(self_169749) {
-	var result_169755 = null;
+function get_player_name_169799(self_169796) {
+	var result_169802 = null;
 
-	var F={procname:"game_logic.getPlayer",prev:framePtr,filename:"game_logic.nim",line:0};
+	var F={procname:"game_logic.getPlayerName",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 160;
-		result_169755 = get_player_169747(self_169749);
+		F.line = 184;
+		result_169802 = get_player_name_169794(self_169796);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_169755;
+	return result_169802;
 
 }
 
-function make_turn_169780(self_169782, move_169783) {
-	var result_169784 = null;
+function make_turn_169827(self_169829, move_169830) {
+	var result_169831 = null;
 
 	var F={procname:"game_logic.make_turn",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 168;
-		result_169784 = nimCopy(null, makeNimstrLit("playing"), NTI138);
-		if (is_over_162755(self_169782)) {
-		F.line = 170;
-		result_169784 = nimCopy(null, makeNimstrLit("Game is Over"), NTI138);
+		if (is_over_162755(self_169829)) {
+		F.line = 193;
+		result_169831 = nimCopy(null, makeNimstrLit("Game is Over"), NTI138);
 		break BeforeRet;
 		}
 		
-		F.line = 171;
-		make_move_162718(self_169782, move_169783);
-		F.line = 172;
-		determine_winner_162793(self_169782);
-		if (is_over_162755(self_169782)) {
-		if ((self_169782.winner_player_number == -1)) {
-		F.line = 175;
-		result_169784 = nimCopy(null, makeNimstrLit("It\'s a tie"), NTI138);
+		F.line = 194;
+		make_move_162718(self_169829, move_169830);
+		F.line = 195;
+		determine_winner_162793(self_169829);
+		if (is_over_162755(self_169829)) {
+		if ((self_169829.winner_player_number == -1)) {
+		F.line = 198;
+		result_169831 = nimCopy(null, makeNimstrLit("It\'s a tie"), NTI138);
 		}
 		else {
-			F.line = 177;
-			F.line = 177;
-			var fmt_res_169792 = mnewString(0);
-			F.line = 177;
-			if (fmt_res_169792 != null) { fmt_res_169792 = (fmt_res_169792).concat(makeNimstrLit("Winner is ")); } else { fmt_res_169792 = makeNimstrLit("Winner is "); };
+			F.line = 200;
+			F.line = 200;
+			var fmt_res_169839 = mnewString(0);
+			F.line = 200;
+			if (fmt_res_169839 != null) { fmt_res_169839 = (fmt_res_169839).concat(makeNimstrLit("Winner is ")); } else { fmt_res_169839 = makeNimstrLit("Winner is "); };
 			F.line = 260;
-			if (fmt_res_169792 != null) { fmt_res_169792 = (fmt_res_169792).concat(winning_player_162642(self_169782).name); } else { fmt_res_169792 = winning_player_162642(self_169782).name.slice(); };
-			result_169784 = nimCopy(null, fmt_res_169792, NTI138);
+			if (fmt_res_169839 != null) { fmt_res_169839 = (fmt_res_169839).concat(winning_player_162642(self_169829).name); } else { fmt_res_169839 = winning_player_162642(self_169829).name.slice(); };
+			result_169831 = nimCopy(null, fmt_res_169839, NTI138);
 		}
 		
-		F.line = 178;
+		F.line = 201;
 		break BeforeRet;
 		}
 		
-		F.line = 179;
-		finish_turn_162697(self_169782);
-		if (isObj(current_player_162620(self_169782).m_type, NTI164164)) {
-		F.line = 182;
-		make_move_162718(self_169782, get_move_161141(current_player_162620(self_169782), self_169782));
-		F.line = 183;
-		finish_turn_162697(self_169782);
+		F.line = 202;
+		finish_turn_162697(self_169829);
+		F.line = 203;
+		F.line = 203;
+		var fmt_res_170003 = mnewString(0);
+		F.line = 260;
+		if (fmt_res_170003 != null) { fmt_res_170003 = (fmt_res_170003).concat(current_player_162620(self_169829).name); } else { fmt_res_170003 = current_player_162620(self_169829).name.slice(); };
+		F.line = 203;
+		if (fmt_res_170003 != null) { fmt_res_170003 = (fmt_res_170003).concat(makeNimstrLit("\'s turn")); } else { fmt_res_170003 = makeNimstrLit("\'s turn"); };
+		result_169831 = nimCopy(null, fmt_res_170003, NTI138);
+		if (isObj(current_player_162620(self_169829).m_type, NTI164164)) {
+		F.line = 206;
+		make_move_162718(self_169829, get_move_161141(current_player_162620(self_169829), self_169829));
+		F.line = 207;
+		finish_turn_162697(self_169829);
 		}
 		
 	} while (false);
 	framePtr = F.prev;
 
-	return result_169784;
+	return result_169831;
 
 }
 
-function make_turn_169786(self_169782, move_169783) {
-	var result_169789 = null;
+function make_turn_169833(self_169829, move_169830) {
+	var result_169836 = null;
 
 	var F={procname:"game_logic.make_turn",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 167;
-		result_169789 = make_turn_169780(self_169782, move_169783);
+		F.line = 191;
+		result_169836 = make_turn_169827(self_169829, move_169830);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_169789;
+	return result_169836;
 
 }
 
-function finished_170026(self_170028) {
-	var result_170029 = false;
+function finished_170226(self_170228) {
+	var result_170229 = false;
 
 	var F={procname:"game_logic.finished",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 187;
-		result_170029 = is_over_162755(self_170028);
+		F.line = 211;
+		result_170229 = is_over_162755(self_170228);
 	framePtr = F.prev;
 
-	return result_170029;
+	return result_170229;
 
 }
 
-function finished_170031(self_170028) {
-	var result_170034 = false;
+function finished_170231(self_170228) {
+	var result_170234 = false;
 
 	var F={procname:"game_logic.finished",prev:framePtr,filename:"game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 186;
-		result_170034 = finished_170026(self_170028);
+		F.line = 210;
+		result_170234 = finished_170226(self_170228);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_170034;
+	return result_170234;
 
 }

@@ -23,6 +23,14 @@ const
     lineScore =1_000
 
 
+method setDefault*(self: Settings) {.base.} =
+  # set default settings
+  self.name1 = "player 1"
+  self.name2 = "player 2"
+  self.size = 3
+  self.winCount = 3
+
+
 method resetField(self: GameOfTicTacToe) {.base.} =
   self.field = newSeqWith(self.size,newSeq[int](self.size))
 
@@ -137,7 +145,7 @@ method get_state(self: GameOfTicTacToe): string =
 method restore_state(self: GameOfTicTacToe, state: string) =
     for y in 0..self.size-1:
         for x in 0..self.size-1:
-            self.field[x][y] = ($state[y*3+x]).parseInt()
+            self.field[x][y] = ($state[y*self.size+x]).parseInt()
     
 method scoring(self: GameOfTicTacToe): float =
   for line in self.getLines:
@@ -173,7 +181,7 @@ method size*(self: GameOfTicTacToe): int {.base.}=
   self.size
 
 
-method getPlayer*(self: GameOfTicTacToe): string {.base.} =
+method getPlayerName*(self: GameOfTicTacToe): string {.base.} =
   if self.current_player == nil:
     "Game is not setup yet"
   else:
@@ -181,7 +189,6 @@ method getPlayer*(self: GameOfTicTacToe): string {.base.} =
 
 
 method make_turn*(self: GameOfTicTacToe, move: string): string {.base.} = 
-  result = "playing"
   if self.is_over:
     return "Game is Over"
   discard self.make_move(move)
@@ -193,6 +200,7 @@ method make_turn*(self: GameOfTicTacToe, move: string): string {.base.} =
         result = fmt"Winner is {self.winning_player.name}"
     return
   self.finish_turn()
+  result = fmt"{self.currentPlayer.name}'s turn"
   # if playing agains ai do it's turn
   if self.current_player of NegamaxPlayer:
     discard self.make_move(self.current_player.get_move(self))
