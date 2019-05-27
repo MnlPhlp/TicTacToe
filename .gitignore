@@ -6,3 +6,4 @@
 !*.nim 
 !website/style.css
 !website/TicTacToe.html
+!*.nimble
