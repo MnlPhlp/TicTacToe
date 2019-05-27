@@ -1,11 +1,8 @@
 import 
-  strutils,
   strformat,
-  karax / [kdom,vstyles],
+  karax / [kbase, karax, karaxdsl, vdom, kdom, jstrutils, vstyles],
 
   game_logic
-
-include karax / prelude
 
 
 let game = new(GameOfTicTacToe)
