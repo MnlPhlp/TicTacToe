@@ -18,3 +18,6 @@ task karax, "build karax client":
 
 task cli, "build comandline client":
   exec "nim c -o:cli_client src/cli_client.nim"
+
+task debug-cli "build commandline client for debugging"
+  exec "nim c --debugger:native -o:cli_client src/cli_client.nim"
