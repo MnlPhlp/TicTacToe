@@ -177,8 +177,11 @@ method playOnCli*(self: GameOfTicTacToe) {.base.} =
 method field*(self: GameOfTicTacToe): seq[seq[int]] {.base.} =
   self.field
   
-method size*(self: GameOfTicTacToe): int {.base.}=
+method size*(self: GameOfTicTacToe): int {.base.} =
   self.size
+
+method winCount*(self: GameOfTicTacToe): int {.base.} =
+  self.winCount
 
 
 method getPlayerName*(self: GameOfTicTacToe): string {.base.} =

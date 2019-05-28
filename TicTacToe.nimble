@@ -20,4 +20,4 @@ task cli, "build comandline client":
   exec "nim c -o:cli_client src/cli_client.nim"
 
 task debug_cli, "build commandline client for debugging":
-  exec "nim c --debugger:native -o:cli_client src/cli_client.nim"
+  exec "nim c --debugger:native -o:debug_cli src/cli_client.nim"

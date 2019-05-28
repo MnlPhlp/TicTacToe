@@ -24,6 +24,9 @@ proc inputHandler(ev: Event, n: VNode) =
       settings.size = if $n.value != "" : n.value.parseInt else: 3
     of "winCount":
       settings.winCount = if $n.value != "" : n.value.parseInt else: 3
+      if settings.winCount > settings.size:
+        window.alert("win-count needs to be smaller than size")
+        n.value=""
 
 proc startGame()=
   game.setup(settings)
@@ -43,7 +46,7 @@ proc clickField(ev: Event, n: VNode) =
   
 
 proc setupGUI(): VNode =
-  buildHtml(tdiv(class="center")):
+  buildHtml(tdiv):
     tdiv(class = "grid-container"):
       tdiv(class="grid-item"):
         label(`for`="name1"):
@@ -68,36 +71,28 @@ proc setupGUI(): VNode =
           text "Win count: "
       tdiv(class="grid-item"):
         input(id="winCount", placeholder = "3", onkeyup=inputHandler)
-    button(onclick=startGame, class="finish-setup command-buttons"):
-      text "start Game"
+    tdiv(class="center"):
+      button(onclick=startGame, class="finish-setup command-buttons"):
+        text "start Game"
     
 
 proc playGUI():VNode =
   # choose smaller side as unit to fit field on page
   let unit = if window.innerWidth < window.innerHeight : "vw" else: "vh"
   let buttonStyle = style(
-      (StyleAttr.width, kstring(fmt"calc(70{unit}/{game.size})")),
-      (StyleAttr.height, kstring(fmt"calc(70{unit}/{game.size})")),
-      (StyleAttr.lineHeight, kstring(fmt"calc(70{unit}/{game.size})")),
-      (StyleAttr.fontSize, kstring(fmt"calc(70{unit}/{game.size})"))
+      (StyleAttr.width, kstring(fmt"calc(65{unit}/{game.size})")),
+      (StyleAttr.height, kstring(fmt"calc(65{unit}/{game.size})")),
+      (StyleAttr.lineHeight, kstring(fmt"calc(65{unit}/{game.size})")),
+      (StyleAttr.fontSize, kstring(fmt"calc(65{unit}/{game.size})"))
     )
   buildHtml(tdiv(class = "center")):
+    # show player names and highlight current player
     p:
-      # show player names and highlight current player
       if state == 2:
-        if game.getPlayerName == settings.name1:
-          span(style = style((StyleAttr.background,kstring"orange"),(StyleAttr.marginRight,kstring"5px"))):
-            text settings.name1
-          span(style = style((StyleAttr.background,kstring"none"),(StyleAttr.marginRight,kstring"5px"))):
-            text settings.name2
-        else:
-          span(style = style((StyleAttr.background,kstring"none"),(StyleAttr.marginLeft,kstring"5px"))):
-            text settings.name1
-          span(style = style((StyleAttr.background,kstring"orange"),(StyleAttr.marginLeft,kstring"5px"))):
-            text settings.name2
+        text fmt"get {settings.winCount} symbols in a row to win"
       else:
         text "Setup game to play"
-
+    
     if state == 2:
       table:
         for i,line in game.field:

@@ -1,8 +1,8 @@
 .grid-container {
     display: grid;
-    grid-gap: 1vh;
-    margin-left: 38%;
-    grid-template-columns: 90px calc(80vw/3);
+    grid-gap: 1vw;
+    margin-left: calc(calc(69vw - 90px)/2);
+    grid-template-columns: 86px 30vw;
 }
 
 .grid-item {
