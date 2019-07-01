@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "1.0"
 author        = "Manuel Philipp"
 description   = "a special version of TicTacToe with various game modes"
 license       = "MIT"
