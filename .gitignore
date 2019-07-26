@@ -1,9 +1,5 @@
-#exclude all files
-* 
-#include folders
-!/**/ 
-#include nim sourcode
-!*.nim 
-!website/style.css
-!website/TicTacToe.html
-!*.nimble
+.vscode
+cli_client
+debug_cli
+*.exe
+deploy.sh
