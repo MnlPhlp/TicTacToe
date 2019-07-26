@@ -5,4 +5,4 @@
 - [Web-Client](karax_client.html)
 - [Cli-Client](cli_client.html)
 
-[**play the game**](../website/TicTacToe.html)
+[**play the game**](play/TicTacToe.html)
