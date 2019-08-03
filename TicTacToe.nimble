@@ -14,7 +14,9 @@ requires "nim >= 0.19.4"
 requires "karax >= 1.1.0"
 
 task karax, "build karax client":
-  exec "nim js -o:website/TicTacToe.js src/karax_client"
+  exec "cp website/TicTacToe.html docs/play/index.html"
+  exec "cp website/style.css docs/play/style.css"
+  exec "nim js -o:docs/play/TicTacToe.js src/karax_client"
 
 task cli, "build comandline client":
   exec "nim c -o:cli_client src/cli_client.nim"

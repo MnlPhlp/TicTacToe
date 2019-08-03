@@ -1,14 +1,26 @@
 .grid-container {
     display: grid;
-    grid-gap: 1vw;
-    margin-left: calc(calc(69vw - 90px)/2);
-    grid-template-columns: 86px 30vw;
+    grid-gap: 10px;
+    margin-left: calc(calc(100vw - 420px)/2);
+    grid-template-columns: 120px 290px;
 }
 
 .grid-item {
     text-align: left;
+    line-height: 30px;
   }
 
+
+.grid-container-game {
+    display: grid;
+    grid-gap: 10px;
+    margin-left: calc(calc(100vw - 380px)/2);
+    grid-template-columns: 120px 120px 120px;
+}
+
+.grid-item-game {
+    text-align: left;
+  }
 
 .fieldButton{
     border: 1px solid black;
@@ -39,13 +51,6 @@ h1{
     font-size: 1.5rem
 }
 
-html, body {
-    margin: 0; 
-    height: 100%; 
-    overflow: hidden;
-    background-color: #555;
-}
-
 .center{
     width: 100%;
     text-align: center;
@@ -55,25 +60,6 @@ table{
     margin-left: auto;
     margin-right: auto;
 }
-
-.settings{
-    padding:20px;
-}
-
-.settings .field { padding: 4px; margin:1px; }
-
-.settings .field label { 
-    width:30%; 
-    margin-left:5px; 
-    text-align: right;
-}
-
-.settings .field input {
-    width: 400px;
-    margin-left: 5px;
-}
-
-
 
 label {
     text-align: right;

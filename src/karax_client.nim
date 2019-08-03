@@ -77,14 +77,6 @@ proc setupGUI(): VNode =
     
 
 proc playGUI():VNode =
-  # choose smaller side as unit to fit field on page
-  let unit = if window.innerWidth < window.innerHeight : "vw" else: "vh"
-  let buttonStyle = style(
-      (StyleAttr.width, kstring(fmt"calc(65{unit}/{game.size})")),
-      (StyleAttr.height, kstring(fmt"calc(65{unit}/{game.size})")),
-      (StyleAttr.lineHeight, kstring(fmt"calc(65{unit}/{game.size})")),
-      (StyleAttr.fontSize, kstring(fmt"calc(65{unit}/{game.size})"))
-    )
   buildHtml(tdiv(class = "center")):
     # show player names and highlight current player
     p:
@@ -94,13 +86,12 @@ proc playGUI():VNode =
         text "Setup game to play"
     
     if state == 2:
-      table:
+      tdiv(class="grid-container-game"):
         for i,line in game.field:
-          tr:
             for j,field in line:
-              td:
+              tdiv(class="grid-item-game"):
                 #create button-grid as field
-                button(style = buttonStyle, class = "fieldButton", id=fmt"{i+1}.{j+1}", onclick = clickField,
+                button(class = "fieldButton", id=fmt"{i+1}.{j+1}", onclick = clickField,
                 disabled = kstring(toDisabled(state==0 or field != 0 or game.finished or fieldBlocked))):
                   text desc[field]
     tdiv(class="command-buttons"):
