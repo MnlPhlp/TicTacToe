@@ -3399,7 +3399,7 @@ function start_game_213480() {
 	var F={procname:"karax_client.startGame",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/karax_client.nim",line:0};
 	framePtr = F;
 		F.line = 32;
-		setup_212818(game_213236, settings_213436);
+		setup_212727(game_213236, settings_213436);
 		F.line = 33;
 		state_213438[0] = 2;
 	framePtr = F.prev;
@@ -4101,12 +4101,12 @@ function click_field_213495(ev_213497, n_213498) {
 		}
 		
 		F.line = 42;
-		make_turn_212953(game_213236, cstrToNimstr(n_213498.id));
+		make_turn_212862(game_213236, cstrToNimstr(n_213498.id));
 		F.line = 43;
 		field_blocked_213439[0] = false;
-		if (finished_212972(game_213236)) {
+		if (finished_212881(game_213236)) {
 		F.line = 45;
-		window.alert(toJSStr((get_player_name_212925(game_213236) || []).concat(makeNimstrLit(" won the game") || [])));
+		window.alert(toJSStr((get_player_name_212834(game_213236) || []).concat(makeNimstrLit(" won the game") || [])));
 		}
 		
 	framePtr = F.prev;
@@ -4157,7 +4157,7 @@ function play_gui_213692() {
 			var F={procname:"playGUI.:anonymous",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/karax_client.nim",line:0};
 			framePtr = F;
 				F.line = 106;
-				setup_212818(game_213236, settings_213436);
+				setup_212727(game_213236, settings_213436);
 			framePtr = F.prev;
 
 			
@@ -4206,7 +4206,7 @@ function play_gui_213692() {
 			F.line = 115;
 			var colontmp__214345 = null;
 			F.line = 90;
-			colontmp__214345 = field_212857(game_213236);
+			colontmp__214345 = field_212766(game_213236);
 			F.line = 117;
 			var i_214347 = 0;
 			F.line = 118;
@@ -4257,7 +4257,7 @@ function play_gui_213692() {
 										F.line = 94;
 										add_event_handler_200532(tmp_213699, 0, click_field_213495, kxi_190324[0]);
 										F.line = 95;
-										if ((state_213438[0] == 0)) Tmp9 = true; else {											Tmp9 = !((field_214015 == 0));										}										if (Tmp9) Tmp8 = true; else {											Tmp8 = finished_212972(game_213236);										}										if (Tmp8) Tmp7 = true; else {											Tmp7 = field_blocked_213439[0];										}										set_attr_172568(tmp_213699, "disabled", to_disabled_200858(Tmp7));
+										if ((state_213438[0] == 0)) Tmp9 = true; else {											Tmp9 = !((field_214015 == 0));										}										if (Tmp9) Tmp8 = true; else {											Tmp8 = finished_212881(game_213236);										}										if (Tmp8) Tmp7 = true; else {											Tmp7 = field_blocked_213439[0];										}										set_attr_172568(tmp_213699, "disabled", to_disabled_200858(Tmp7));
 										F.line = 96;
 										add_172800(tmp_213699, text_174364(desc_211056[chckIndx(field_214015, 0, desc_211056.length+0-1)-0]));
 										F.line = 96;
@@ -5082,84 +5082,84 @@ function nsuFormatVarargs(formatstr_156657, a_156659) {
 
 }
 
-function status_212576(self_212578) {
-	var result_212579 = null;
+function status_212485(self_212487) {
+	var result_212488 = null;
 
 	var F={procname:"game_logic.status",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 130;
-		var top_line_212580 = [];
+		F.line = 132;
+		var top_line_212489 = [];
 		L1: do {
-			F.line = 131;
-			var i_212589 = 0;
+			F.line = 133;
+			var i_212498 = 0;
 			F.line = 2610;
 			var colontmp__214421 = 0;
-			F.line = 131;
-			colontmp__214421 = self_212578.size;
+			F.line = 133;
+			colontmp__214421 = self_212487.size;
 			F.line = 2620;
 			var res_214422 = 1;
 			L2: do {
 				F.line = 2621;
 					L3: while (true) {
 					if (!(res_214422 <= colontmp__214421)) break L3;
-						F.line = 131;
-						i_212589 = res_214422;
-						F.line = 132;
-						F.line = 132;
-						var fmt_res_212590 = [mnewString(0)];
-						F.line = 132;
-						if (fmt_res_212590[0] != null) { fmt_res_212590[0] = (fmt_res_212590[0]).concat(makeNimstrLit("  ")); } else { fmt_res_212590[0] = makeNimstrLit("  "); };
-						F.line = 132;
-						format_value_211267(fmt_res_212590, 0, i_212589, []);
-						if (top_line_212580 != null) { top_line_212580 = (top_line_212580).concat(fmt_res_212590[0]); } else { top_line_212580 = fmt_res_212590[0].slice(); };
+						F.line = 133;
+						i_212498 = res_214422;
+						F.line = 134;
+						F.line = 134;
+						var fmt_res_212499 = [mnewString(0)];
+						F.line = 134;
+						if (fmt_res_212499[0] != null) { fmt_res_212499[0] = (fmt_res_212499[0]).concat(makeNimstrLit("  ")); } else { fmt_res_212499[0] = makeNimstrLit("  "); };
+						F.line = 134;
+						format_value_211267(fmt_res_212499, 0, i_212498, []);
+						if (top_line_212489 != null) { top_line_212489 = (top_line_212489).concat(fmt_res_212499[0]); } else { top_line_212489 = fmt_res_212499[0].slice(); };
 						F.line = 2623;
 						res_214422 = addInt(res_214422, 1);
 					}
 			} while(false);
 		} while(false);
-		F.line = 133;
-		rawEcho(top_line_212580);
+		F.line = 135;
+		rawEcho(top_line_212489);
 		L4: do {
-			F.line = 134;
-			var y_212609 = 0;
+			F.line = 136;
+			var y_212518 = 0;
 			F.line = 2610;
 			var colontmp__214435 = 0;
-			F.line = 134;
-			colontmp__214435 = subInt(self_212578.size, 1);
+			F.line = 136;
+			colontmp__214435 = subInt(self_212487.size, 1);
 			F.line = 2620;
 			var res_214436 = 0;
 			L5: do {
 				F.line = 2621;
 					L6: while (true) {
 					if (!(res_214436 <= colontmp__214435)) break L6;
-						F.line = 134;
-						y_212609 = res_214436;
-						F.line = 135;
-						var line_212610 = cstrToNimstr((addInt(y_212609, 1))+"");
+						F.line = 136;
+						y_212518 = res_214436;
+						F.line = 137;
+						var line_212519 = cstrToNimstr((addInt(y_212518, 1))+"");
 						L7: do {
-							F.line = 136;
-							var x_212619 = 0;
+							F.line = 138;
+							var x_212528 = 0;
 							F.line = 2610;
 							var colontmp__214429 = 0;
-							F.line = 136;
-							colontmp__214429 = subInt(self_212578.size, 1);
+							F.line = 138;
+							colontmp__214429 = subInt(self_212487.size, 1);
 							F.line = 2620;
 							var res_214430 = 0;
 							L8: do {
 								F.line = 2621;
 									L9: while (true) {
 									if (!(res_214430 <= colontmp__214429)) break L9;
-										F.line = 136;
-										x_212619 = res_214430;
-										F.line = 137;
-										if (line_212610 != null) { line_212610 = (line_212610).concat(nsuFormatVarargs(makeNimstrLit("[$1]"), [nimCopy(null, desc_211056[chckIndx(self_212578.field[chckIndx(x_212619, 0, self_212578.field.length+0-1)-0][chckIndx(y_212609, 0, self_212578.field[chckIndx(x_212619, 0, self_212578.field.length+0-1)-0].length+0-1)-0], 0, desc_211056.length+0-1)-0], NTI138)])); } else { line_212610 = nsuFormatVarargs(makeNimstrLit("[$1]"), [nimCopy(null, desc_211056[chckIndx(self_212578.field[chckIndx(x_212619, 0, self_212578.field.length+0-1)-0][chckIndx(y_212609, 0, self_212578.field[chckIndx(x_212619, 0, self_212578.field.length+0-1)-0].length+0-1)-0], 0, desc_211056.length+0-1)-0], NTI138)]).slice(); };
+										F.line = 138;
+										x_212528 = res_214430;
+										F.line = 139;
+										if (line_212519 != null) { line_212519 = (line_212519).concat(nsuFormatVarargs(makeNimstrLit("[$1]"), [nimCopy(null, desc_211056[chckIndx(self_212487.field[chckIndx(x_212528, 0, self_212487.field.length+0-1)-0][chckIndx(y_212518, 0, self_212487.field[chckIndx(x_212528, 0, self_212487.field.length+0-1)-0].length+0-1)-0], 0, desc_211056.length+0-1)-0], NTI138)])); } else { line_212519 = nsuFormatVarargs(makeNimstrLit("[$1]"), [nimCopy(null, desc_211056[chckIndx(self_212487.field[chckIndx(x_212528, 0, self_212487.field.length+0-1)-0][chckIndx(y_212518, 0, self_212487.field[chckIndx(x_212528, 0, self_212487.field.length+0-1)-0].length+0-1)-0], 0, desc_211056.length+0-1)-0], NTI138)]).slice(); };
 										F.line = 2623;
 										res_214430 = addInt(res_214430, 1);
 									}
 							} while(false);
 						} while(false);
-						F.line = 138;
-						rawEcho(line_212610);
+						F.line = 140;
+						rawEcho(line_212519);
 						F.line = 2623;
 						res_214436 = addInt(res_214436, 1);
 					}
@@ -5167,7 +5167,7 @@ function status_212576(self_212578) {
 		} while(false);
 	framePtr = F.prev;
 
-	return result_212579;
+	return result_212488;
 
 }
 
@@ -5234,7 +5234,7 @@ function status_203114(self_203113) {
 		chckNilDisp(self_203113);
 		if (isObj(self_203113.m_type, NTI211018)) {
 		F.line = 175;
-		result_205052 = status_212576(self_203113);
+		result_205052 = status_212485(self_203113);
 		break BeforeRet;
 		}
 		else {
@@ -5484,28 +5484,28 @@ function HEX2BHEX3D_156261(x_156265, x_156265_Idx, y_156266) {
 	
 }
 
-function HEX2DHEX3D_212728(x_212732, x_212732_Idx, y_212733) {
+function HEX2DHEX3D_212637(x_212641, x_212641_Idx, y_212642) {
 	var F={procname:"-=.-=",prev:framePtr,filename:"/home/manuel/.choosenim/toolchains/nim-0.20.0/lib/system.nim",line:0};
 	framePtr = F;
 		F.line = 4028;
-		x_212732[x_212732_Idx] = (x_212732[x_212732_Idx] - y_212733);
+		x_212641[x_212641_Idx] = (x_212641[x_212641_Idx] - y_212642);
 	framePtr = F.prev;
 
 	
 }
 
-function scoring_212709(self_212711) {
-	var result_212712 = [0.0];
+function scoring_212618(self_212620) {
+	var result_212621 = [0.0];
 
 	var F={procname:"game_logic.scoring",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
 		L1: do {
-			F.line = 151;
-			var line_212719 = null;
+			F.line = 153;
+			var line_212628 = null;
 			F.line = 183;
 			var colontmp__214458 = null;
-			F.line = 151;
-			colontmp__214458 = get_lines_211969(self_212711);
+			F.line = 153;
+			colontmp__214458 = get_lines_211969(self_212620);
 			F.line = 185;
 			var i_214460 = 0;
 			F.line = 186;
@@ -5514,30 +5514,30 @@ function scoring_212709(self_212711) {
 				F.line = 187;
 					L3: while (true) {
 					if (!(i_214460 < l_214461)) break L3;
-						F.line = 151;
-						line_212719 = colontmp__214458[chckIndx(i_214460, 0, colontmp__214458.length+0-1)-0];
-						F.line = 152;
-						var max_len_212720 = max_line_length_211972(line_212719);
-						if ((self_212711.winCount <= max_len_212720["Field0"])) {
-						if ((self_212711.current_player_number == max_len_212720["Field1"])) {
-						F.line = 155;
-						HEX2BHEX3D_156261(result_212712, 0, 1.0000000000000000e+06);
+						F.line = 153;
+						line_212628 = colontmp__214458[chckIndx(i_214460, 0, colontmp__214458.length+0-1)-0];
+						F.line = 154;
+						var max_len_212629 = max_line_length_211972(line_212628);
+						if ((self_212620.winCount <= max_len_212629["Field0"])) {
+						if ((self_212620.current_player_number == max_len_212629["Field1"])) {
+						F.line = 157;
+						HEX2BHEX3D_156261(result_212621, 0, 1.0000000000000000e+06);
 						}
 						else {
-							F.line = 157;
-						HEX2DHEX3D_212728(result_212712, 0, 1.0000000000000000e+06);
+							F.line = 159;
+						HEX2DHEX3D_212637(result_212621, 0, 1.0000000000000000e+06);
 						}
 						
 						}
 						else {
-							if ((1 < max_len_212720["Field0"])) {
-							if ((self_212711.current_player_number == max_len_212720["Field1"])) {
-							F.line = 161;
-							HEX2BHEX3D_156261(result_212712, 0, (1.0000000000000000e+03 * max_len_212720["Field0"]));
+							if ((1 < max_len_212629["Field0"])) {
+							if ((self_212620.current_player_number == max_len_212629["Field1"])) {
+							F.line = 163;
+							HEX2BHEX3D_156261(result_212621, 0, (1.0000000000000000e+03 * max_len_212629["Field0"]));
 							}
 							else {
-								F.line = 163;
-							HEX2DHEX3D_212728(result_212712, 0, (1.0000000000000000e+03 * max_len_212720["Field0"]));
+								F.line = 165;
+							HEX2DHEX3D_212637(result_212621, 0, (1.0000000000000000e+03 * max_len_212629["Field0"]));
 							}
 							
 							}
@@ -5556,7 +5556,7 @@ function scoring_212709(self_212711) {
 		} while(false);
 	framePtr = F.prev;
 
-	return result_212712[0];
+	return result_212621[0];
 
 }
 
@@ -5591,7 +5591,7 @@ function scoring_205426(self_205230) {
 		chckNilDisp(self_205230);
 		if (isObj(self_205230.m_type, NTI211018)) {
 		F.line = 308;
-		result_205428 = scoring_212709(self_205230);
+		result_205428 = scoring_212618(self_205230);
 		break BeforeRet;
 		}
 		else {
@@ -5608,43 +5608,43 @@ function scoring_205426(self_205230) {
 
 }
 
-function get_state_212639(self_212641) {
-	var result_212642 = null;
+function get_state_212548(self_212550) {
+	var result_212551 = null;
 
 	var F={procname:"game_logic.get_state",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
 		L1: do {
-			F.line = 141;
-			var y_212651 = 0;
+			F.line = 143;
+			var y_212560 = 0;
 			F.line = 2610;
 			var colontmp__214488 = 0;
-			F.line = 141;
-			colontmp__214488 = subInt(self_212641.size, 1);
+			F.line = 143;
+			colontmp__214488 = subInt(self_212550.size, 1);
 			F.line = 2620;
 			var res_214489 = 0;
 			L2: do {
 				F.line = 2621;
 					L3: while (true) {
 					if (!(res_214489 <= colontmp__214488)) break L3;
-						F.line = 141;
-						y_212651 = res_214489;
+						F.line = 143;
+						y_212560 = res_214489;
 						L4: do {
-							F.line = 142;
-							var x_212660 = 0;
+							F.line = 144;
+							var x_212569 = 0;
 							F.line = 2610;
 							var colontmp__214482 = 0;
-							F.line = 142;
-							colontmp__214482 = subInt(self_212641.size, 1);
+							F.line = 144;
+							colontmp__214482 = subInt(self_212550.size, 1);
 							F.line = 2620;
 							var res_214483 = 0;
 							L5: do {
 								F.line = 2621;
 									L6: while (true) {
 									if (!(res_214483 <= colontmp__214482)) break L6;
-										F.line = 142;
-										x_212660 = res_214483;
-										F.line = 143;
-										if (result_212642 != null) { result_212642 = (result_212642).concat(cstrToNimstr((self_212641.field[chckIndx(x_212660, 0, self_212641.field.length+0-1)-0][chckIndx(y_212651, 0, self_212641.field[chckIndx(x_212660, 0, self_212641.field.length+0-1)-0].length+0-1)-0])+"")); } else { result_212642 = cstrToNimstr((self_212641.field[chckIndx(x_212660, 0, self_212641.field.length+0-1)-0][chckIndx(y_212651, 0, self_212641.field[chckIndx(x_212660, 0, self_212641.field.length+0-1)-0].length+0-1)-0])+"").slice(); };
+										F.line = 144;
+										x_212569 = res_214483;
+										F.line = 145;
+										if (result_212551 != null) { result_212551 = (result_212551).concat(cstrToNimstr((self_212550.field[chckIndx(x_212569, 0, self_212550.field.length+0-1)-0][chckIndx(y_212560, 0, self_212550.field[chckIndx(x_212569, 0, self_212550.field.length+0-1)-0].length+0-1)-0])+"")); } else { result_212551 = cstrToNimstr((self_212550.field[chckIndx(x_212569, 0, self_212550.field.length+0-1)-0][chckIndx(y_212560, 0, self_212550.field[chckIndx(x_212569, 0, self_212550.field.length+0-1)-0].length+0-1)-0])+"").slice(); };
 										F.line = 2623;
 										res_214483 = addInt(res_214483, 1);
 									}
@@ -5657,7 +5657,7 @@ function get_state_212639(self_212641) {
 		} while(false);
 	framePtr = F.prev;
 
-	return result_212642;
+	return result_212551;
 
 }
 
@@ -5692,7 +5692,7 @@ function get_state_205626(self_205431) {
 		chckNilDisp(self_205431);
 		if (isObj(self_205431.m_type, NTI211018)) {
 		F.line = 316;
-		result_205628 = get_state_212639(self_205431);
+		result_205628 = get_state_212548(self_205431);
 		break BeforeRet;
 		}
 		else {
@@ -6051,41 +6051,41 @@ function finish_turn_204924(self_204910) {
 	
 }
 
-function restore_state_212674(self_212676, state_212677) {
+function restore_state_212583(self_212585, state_212586) {
 	var F={procname:"game_logic.restore_state",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
 		L1: do {
-			F.line = 146;
-			var y_212686 = 0;
+			F.line = 148;
+			var y_212595 = 0;
 			F.line = 2610;
 			var colontmp__214518 = 0;
-			F.line = 146;
-			colontmp__214518 = subInt(self_212676.size, 1);
+			F.line = 148;
+			colontmp__214518 = subInt(self_212585.size, 1);
 			F.line = 2620;
 			var res_214519 = 0;
 			L2: do {
 				F.line = 2621;
 					L3: while (true) {
 					if (!(res_214519 <= colontmp__214518)) break L3;
-						F.line = 146;
-						y_212686 = res_214519;
+						F.line = 148;
+						y_212595 = res_214519;
 						L4: do {
-							F.line = 147;
-							var x_212695 = 0;
+							F.line = 149;
+							var x_212604 = 0;
 							F.line = 2610;
 							var colontmp__214512 = 0;
-							F.line = 147;
-							colontmp__214512 = subInt(self_212676.size, 1);
+							F.line = 149;
+							colontmp__214512 = subInt(self_212585.size, 1);
 							F.line = 2620;
 							var res_214513 = 0;
 							L5: do {
 								F.line = 2621;
 									L6: while (true) {
 									if (!(res_214513 <= colontmp__214512)) break L6;
-										F.line = 147;
-										x_212695 = res_214513;
-										F.line = 148;
-										self_212676.field[chckIndx(x_212695, 0, self_212676.field.length+0-1)-0][chckIndx(y_212686, 0, self_212676.field[chckIndx(x_212695, 0, self_212676.field.length+0-1)-0].length+0-1)-0] = nsuParseInt(nimCharToStr(state_212677[chckIndx(addInt(mulInt(y_212686, self_212676.size), x_212695), 0, state_212677.length+0-1)-0]));
+										F.line = 149;
+										x_212604 = res_214513;
+										F.line = 150;
+										self_212585.field[chckIndx(x_212604, 0, self_212585.field.length+0-1)-0][chckIndx(y_212595, 0, self_212585.field[chckIndx(x_212604, 0, self_212585.field.length+0-1)-0].length+0-1)-0] = nsuParseInt(nimCharToStr(state_212586[chckIndx(addInt(mulInt(y_212595, self_212585.size), x_212604), 0, state_212586.length+0-1)-0]));
 										F.line = 2623;
 										res_214513 = addInt(res_214513, 1);
 									}
@@ -6126,7 +6126,7 @@ function restore_state_205826(self_205631, state_205632) {
 		chckNilDisp(self_205631);
 		if (isObj(self_205631.m_type, NTI211018)) {
 		F.line = 325;
-		restore_state_212674(self_205631, state_205632);
+		restore_state_212583(self_205631, state_205632);
 		}
 		else {
 		if (isObj(self_205631.m_type, NTI203034)) {
@@ -6764,26 +6764,26 @@ function winning_player_204880(self_204863) {
 
 }
 
-function all_212510(s_212514, pred_212517) {
-	var result_212518 = false;
+function all_212419(s_212423, pred_212426) {
+	var result_212427 = false;
 
 	var F={procname:"all.all",prev:framePtr,filename:"/home/manuel/.choosenim/toolchains/nim-0.20.0/lib/pure/collections/sequtils.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
 		L1: do {
 			F.line = 538;
-			var i_212549 = null;
+			var i_212458 = null;
 			F.line = 3;
 			var i_214564 = 0;
 			L2: do {
 				F.line = 4;
 					L3: while (true) {
-					if (!(i_214564 < (s_212514 != null ? s_212514.length : 0))) break L3;
+					if (!(i_214564 < (s_212423 != null ? s_212423.length : 0))) break L3;
 						F.line = 538;
-						i_212549 = s_212514[chckIndx(i_214564, 0, s_212514.length+0-1)-0];
-						if (!(pred_212517(i_212549))) {
+						i_212458 = s_212423[chckIndx(i_214564, 0, s_212423.length+0-1)-0];
+						if (!(pred_212426(i_212458))) {
 						F.line = 540;
-						result_212518 = false;
+						result_212427 = false;
 						break BeforeRet;
 						}
 						
@@ -6793,35 +6793,35 @@ function all_212510(s_212514, pred_212517) {
 			} while(false);
 		} while(false);
 		F.line = 541;
-		result_212518 = true;
+		result_212427 = true;
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_212518;
+	return result_212427;
 
 }
 
-function all_212442(s_212446, pred_212449) {
-	var result_212450 = false;
+function all_212259(s_212263, pred_212266) {
+	var result_212267 = false;
 
 	var F={procname:"all.all",prev:framePtr,filename:"/home/manuel/.choosenim/toolchains/nim-0.20.0/lib/pure/collections/sequtils.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
 		L1: do {
 			F.line = 538;
-			var i_212481 = 0;
+			var i_212298 = 0;
 			F.line = 3;
 			var i_214568 = 0;
 			L2: do {
 				F.line = 4;
 					L3: while (true) {
-					if (!(i_214568 < (s_212446 != null ? s_212446.length : 0))) break L3;
+					if (!(i_214568 < (s_212263 != null ? s_212263.length : 0))) break L3;
 						F.line = 538;
-						i_212481 = s_212446[chckIndx(i_214568, 0, s_212446.length+0-1)-0];
-						if (!(pred_212449(i_212481))) {
+						i_212298 = s_212263[chckIndx(i_214568, 0, s_212263.length+0-1)-0];
+						if (!(pred_212266(i_212298))) {
 						F.line = 540;
-						result_212450 = false;
+						result_212267 = false;
 						break BeforeRet;
 						}
 						
@@ -6831,59 +6831,57 @@ function all_212442(s_212446, pred_212449) {
 			} while(false);
 		} while(false);
 		F.line = 541;
-		result_212450 = true;
+		result_212267 = true;
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_212450;
+	return result_212267;
 
 }
 
-function determine_winner_212234(self_212236) {
+function field_full_212234(field_212236) {
+	var result_212237 = false;
 
-			function HEX3Aanonymous_212417(line_212420) {
+	var F={procname:"game_logic.fieldFull",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
+	framePtr = F;
+		F.line = 113;
+		result_212237 = !((field_212236 == 0));
+	framePtr = F.prev;
 
-					function HEX3Aanonymous_212423(x_212425) {
-						var result_212426 = false;
+	return result_212237;
 
-						var F={procname:":anonymous.:anonymous",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
-						framePtr = F;
-							F.line = 125;
-							result_212426 = !((x_212425 == 0));
-						framePtr = F.prev;
+}
 
-						return result_212426;
+function line_full_212251(line_212254) {
+	var result_212255 = false;
 
-					}
+	var F={procname:"game_logic.lineFull",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
+	framePtr = F;
+		F.line = 116;
+		result_212255 = all_212259(line_212254, field_full_212234);
+	framePtr = F.prev;
 
-				var result_212421 = false;
+	return result_212255;
 
-				var F={procname:"determine_winner.:anonymous",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
-				framePtr = F;
-					F.line = 124;
-					result_212421 = all_212442(line_212420, HEX3Aanonymous_212423);
-				framePtr = F.prev;
+}
 
-				return result_212421;
-
-			}
-
+function determine_winner_212325(self_212327) {
 	var F={procname:"game_logic.determine_winner",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		if (!((self_212236.winner_player_number == 0))) {
-		F.line = 114;
+		if (!((self_212327.winner_player_number == 0))) {
+		F.line = 120;
 		break BeforeRet;
 		}
 		
 		L1: do {
-			F.line = 115;
+			F.line = 121;
 			var line_212414 = null;
 			F.line = 183;
 			var colontmp__214558 = null;
-			F.line = 115;
-			colontmp__214558 = get_lines_211969(self_212236);
+			F.line = 121;
+			colontmp__214558 = get_lines_211969(self_212327);
 			F.line = 185;
 			var i_214559 = 0;
 			F.line = 186;
@@ -6892,14 +6890,14 @@ function determine_winner_212234(self_212236) {
 				F.line = 187;
 					L3: while (true) {
 					if (!(i_214559 < l_214560)) break L3;
-						F.line = 115;
+						F.line = 121;
 						line_212414 = colontmp__214558[chckIndx(i_214559, 0, colontmp__214558.length+0-1)-0];
-						F.line = 117;
+						F.line = 123;
 						var max_length_212415 = max_line_length_211972(line_212414);
-						if ((self_212236.winCount <= max_length_212415["Field0"])) {
-						F.line = 119;
-						self_212236.winner_player_number = max_length_212415["Field1"];
-						F.line = 120;
+						if ((self_212327.winCount <= max_length_212415["Field0"])) {
+						F.line = 125;
+						self_212327.winner_player_number = max_length_212415["Field1"];
+						F.line = 126;
 						break BeforeRet;
 						}
 						
@@ -6913,9 +6911,9 @@ function determine_winner_212234(self_212236) {
 					}
 			} while(false);
 		} while(false);
-		if (all_212510(self_212236.field, HEX3Aanonymous_212417)) {
-		F.line = 126;
-		self_212236.winner_player_number = -1;
+		if (all_212419(self_212327.field, line_full_212251)) {
+		F.line = 129;
+		self_212327.winner_player_number = -1;
 		}
 		
 	} while (false);
@@ -6949,7 +6947,7 @@ function determine_winner_205226(self_205068) {
 		chckNilDisp(self_205068);
 		if (isObj(self_205068.m_type, NTI211018)) {
 		F.line = 300;
-		determine_winner_212234(self_205068);
+		determine_winner_212325(self_205068);
 		}
 		else {
 		if (isObj(self_205068.m_type, NTI203034)) {
@@ -7207,29 +7205,29 @@ function set_default_211090(self_211076) {
 	
 }
 
-function setup_212781(self_212783, s_212784) {
+function setup_212690(self_212692, s_212693) {
 		var Tmp1;
 
 	var F={procname:"game_logic.setup",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 167;
-		self_212783.size = s_212784.size;
-		F.line = 168;
-		if ((s_212784.winCount == 0)) {
-		Tmp1 = s_212784.size;
-		}
-		else {
-		Tmp1 = s_212784.winCount;
-		}
-		
-		self_212783.winCount = Tmp1;
-		if (s_212784.ai) {
+		F.line = 169;
+		self_212692.size = s_212693.size;
 		F.line = 170;
-		setup_206026(self_212783, [{name: nimCopy(null, s_212784.name1, NTI138), m_type: NTI203041}, {name: nimCopy(null, s_212784.name2, NTI138), depth: 3, m_type: NTI207147}]);
+		if ((s_212693.winCount == 0)) {
+		Tmp1 = s_212693.size;
 		}
 		else {
-			F.line = 172;
-		setup_206026(self_212783, [{name: nimCopy(null, s_212784.name1, NTI138), m_type: NTI203041}, {name: nimCopy(null, s_212784.name2, NTI138), m_type: NTI203041}]);
+		Tmp1 = s_212693.winCount;
+		}
+		
+		self_212692.winCount = Tmp1;
+		if (s_212693.ai) {
+		F.line = 172;
+		setup_206026(self_212692, [{name: nimCopy(null, s_212693.name1, NTI138), m_type: NTI203041}, {name: nimCopy(null, s_212693.name2, NTI138), depth: 3, m_type: NTI207147}]);
+		}
+		else {
+			F.line = 174;
+		setup_206026(self_212692, [{name: nimCopy(null, s_212693.name1, NTI138), m_type: NTI203041}, {name: nimCopy(null, s_212693.name2, NTI138), m_type: NTI203041}]);
 		}
 		
 	framePtr = F.prev;
@@ -7237,185 +7235,185 @@ function setup_212781(self_212783, s_212784) {
 	
 }
 
-function setup_212818(self_212783, s_212784) {
+function setup_212727(self_212692, s_212693) {
 	var F={procname:"game_logic.setup",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 166;
-		setup_212781(self_212783, s_212784);
+		F.line = 168;
+		setup_212690(self_212692, s_212693);
 	framePtr = F.prev;
 
 	
 }
 
-function play_on_cli_212820(self_212822) {
+function play_on_cli_212729(self_212731) {
 	var F={procname:"game_logic.playOnCli",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		play_206114(self_212822);
+		play_206114(self_212731);
 	framePtr = F.prev;
 
 	
 }
 
-function play_on_cli_212836(self_212822) {
+function play_on_cli_212745(self_212731) {
 	var F={procname:"game_logic.playOnCli",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 174;
-		play_on_cli_212820(self_212822);
+		F.line = 176;
+		play_on_cli_212729(self_212731);
 	framePtr = F.prev;
 
 	
 }
 
-function field_212838(self_212840) {
-	var result_212843 = null;
+function field_212747(self_212749) {
+	var result_212752 = null;
 
 	var F={procname:"game_logic.field",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 178;
-		result_212843 = nimCopy(null, self_212840.field, NTI211019);
-	framePtr = F.prev;
-
-	return result_212843;
-
-}
-
-function field_212857(self_212840) {
-	var result_212859 = null;
-
-	var F={procname:"game_logic.field",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
-	framePtr = F;
-	BeforeRet: do {
-		F.line = 177;
-		result_212859 = field_212838(self_212840);
-		break BeforeRet;
-	} while (false);
-	framePtr = F.prev;
-
-	return result_212859;
-
-}
-
-function size_212860(self_212862) {
-	var result_212863 = 0;
-
-	var F={procname:"game_logic.size",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
-	framePtr = F;
-		F.line = 181;
-		result_212863 = self_212862.size;
-	framePtr = F.prev;
-
-	return result_212863;
-
-}
-
-function size_212877(self_212862) {
-	var result_212879 = 0;
-
-	var F={procname:"game_logic.size",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
-	framePtr = F;
-	BeforeRet: do {
 		F.line = 180;
-		result_212879 = size_212860(self_212862);
+		result_212752 = nimCopy(null, self_212749.field, NTI211019);
+	framePtr = F.prev;
+
+	return result_212752;
+
+}
+
+function field_212766(self_212749) {
+	var result_212768 = null;
+
+	var F={procname:"game_logic.field",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
+	framePtr = F;
+	BeforeRet: do {
+		F.line = 179;
+		result_212768 = field_212747(self_212749);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_212879;
+	return result_212768;
 
 }
 
-function win_count_212880(self_212882) {
-	var result_212883 = 0;
+function size_212769(self_212771) {
+	var result_212772 = 0;
+
+	var F={procname:"game_logic.size",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
+	framePtr = F;
+		F.line = 183;
+		result_212772 = self_212771.size;
+	framePtr = F.prev;
+
+	return result_212772;
+
+}
+
+function size_212786(self_212771) {
+	var result_212788 = 0;
+
+	var F={procname:"game_logic.size",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
+	framePtr = F;
+	BeforeRet: do {
+		F.line = 182;
+		result_212788 = size_212769(self_212771);
+		break BeforeRet;
+	} while (false);
+	framePtr = F.prev;
+
+	return result_212788;
+
+}
+
+function win_count_212789(self_212791) {
+	var result_212792 = 0;
 
 	var F={procname:"game_logic.winCount",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 184;
-		result_212883 = self_212882.winCount;
+		F.line = 186;
+		result_212792 = self_212791.winCount;
 	framePtr = F.prev;
 
-	return result_212883;
+	return result_212792;
 
 }
 
-function win_count_212897(self_212882) {
-	var result_212899 = 0;
+function win_count_212806(self_212791) {
+	var result_212808 = 0;
 
 	var F={procname:"game_logic.winCount",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 183;
-		result_212899 = win_count_212880(self_212882);
+		F.line = 185;
+		result_212808 = win_count_212789(self_212791);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_212899;
+	return result_212808;
 
 }
 
-function get_player_name_212900(self_212902) {
+function get_player_name_212809(self_212811) {
 		var Tmp1;
 
-	var result_212903 = null;
+	var result_212812 = null;
 
 	var F={procname:"game_logic.getPlayerName",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 188;
-		if ((current_player_204858(self_212902) == null)) {
+		F.line = 190;
+		if ((current_player_204858(self_212811) == null)) {
 		Tmp1 = makeNimstrLit("Game is not setup yet");
 		}
 		else {
-		Tmp1 = current_player_204858(self_212902).name;
+		Tmp1 = current_player_204858(self_212811).name;
 		}
 		
-		result_212903 = nimCopy(null, Tmp1, NTI138);
+		result_212812 = nimCopy(null, Tmp1, NTI138);
 	framePtr = F.prev;
 
-	return result_212903;
+	return result_212812;
 
 }
 
-function get_player_name_212925(self_212902) {
-	var result_212927 = null;
+function get_player_name_212834(self_212811) {
+	var result_212836 = null;
 
 	var F={procname:"game_logic.getPlayerName",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 187;
-		result_212927 = get_player_name_212900(self_212902);
+		F.line = 189;
+		result_212836 = get_player_name_212809(self_212811);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_212927;
+	return result_212836;
 
 }
 
-function make_turn_212928(self_212930, move_212931) {
+function make_turn_212837(self_212839, move_212840) {
 	var F={procname:"game_logic.make_turn",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		if (is_over_205046(self_212930)) {
-		F.line = 196;
-		break BeforeRet;
-		}
-		
-		F.line = 197;
-		make_move_205026(self_212930, move_212931);
+		if (is_over_205046(self_212839)) {
 		F.line = 198;
-		determine_winner_205226(self_212930);
-		if (is_over_205046(self_212930)) {
-		F.line = 200;
 		break BeforeRet;
 		}
 		
-		F.line = 201;
-		finish_turn_204924(self_212930);
-		if (isObj(current_player_204858(self_212930).m_type, NTI207147)) {
-		F.line = 204;
-		make_move_205026(self_212930, get_move_204641(current_player_204858(self_212930), self_212930));
-		F.line = 205;
-		finish_turn_204924(self_212930);
+		F.line = 199;
+		make_move_205026(self_212839, move_212840);
+		F.line = 200;
+		determine_winner_205226(self_212839);
+		if (is_over_205046(self_212839)) {
+		F.line = 202;
+		break BeforeRet;
+		}
+		
+		F.line = 203;
+		finish_turn_204924(self_212839);
+		if (isObj(current_player_204858(self_212839).m_type, NTI207147)) {
+		F.line = 206;
+		make_move_205026(self_212839, get_move_204641(current_player_204858(self_212839), self_212839));
+		F.line = 207;
+		finish_turn_204924(self_212839);
 		}
 		
 	} while (false);
@@ -7424,41 +7422,41 @@ function make_turn_212928(self_212930, move_212931) {
 	
 }
 
-function make_turn_212953(self_212930, move_212931) {
+function make_turn_212862(self_212839, move_212840) {
 	var F={procname:"game_logic.make_turn",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 194;
-		make_turn_212928(self_212930, move_212931);
+		F.line = 196;
+		make_turn_212837(self_212839, move_212840);
 	framePtr = F.prev;
 
 	
 }
 
-function finished_212955(self_212957) {
-	var result_212958 = false;
+function finished_212864(self_212866) {
+	var result_212867 = false;
 
 	var F={procname:"game_logic.finished",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
-		F.line = 209;
-		result_212958 = is_over_205046(self_212957);
+		F.line = 211;
+		result_212867 = is_over_205046(self_212866);
 	framePtr = F.prev;
 
-	return result_212958;
+	return result_212867;
 
 }
 
-function finished_212972(self_212957) {
-	var result_212974 = false;
+function finished_212881(self_212866) {
+	var result_212883 = false;
 
 	var F={procname:"game_logic.finished",prev:framePtr,filename:"/home/manuel/Programming/nim/TicTacToe/src/game_logic.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 208;
-		result_212974 = finished_212955(self_212957);
+		F.line = 210;
+		result_212883 = finished_212864(self_212866);
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_212974;
+	return result_212883;
 
 }

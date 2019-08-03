@@ -109,6 +109,12 @@ proc maxLineLength(line: seq[int]): (int,int) =
         result[1] = field
 
 
+proc fieldFull(field: int): bool =
+  field != 0
+
+proc lineFull(line: seq[int]): bool =
+  all(line, fieldFull)
+
 method determine_winner(self: GameOfTicTacToe) =
   if self.winner_player_number != NO_WINNER_YET:
       return
@@ -119,12 +125,8 @@ method determine_winner(self: GameOfTicTacToe) =
       self.winner_player_number = maxLength[1]
       return
   # check for a tie
-  if all(self.field, 
-    proc (line: seq[int]):bool = 
-      all(line, proc (x:int):bool =
-        x != 0)): 
+  if all(self.field, lineFull): 
     self.winner_player_number = STALEMATE
-
 
 method status*(self: GameOfTicTacToe):string =
     var topLine = ""
