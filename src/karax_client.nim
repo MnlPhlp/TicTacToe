@@ -5,7 +5,7 @@ import
   game_logic
 
 
-let game = new(GameOfTicTacToe)#
+let game = new(GameOfTicTacToe)
 let settings = new(Settings)
 
 var state = 0
@@ -77,6 +77,21 @@ proc setupGUI(): VNode =
     
 
 proc playGUI():VNode =
+  let fieldWidth = if window.innerHeight-200 < window.innerWidth: int(window.innerHeight-200) else: int(window.innerWidth-20)
+  let pixelSize = (fieldWidth - (game.size*5)) / game.size
+  let size = kstring(fmt"{pixelSize}px")
+  let buttonStyle = style(
+    (StyleAttr.width, size),
+    (StyleAttr.height, size),
+    (StyleAttr.lineHeight, size),
+    (StyleAttr.fontSize, size)
+  )
+  # define the grid columns
+  var gridColumns = kstring("")
+  for i in 1..game.size:
+    gridColumns &= " " & size
+  let gridStyle = style(StyleAttr.gridTemplateColumns, gridColumns)
+
   buildHtml(tdiv(class = "center")):
     # show player names and highlight current player
     p:
@@ -86,12 +101,11 @@ proc playGUI():VNode =
         text "Setup game to play"
     
     if state == 2:
-      tdiv(class="grid-container-game"):
+      tdiv(class="grid-container-game",style=gridStyle):
         for i,line in game.field:
             for j,field in line:
-              tdiv(class="grid-item-game"):
-                #create button-grid as field
-                button(class = "fieldButton", id=fmt"{i+1}.{j+1}", onclick = clickField,
+              #create button-grid as field
+              button(class = "fieldButton", id=fmt"{i+1}.{j+1}", onclick = clickField,style=buttonstyle,
                 disabled = kstring(toDisabled(state==0 or field != 0 or game.finished or fieldBlocked))):
                   text desc[field]
     tdiv(class="command-buttons"):
