@@ -10,8 +10,10 @@ bin           = @["TicTacToe"]
 
 # Dependencies
 
-requires "nim >= 0.19.4"
-requires "karax >= 1.1.0"
+requires "nim >= 0.19.4",
+  "karax >= 1.1.0",
+  "turn_based_game",
+  "negamax"
 
 task karax, "build karax client":
   exec "cp website/TicTacToe.html docs/play/index.html"
