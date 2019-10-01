@@ -25,8 +25,8 @@ const
 
 method setDefault*(self: Settings) {.base.} =
   # set default settings
-  self.name1 = "player 1"
-  self.name2 = "player 2"
+  self.name1 = "X"
+  self.name2 = "O"
   self.size = 3
   self.winCount = 3
 

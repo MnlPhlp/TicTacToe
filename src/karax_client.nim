@@ -15,9 +15,9 @@ var fieldBlocked = false
 proc inputHandler(ev: Event, n: VNode) =
   case $n.id:
     of "name1":
-      settings.name1 = if $n.value != "" : $n.value else: "player 1"
+      settings.name1 = if $n.value != "" : $n.value else: "X"
     of "name2":
-      settings.name2 = if $n.value != "" : $n.value else: "player 2"
+      settings.name2 = if $n.value != "" : $n.value else: "O"
     of "AI":
       settings.ai = not settings.ai
     of "fieldSize":
