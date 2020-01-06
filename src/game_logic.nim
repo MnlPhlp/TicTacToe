@@ -115,7 +115,7 @@ proc fieldFull(field: int): bool =
 proc lineFull(line: seq[int]): bool =
   all(line, fieldFull)
 
-proc determine_winner(self: GameOfTicTacToe) =
+method determine_winner(self: GameOfTicTacToe) =
   if self.winner_player_number != NO_WINNER_YET:
       return
   for line in self.getLines:
