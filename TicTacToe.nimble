@@ -20,6 +20,9 @@ task karax, "build karax client":
   exec "cp website/style.css docs/play/style.css"
   exec "nim js -o:docs/play/TicTacToe.js src/karax_client"
 
+task fidget, "build fidget desktop client":
+  selfExec "c -o:fidgetClient src/fidgetClient.nim"
+
 task cli, "build comandline client":
   exec "nim c -o:cli_client src/cli_client.nim"
 
