@@ -109,12 +109,12 @@ proc playGUI():VNode =
                 disabled = kstring(toDisabled(state==0 or field != 0 or game.finished or fieldBlocked))):
                   text desc[field]
     tdiv(class="command-buttons"):
-      button(class = "start"):
+      button(class = "start", title = "setup the game"):
         text "setup"
         proc onclick() =
           state = 1 
           settings.setDefault()
-      button(class = "reset", id = "reset"):
+      button(class = "reset", id = "reset", titlef = "restart the game"):
         text "reset"
         proc onclick() =
           game.setup(settings)
