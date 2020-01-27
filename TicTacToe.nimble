@@ -16,9 +16,13 @@ requires "nim >= 0.19.4",
   "negamax"
 
 task karax, "build karax client":
-  exec "cp website/TicTacToe.html docs/play/index.html"
+  exec "cp website/Karax.html docs/play/Karax.html"
   exec "cp website/style.css docs/play/style.css"
-  exec "nim js -o:docs/play/TicTacToe.js src/karax_client"
+  exec "nim js -o:docs/play/Karax.js src/karax_client"
+
+task fidgetWeb, "build fidget web client":
+  selfExec "js -o:docs/play/Fidget.js src/fidgetClient.nim"
+  exec "cp website/Fidget.html docs/play/Fidget.html"
 
 task fidget, "build fidget desktop client":
   selfExec "c -o:fidgetClient src/fidgetClient.nim"

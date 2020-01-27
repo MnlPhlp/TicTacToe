@@ -1,30 +1,67 @@
-import fidget,os
+import fidget,os,chroma
+
+import game_logic,colorScheme
+
+let game = new(GameOfTicTacToe)
+let settings = new(Settings)
+settings.setDefault()
+game.setup(settings)
 
 when not defined(js):
     import typography,tables
     fonts["IBM Plex Sans Regular"] = readFontSvg(getAppDir() & "/data/IBMPlexSans-Regular.svg")
     fonts["IBM Plex Sans Bold"] = readFontSvg(getAppDir() & "/data/IBMPlexSans-Bold.svg")
 
+proc startGame() = 
+    game.setup(settings)
+
+proc makeSquare() =
+    if current.box.w > current.box.h:
+        current.box.w = current.box.h
+    if current.box.h > current.box.w:
+        current.box.h = current.box.w
+    
+proc createGameField() =
+    let fieldWidth = min(current.box.w,current.box.h)
+    let boxWidth = (int)(fieldWidth - 2) / game.field.len - 2
+    var x,y = 2.0
+    var dark = false
+    for i,row in game.field:
+        x = 2
+        for j,field in row:
+            rectangle "field":
+                box x,y,boxWidth,boxWidth
+                if dark:
+                    fill colors.fieldDark
+                else:
+                    fill colors.fieldLight
+                dark = not dark
+                # if field is empty allow clicking
+                if field == 0:
+                    onClick:
+                        game.makeTurn($(i+1) & "." & $(j+1))
+                text "symbol":
+                    box 0,0,boxWidth,boxWidth
+                    characters desc[field]
+                    fill blackColor
+                    font "IBM Plex Sans Bold", fieldWidth, 200, 0, 0, 0
+            x += boxWidth + 2
+        y += boxWidth + 2
+
 
 proc drawMainFrame() =
     frame "Frame 1":
-        when not defined(js):
-            box root.box
-        else:
-            box 0, 0, 1280, 720
+        orgBox 0,0,1280,720
+        box root.box
         constraints cMin, cMin
         fill "#ffffff"
-        fill "#ffffff"
-        cornerRadius 0
         strokeWeight 1
-        group "Heading":
+        rectangle "Heading":
             box 400, 20, 480, 60
-            rectangle "Rectangle 1":
-                box 0, 0, 480, 60
-                constraints cCenter, cMin
-                fill "#d7ba56"
-                cornerRadius 30
-                strokeWeight 1
+            constraints cCenter, cMin
+            fill "#d7ba56"
+            cornerRadius 30
+            strokeWeight 1
             text "Tic-Tac-Toe":
                 box 0, 0, 480, 60
                 constraints cMin, cMin
@@ -35,28 +72,18 @@ proc drawMainFrame() =
                 characters "Tic-Tac-Toe"
         frame "GameFrame":
             box 335, 90, 610, 610
-            constraints cScale, cScale
-            cornerRadius 0
-            strokeWeight 1
+            constraints cBoth, cBoth
+            makeSquare()
             rectangle "Rectangle 2":
-                box 0, 0, 610, 610
-                constraints cBoth, cBoth
+                box 0, 0, parent.box.h, parent.box.w
                 fill "#c4c4c4"
-                cornerRadius 0
-                strokeWeight 1
-            rectangle "Rectangle 3":
-                box 5, 5, 600, 600
-                constraints cBoth, cBoth
-                fill "#eeeeee"
-                cornerRadius 0
-                strokeWeight 1
-            frame "Game":
-                box 5, 5, 600, 600
-                constraints cMin, cMin
-                cornerRadius 0
-                strokeWeight 1
+                rectangle "Rectangle 3":
+                    box 5, 5, parent.box.w - 10, parent.box.h - 10
+                    fill "#eeeeee"
+                    createGameField()
         frame "Leaderboard":
             box 960, 40, 300, 655
+            orgBox 960, 40, 300, 655
             constraints cMax, cBoth
             cornerRadius 0
             strokeWeight 1
@@ -75,6 +102,8 @@ proc drawMainFrame() =
                 characters "Leaderboard"
             group "Table":
                 box 0, 70, 300, 585
+                orgBox 0, 70, 300, 585
+                constraints cMin,cBoth
                 rectangle "Rectangle 6":
                     box 0, 41, 300, 40
                     constraints cMin, cMin
@@ -124,7 +153,7 @@ proc drawMainFrame() =
                     strokeWeight 1
                 rectangle "hline":
                     box 0, 80, 300, 2
-                    constraints cMin, cMax
+                    constraints cMin, cMin
                     fill "#c4c4c4"
                     cornerRadius 0
                     strokeWeight 1
@@ -148,6 +177,7 @@ proc drawMainFrame() =
                     font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
                     characters "Match"
         frame "Settings":
+            var buttonColor: Color
             box 20, 40, 300, 655
             constraints cMin, cBoth
             cornerRadius 0
@@ -170,9 +200,15 @@ proc drawMainFrame() =
                 rectangle "startButton":
                     box 0, 0, 200, 50
                     constraints cMin, cMin
-                    fill "#c4c4c4"
+                    fill colors.buttonColor
                     cornerRadius 25
                     strokeWeight 1
+                    onClick:
+                        startGame()
+                    onHover:
+                        fill colors.buttonHover
+                    onDown:
+                        fill colors.buttonPressed
                 text "start":
                     box 0, 0, 200, 50
                     constraints cMin, cMin
@@ -207,7 +243,7 @@ proc drawMainFrame() =
                     fill "#000000"
                     strokeWeight 1
                     font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
-                    characters "enter Name"
+                    binding settings.name2
             group "P1Name":
                 box 0, 110, 276, 40
                 text "Player 1:":
@@ -235,7 +271,7 @@ proc drawMainFrame() =
                     fill "#000000"
                     strokeWeight 1
                     font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
-                    characters "enter Name"
+                    binding settings.name1
             group "FieldSize":
                 box 0, 225, 265, 40
                 text "Field Size:":
@@ -263,37 +299,44 @@ proc drawMainFrame() =
                     fill "#000000"
                     strokeWeight 1
                     font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
-                    characters "3"
+                    characters $(settings.size)
                 frame "MinField":
                     box 145, 5, 30, 30
                     constraints cMin, cMin
-                    fill "#ffffff"
-                    fill "#ffffff"
-                    cornerRadius 0
-                    strokeWeight 1
-                rectangle "Rectangle 8":
-                    box 0, -207.5, 5, 30
-                    constraints cMin, cMin
-                    fill "#c4c4c4"
-                    cornerRadius 0
-                    strokeWeight 1
+                    buttonColor = colors.buttonColor
+                    onClick:
+                        if settings.size > settings.winCount:
+                            settings.size -= 1
+                    onHover:
+                        buttonColor = colors.buttonHover
+                    onDown:
+                        buttonColor = colors.buttonPressed
+                    rectangle "Rectangle 8":
+                        box 0, 12.5, 30, 5
+                        constraints cMin, cMin
+                        fill buttonColor
+                        cornerRadius 0
                 frame "plusField":
                     box 235, 5, 30, 30
                     constraints cMin, cMin
-                    fill "#ffffff"
-                    fill "#ffffff"
-                    cornerRadius 0
-                    strokeWeight 1
+                    onClick:
+                        if settings.size < 9:
+                            settings.size += 1
+                    buttonColor = colors.buttonColor
+                    onHover:
+                        buttonColor = colors.buttonHover
+                    onDown:
+                        buttonColor = colors.buttonPressed
                     rectangle "Rectangle 7":
-                        box 12.5, -225, 5, 30
+                        box 12.5, 0, 5, 30
                         constraints cMin, cMin
-                        fill "#c4c4c4"
+                        fill buttonColor
                         cornerRadius 0
                         strokeWeight 1
                     rectangle "Rectangle 8":
-                        box 0, -207.5, 5, 30
+                        box 0, 12.5, 30, 5
                         constraints cMin, cMin
-                        fill "#c4c4c4"
+                        fill buttonColor
                         cornerRadius 0
                         strokeWeight 1
             group "Win Count":
@@ -323,39 +366,47 @@ proc drawMainFrame() =
                     fill "#000000"
                     strokeWeight 1
                     font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
-                    characters "3"
+                    characters $(settings.winCount)
                 frame "MinField":
                     box 145, 5, 30, 30
                     constraints cMin, cMin
-                    fill "#ffffff"
-                    fill "#ffffff"
-                    cornerRadius 0
-                    strokeWeight 1
+                    onClick:
+                        if settings.winCount > 0:
+                            settings.winCount -= 1
+                    buttonColor = colors.buttonColor
+                    onHover:
+                        buttonColor = colors.buttonHover
+                    onDown:
+                        buttonColor = colors.buttonPressed
                     rectangle "Rectangle 8":
-                        box 0, -252.5, 5, 30
+                        box 0, 12.5, 30, 5
                         constraints cMin, cMin
-                        fill "#c4c4c4"
+                        fill buttonColor
                         cornerRadius 0
                         strokeWeight 1
-                    frame "plusField":
-                        box 235, 5, 30, 30
+                frame "plusField":
+                    box 235, 5, 30, 30
+                    constraints cMin, cMin
+                    onClick:
+                        if settings.winCount < settings.size:
+                            settings.winCount += 1
+                    buttonColor = colors.buttonColor
+                    onHover:
+                        buttonColor = colors.buttonHover
+                    onDown:
+                        buttonColor = colors.buttonPressed
+                    rectangle "Rectangle 7":
+                        box 12.5, 0, 5, 30
                         constraints cMin, cMin
-                        fill "#ffffff"
-                        fill "#ffffff"
+                        fill buttonColor
                         cornerRadius 0
                         strokeWeight 1
-                        rectangle "Rectangle 7":
-                            box 12.5, -270, 5, 30
-                            constraints cMin, cMin
-                            fill "#c4c4c4"
-                            cornerRadius 0
-                            strokeWeight 1
-                        rectangle "Rectangle 8":
-                            box 0, -252.5, 5, 30
-                            constraints cMin, cMin
-                            fill "#c4c4c4"
-                            cornerRadius 0
-                            strokeWeight 1
-                    
+                    rectangle "Rectangle 8":
+                        box 0, 12.5, 30, 5
+                        constraints cMin, cMin
+                        fill buttonColor
+                        cornerRadius 0
+                        strokeWeight 1
+                
 drawMain = drawMainFrame
 startFidget()
