@@ -48,7 +48,8 @@ method resetLeaderboard*(self: GameOfTicTacToe) {.base.} =
 method setup(self: GameOfTicTacToe, players: seq[Player]) =
   self.default_setup(players)
   self.resetField()
-  self.resetLeaderboard()
+  if self.leaderboard.isNil:
+    self.resetLeaderboard
 
 
 method set_possible_moves(self: GameOfTicTacToe, moves: var seq[string]) =

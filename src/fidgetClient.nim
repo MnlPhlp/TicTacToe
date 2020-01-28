@@ -4,6 +4,8 @@ import game_logic,colorScheme
 let game = new(GameOfTicTacToe)
 let settings = new(Settings)
 var winnerAnnounced = false
+var startingPlayer = 1
+
 settings.setDefault()
 game.setup(settings)
 
@@ -72,7 +74,7 @@ proc drawLeaderboard() =
     let startEntry = if entries == histLen: 0 else: histLen - entries
     for i in startEntry .. startEntry + entries - 1:
         group "entry":
-            box 0,i*40,40,300
+            box 0,(i-startEntry)*40,40,300
             text "round":
                 box 0,0,99,40
                 font "IBM Plex Sans Regular", 32, 200, 0, 0, 0
@@ -94,7 +96,6 @@ proc drawMainFrame() =
         box root.box
         constraints cMin, cMin
         fill "#ffffff"
-        strokeWeight 1
         rectangle "Heading":
             box 400, 20, 480, 60
             constraints cCenter, cMin
@@ -106,7 +107,6 @@ proc drawMainFrame() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                stroke color(0,1,0)
                 font "IBM Plex Sans Bold", 48, 200, 0, 0, -1
                 characters "Tic-Tac-Toe"
         frame "GameFrame":
@@ -137,7 +137,7 @@ proc drawMainFrame() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 36, 200, 0, 0, -1
+                font "IBM Plex Sans Regular", 36, 200, 0, 0, 0
                 characters "Leaderboard"
             group "Table":
                 box 0, 70, 300, 585
@@ -259,6 +259,27 @@ proc drawMainFrame() =
                     strokeWeight 1
                     font "IBM Plex Sans Regular", 36, 200, 0, 0, -1
                     characters "start"
+                rectangle "next":
+                    box 0,60,200,50
+                    constraints cMin, cMin
+                    fill colors.buttonColor
+                    cornerRadius 25
+                    strokeWeight 1
+                    onClick:
+                        game.setup(settings)
+                        startingPlayer = if startingPlayer == 1: 2 else: 1
+                        game.current_player_number = startingPlayer
+                    onHover:
+                        fill colors.buttonHover
+                    onDown:
+                        fill colors.buttonPressed
+                text "start":
+                    box 0, 60, 200, 50
+                    constraints cMin, cMin
+                    fill "#000000"
+                    strokeWeight 1
+                    font "IBM Plex Sans Regular", 36, 200, 0, 0, -1
+                    characters "next"
             group "P2Name":
                 box 0, 155, 276, 40
                 text "Player 2:":
