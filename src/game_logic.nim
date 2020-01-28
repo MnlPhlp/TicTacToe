@@ -10,6 +10,7 @@ type
         field: seq[seq[int]]
         size: int
         winCount: int
+        leaderboard: Leaderboard
 
     Settings* = ref object
         name1*, name2*: string
@@ -17,11 +18,17 @@ type
         size*: int
         winCount*: int
 
+    Leaderboard* = ref object
+        sum*: array[3,int] #sum of victorys for each player
+        history*: seq[0..2] #winner history (0 is draw) 
+
 const
     desc* = @[" ","X","0"]
     winScore = 1_000_000
     lineScore =1_000
 
+
+method getLeaderboard*(self: GameOfTicTacToe): Leaderboard {.base.} = self.leaderboard
 
 method setDefault*(self: Settings) {.base.} =
   # set default settings
@@ -35,9 +42,13 @@ method resetField(self: GameOfTicTacToe) {.base.} =
   self.field = newSeqWith(self.size,newSeq[int](self.size))
 
 
+method resetLeaderboard*(self: GameOfTicTacToe) {.base.} =
+  self.leaderboard = new Leaderboard
+
 method setup(self: GameOfTicTacToe, players: seq[Player]) =
-    self.default_setup(players)
-    self.resetField()
+  self.default_setup(players)
+  self.resetField()
+  self.resetLeaderboard()
 
 
 method set_possible_moves(self: GameOfTicTacToe, moves: var seq[string]) =
@@ -123,10 +134,14 @@ proc determine_winner*(self: GameOfTicTacToe) =
     let maxLength = line.maxLineLength
     if  maxLength[0] >= self.winCount:
       self.winner_player_number = maxLength[1]
+      self.leaderboard.sum[self.winner_player_number] += 1
+      self.leaderboard.history.add(self.winner_player_number)
       return
   # check for a tie
   if all(self.field, lineFull): 
     self.winner_player_number = STALEMATE
+    self.leaderboard.sum[0] += 1
+    self.leaderboard.history.add(0)
 
 method status*(self: GameOfTicTacToe):string =
     var topLine = ""
@@ -209,4 +224,3 @@ method make_turn*(self: GameOfTicTacToe, move: string) {.base.} =
 
 method finished*(self: GameOfTicTacToe): bool {.base.}=
   self.is_over
-

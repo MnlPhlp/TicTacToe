@@ -1,9 +1,9 @@
-import fidget,os,chroma
-
+import fidget,os,chroma,tinyfiledialogs
 import game_logic,colorScheme
 
 let game = new(GameOfTicTacToe)
 let settings = new(Settings)
+var winnerAnnounced = false
 settings.setDefault()
 game.setup(settings)
 
@@ -14,13 +14,25 @@ when not defined(js):
 
 proc startGame() = 
     game.setup(settings)
+    game.resetLeaderboard()
 
 proc makeSquare() =
     if current.box.w > current.box.h:
+        current.box.x += (current.box.w - current.box.h) / 2
         current.box.w = current.box.h
     if current.box.h > current.box.w:
         current.box.h = current.box.w
-    
+    current.screenBox = current.box + parent.screenBox
+
+proc checkWinner() =
+    if not winnerAnnounced:
+        if game.winner_player_number != 0:
+            if game.winner_player_number == -1:
+                echo "Draw"
+            else:
+                echo game.getPlayerName() & " won the game!"
+            
+
 proc createGameField() =
     let fieldWidth = min(current.box.w,current.box.h)
     let boxWidth = (int)(fieldWidth - 2) / game.field.len - 2
@@ -40,11 +52,13 @@ proc createGameField() =
                 if field == 0:
                     onClick:
                         game.makeTurn($(i+1) & "." & $(j+1))
-                text "symbol":
-                    box 0,0,boxWidth,boxWidth
-                    characters desc[field]
-                    fill blackColor
-                    font "IBM Plex Sans Bold", fieldWidth, 200, 0, 0, 0
+                        checkWinner()
+                rectangle "symbol":
+                    box 5,5,parent.box.w-10,parent.box.h-10
+                    if field == 1:
+                        image "x"
+                    if field == 2:
+                        image "0"
             x += boxWidth + 2
         y += boxWidth + 2
 
@@ -123,14 +137,14 @@ proc drawMainFrame() =
                     fill "#000000"
                     strokeWeight 1
                     font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
-                    characters "0"
+                    characters $game.getLeaderboard().sum[1]
                 text "Score2":
                     box 200, 41, 100, 40
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
                     font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
-                    characters "0"
+                    characters $game.getLeaderboard().sum[2]
                 text "Player1":
                     box 100, 1, 100, 40
                     constraints cMin, cMin
@@ -214,7 +228,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 36, 200, 0, 0, 0
+                    font "IBM Plex Sans Regular", 36, 200, 0, 0, -1
                     characters "start"
             group "P2Name":
                 box 0, 155, 276, 40
