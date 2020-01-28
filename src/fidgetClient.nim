@@ -1,4 +1,4 @@
-import fidget,os,chroma,tinyfiledialogs
+import fidget,os,chroma,math
 import game_logic,colorScheme
 
 let game = new(GameOfTicTacToe)
@@ -33,7 +33,7 @@ proc checkWinner() =
                 echo game.getPlayerName() & " won the game!"
             
 
-proc createGameField() =
+proc drawGameField() =
     let fieldWidth = min(current.box.w,current.box.h)
     let boxWidth = (int)(fieldWidth - 2) / game.field.len - 2
     var x,y = 2.0
@@ -63,6 +63,31 @@ proc createGameField() =
         y += boxWidth + 2
 
 
+proc drawLeaderboard() =
+  let history = game.getLeaderboard().history
+  let histLen = history.len
+  if histLen > 0:
+    let maxEntries = (int) floor(current.box.h / 40) # calculate amount of entries that fit
+    let entries = min(maxEntries,histLen)
+    let startEntry = if entries == histLen: 0 else: histLen - entries
+    for i in startEntry .. startEntry + entries - 1:
+        group "entry":
+            box 0,i*40,40,300
+            text "round":
+                box 0,0,99,40
+                font "IBM Plex Sans Regular", 32, 200, 0, 0, 0
+                fill colors.lbText
+                characters $(i+1)
+                if history[i] == 1:
+                    rectangle "x":
+                        box 134,4,32,32
+                        image "x"
+                if history[i] == 2:
+                    rectangle "0":
+                        box 234,4,32,32
+                        image "0"
+
+
 proc drawMainFrame() =
     frame "Frame 1":
         orgBox 0,0,1280,720
@@ -82,7 +107,7 @@ proc drawMainFrame() =
                 fill "#000000"
                 strokeWeight 1
                 stroke color(0,1,0)
-                font "IBM Plex Sans Bold", 48, 200, 0, 0, 0
+                font "IBM Plex Sans Bold", 48, 200, 0, 0, -1
                 characters "Tic-Tac-Toe"
         frame "GameFrame":
             box 335, 90, 610, 610
@@ -94,7 +119,7 @@ proc drawMainFrame() =
                 rectangle "Rectangle 3":
                     box 5, 5, parent.box.w - 10, parent.box.h - 10
                     fill "#eeeeee"
-                    createGameField()
+                    drawGameField()
         frame "Leaderboard":
             box 960, 40, 300, 655
             orgBox 960, 40, 300, 655
@@ -112,7 +137,7 @@ proc drawMainFrame() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 36, 200, 0, 0, 0
+                font "IBM Plex Sans Regular", 36, 200, 0, 0, -1
                 characters "Leaderboard"
             group "Table":
                 box 0, 70, 300, 585
@@ -190,6 +215,10 @@ proc drawMainFrame() =
                     strokeWeight 1
                     font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
                     characters "Match"
+                frame "tableContent":
+                    box 0,82,300,500
+                    constraints cMin,cBoth
+                    drawLeaderboard()
         frame "Settings":
             var buttonColor: Color
             box 20, 40, 300, 655
@@ -207,7 +236,7 @@ proc drawMainFrame() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 36, 200, 0, 0, 0
+                font "IBM Plex Sans Regular", 36, 200, 0, 0, -1
                 characters "Settings"
             group "SettingButtons":
                 box 45, 360, 200, 50
@@ -237,7 +266,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, -1, 0
+                    font "IBM Plex Sans Regular", 24, 200, 0, -1, -1
                     characters "Player 2: "
                 rectangle "P1Name":
                     box 120, 0, 156, 40
@@ -256,7 +285,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
+                    font "IBM Plex Sans Regular", 24, 200, 0, 0, -1
                     binding settings.name2
             group "P1Name":
                 box 0, 110, 276, 40
@@ -265,7 +294,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, -1, 0
+                    font "IBM Plex Sans Regular", 24, 200, 0, -1, -1
                     characters "Player 1: "
                 rectangle "P1Name":
                     box 120, 0, 156, 40
@@ -284,7 +313,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
+                    font "IBM Plex Sans Regular", 24, 200, 0, 0, -1
                     binding settings.name1
             group "FieldSize":
                 box 0, 225, 265, 40
@@ -293,7 +322,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, -1, 0
+                    font "IBM Plex Sans Regular", 24, 200, 0, -1, -1
                     characters "Field Size:"
                 rectangle "P1Name":
                     box 181, 0, 50, 40
@@ -312,7 +341,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
+                    font "IBM Plex Sans Regular", 24, 200, 0, 0, -1
                     characters $(settings.size)
                 frame "MinField":
                     box 145, 5, 30, 30
@@ -360,7 +389,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, -1, 0
+                    font "IBM Plex Sans Regular", 24, 200, 0, -1, -1
                     characters "Win Count: "
                 rectangle "P1Name":
                     box 181, 0, 50, 40
@@ -379,7 +408,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, 0, 0
+                    font "IBM Plex Sans Regular", 24, 200, 0, 0, -1
                     characters $(settings.winCount)
                 frame "MinField":
                     box 145, 5, 30, 30

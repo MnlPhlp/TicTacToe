@@ -2,7 +2,7 @@ import chroma
 
 type 
   ColorScheme = ref object
-      fieldLight*,fieldDark*,warn*,buttonColor*,buttonPressed*,buttonHover*: Color
+      fieldLight*,fieldDark*,warn*,buttonColor*,buttonPressed*,buttonHover*,lbText*: Color
 
 let 
   colors* = ColorScheme(
@@ -11,5 +11,6 @@ let
       warn: color(1,0,0),
       buttonColor: parseHtmlColor("#c4c4c4"),
       buttonHover: parseHtmlColor("#DDDDDD"),
-      buttonPressed: parseHtmlColor("#BBBBBB")
+      buttonPressed: parseHtmlColor("#BBBBBB"),
+      lbText: color(0,0,0)
   )

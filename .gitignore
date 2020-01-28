@@ -1,6 +1,7 @@
 .vscode
 cli_client
 debug_cli
+fidgetClient
 *.exe
 deploy.sh
 website/TicTacToe.js
