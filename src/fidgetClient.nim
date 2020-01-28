@@ -111,7 +111,7 @@ proc drawMainFrame() =
                 characters "Tic-Tac-Toe"
         frame "GameFrame":
             box 335, 90, 610, 610
-            constraints cBoth, cBoth
+            constraints cStretch, cStretch
             makeSquare()
             rectangle "Rectangle 2":
                 box 0, 0, parent.box.h, parent.box.w
@@ -123,7 +123,7 @@ proc drawMainFrame() =
         frame "Leaderboard":
             box 960, 40, 300, 655
             orgBox 960, 40, 300, 655
-            constraints cMax, cBoth
+            constraints cMax, cStretch
             cornerRadius 0
             strokeWeight 1
             rectangle "Rectangle 4":
@@ -142,7 +142,7 @@ proc drawMainFrame() =
             group "Table":
                 box 0, 70, 300, 585
                 orgBox 0, 70, 300, 585
-                constraints cMin,cBoth
+                constraints cMin,cStretch
                 rectangle "Rectangle 6":
                     box 0, 41, 300, 40
                     constraints cMin, cMin
@@ -198,13 +198,13 @@ proc drawMainFrame() =
                     strokeWeight 1
                 rectangle "vline1":
                     box 99, 0, 2, 585
-                    constraints cMin, cBoth
+                    constraints cMin, cStretch
                     fill "#c4c4c4"
                     cornerRadius 0
                     strokeWeight 1
                 rectangle "vline2":
                     box 199, 0, 2, 585
-                    constraints cMin, cBoth
+                    constraints cMin, cStretch
                     fill "#c4c4c4"
                     cornerRadius 0
                     strokeWeight 1
@@ -217,12 +217,12 @@ proc drawMainFrame() =
                     characters "Match"
                 frame "tableContent":
                     box 0,82,300,500
-                    constraints cMin,cBoth
+                    constraints cMin,cStretch
                     drawLeaderboard()
         frame "Settings":
             var buttonColor: Color
             box 20, 40, 300, 655
-            constraints cMin, cBoth
+            constraints cMin, cStretch
             cornerRadius 0
             strokeWeight 1
             rectangle "Rectangle 4":
