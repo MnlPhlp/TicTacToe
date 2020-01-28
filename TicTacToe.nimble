@@ -25,7 +25,7 @@ task fidgetWeb, "build fidget web client":
   exec "cp website/Fidget.html docs/play/Fidget.html"
 
 task fidget, "build fidget desktop client":
-  selfExec "c -o:fidgetClient src/fidgetClient.nim"
+  selfExec "c -o:fidgetClient -d:release src/fidgetClient.nim"
 
 task cli, "build comandline client":
   exec "nim c -o:cli_client src/cli_client.nim"
