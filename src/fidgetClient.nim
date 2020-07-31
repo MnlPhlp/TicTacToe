@@ -212,11 +212,11 @@ proc drawSettings() =
             cornerRadius 25
             strokeWeight 1
             text "Settings":
-                box 0, 5, 260, 50
+                box 0, 0, 260, 50
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 36, 200, 0, hCenter,  vTop
+                font "IBM Plex Sans Regular", 36, 200, 0, hCenter,  vCenter
                 characters "Settings"
         group "SettingButtons":
             box 45, 360, 200, 50
@@ -233,11 +233,11 @@ proc drawSettings() =
                 onDown:
                     fill colors.buttonPressed
                 text "start":
-                    box 0, 5, 200, 50
+                    box 0, 0, 200, 50
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 36, 200, 0, hCenter,  vTop
+                    font "IBM Plex Sans Regular", 36, 200, 0, hCenter,  vCenter
                     characters "start"
         group "P2Name":
             box 0, 155, 276, 40
@@ -255,7 +255,7 @@ proc drawSettings() =
                 cornerRadius 0
                 strokeWeight 1
                 text "P2NameInput":
-                    box 0, 5, 154, 38
+                    box 0, 0, 154, 38
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
@@ -283,7 +283,7 @@ proc drawSettings() =
                 cornerRadius 0
                 strokeWeight 1
                 text "P1NameInput":
-                    box 0, 5, 154, 38
+                    box 0, 0, 154, 38
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
@@ -473,7 +473,7 @@ proc drawMainFrame() =
                 cornerRadius 25
                 strokeWeight 1
                 text "Leaderboard":
-                    box 0, 5, 260, 50
+                    box 0, 0, 260, 50
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
