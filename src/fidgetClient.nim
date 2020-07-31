@@ -12,8 +12,7 @@ game.setup(settings)
 
 when not defined(js):
     import typography,tables
-    fonts["IBM Plex Sans Regular"] = readFontSvg(getAppDir() & "/data/IBMPlexSans-Regular.svg")
-    fonts["IBM Plex Sans Bold"] = readFontSvg(getAppDir() & "/data/IBMPlexSans-Bold.svg")
+    fonts["IBM Plex Sans"] = readFontSvg(getAppDir() & "/data/IBMPlexSans-Regular.svg")
 
 proc startGame() = 
     game.setup(settings)
@@ -81,7 +80,7 @@ proc drawLeaderboard() =
             box 0,(i-startEntry)*40,40,300
             text "round":
                 box 0,0,99,40
-                font("IBM Plex Sans Regular", 32, 200, 0, hCenter,vCenter)
+                font("IBM Plex Sans", 32, 200, 0, hCenter,vCenter)
                 fill colors.lbText
                 characters $(i+1)
                 if history[i] == 1:
@@ -106,7 +105,7 @@ proc drawInfo() =
             text "current Game":
                 box 0, 0, 260, 50
                 fill "#000000"
-                font "IBM Plex Sans Regular", 36, 200, 0, hCenter, vCenter
+                font "IBM Plex Sans", 36, 200, 0, hCenter, vCenter
                 characters "current Game"
         group "SettingButtons":
           box 45, 252, 200, 50
@@ -126,7 +125,7 @@ proc drawInfo() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 36, 200, 0, hCenter, vCenter
+                font "IBM Plex Sans", 36, 200, 0, hCenter, vCenter
                 characters "reset"
           rectangle "next":
             box 0,60,200,50
@@ -147,7 +146,7 @@ proc drawInfo() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 36, 200, 0, hCenter, vCenter
+                font "IBM Plex Sans", 36, 200, 0, hCenter, vCenter
                 characters "next round"
         group "current Player":
           box 0, 155, 294, 40
@@ -156,14 +155,14 @@ proc drawInfo() =
             constraints cMin, cMin
             fill "#000000"
             strokeWeight 1
-            font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+            font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
             characters "current player: "
           text "curPlayer":
             box 172, 0, 122, 40
             constraints cMin, cMin
             fill "#000000"
             strokeWeight 1
-            font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+            font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
             characters if game.current_player_number == 1: settings.name1 else: settings.name2
         group "current Symbol":
           box 0, 204, 214, 33
@@ -172,14 +171,14 @@ proc drawInfo() =
             constraints cMin, cMin
             fill "#000000"
             strokeWeight 1
-            font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+            font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
             characters "current symbol: "
           text "curSymbol":
             box 182, 0, 32, 33
             constraints cMin, cMin
             fill "#000000"
             strokeWeight 1
-            font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+            font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
             characters "X"
         group "winLength":
           box 0, 110, 267, 40
@@ -188,15 +187,15 @@ proc drawInfo() =
             constraints cMin, cMin
             fill "#000000"
             strokeWeight 1
-            font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+            font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
             characters "line-length to win: "
           text "winLength":
             box 213, 0, 54, 40
             constraints cMin, cMin
             fill "#000000"
             strokeWeight 1
-            font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
-            characters "3"
+            font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
+            characters $(settings.winCount)
 
 proc drawSettings() =
     frame "Settings":
@@ -216,7 +215,7 @@ proc drawSettings() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 36, 200, 0, hCenter,  vCenter
+                font "IBM Plex Sans", 36, 200, 0, hCenter,  vCenter
                 characters "Settings"
         group "SettingButtons":
             box 45, 360, 200, 50
@@ -237,7 +236,7 @@ proc drawSettings() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 36, 200, 0, hCenter,  vCenter
+                    font "IBM Plex Sans", 36, 200, 0, hCenter,  vCenter
                     characters "start"
         group "P2Name":
             box 0, 155, 276, 40
@@ -246,7 +245,7 @@ proc drawSettings() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+                font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
                 characters "Player 2: "
             rectangle "P1Name":
                 box 121, 1, 154, 38
@@ -259,7 +258,7 @@ proc drawSettings() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                    font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                     binding settings.name2
             rectangle "P1Name":
                 box 120, 0, 156, 40
@@ -274,7 +273,7 @@ proc drawSettings() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+                font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
                 characters "Player 1: "
             rectangle "P1Name":
                 box 121, 1, 154, 38
@@ -287,7 +286,7 @@ proc drawSettings() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                    font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                     binding settings.name1
             rectangle "P1Name":
                 box 120, 0, 156, 40
@@ -302,7 +301,7 @@ proc drawSettings() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+                font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
                 characters "Field Size:"
             rectangle "P1Name":
                 box 182, 1, 48, 38
@@ -315,7 +314,7 @@ proc drawSettings() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                    font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                     characters $(settings.size)
             rectangle "P1Name":
                 box 181, 0, 50, 40
@@ -369,7 +368,7 @@ proc drawSettings() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Regular", 24, 200, 0, hLeft, vCenter
+                font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
                 characters "Win Count: "
             rectangle "P1Name":
                 box 182, 1, 48, 38
@@ -382,7 +381,7 @@ proc drawSettings() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                    font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                     characters $(settings.winCount)
             rectangle "P1Name":
                 box 181, 0, 50, 40
@@ -448,7 +447,7 @@ proc drawMainFrame() =
                 constraints cMin, cMin
                 fill "#000000"
                 strokeWeight 1
-                font "IBM Plex Sans Bold", 48, 200, 0, hCenter, vCenter
+                font "IBM Plex Sans", 52, 200, 0, hCenter, vCenter
                 characters "Tic-Tac-Toe"
         frame "GameFrame":
             box 335, 90, 610, 610
@@ -477,7 +476,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 36, 200, 0, hCenter,  vCenter
+                    font "IBM Plex Sans", 36, 200, 0, hCenter,  vCenter
                     characters "Leaderboard"
             group "Table":
                 box 0, 70, 300, 585
@@ -494,35 +493,35 @@ proc drawMainFrame() =
                         constraints cMin, cMin
                         fill "#000000"
                         strokeWeight 1
-                        font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                        font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                         characters "Sum"
                     text "Score1":
                         box 100, 0, 100, 40
                         constraints cMin, cMin
                         fill "#000000"
                         strokeWeight 1
-                        font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                        font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                         characters $game.getLeaderboard().sum[1]
                     text "Score2":
                         box 200, 0, 100, 40
                         constraints cMin, cMin
                         fill "#000000"
                         strokeWeight 1
-                        font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                        font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                         characters $game.getLeaderboard().sum[2]
                 text "Player1":
                     box 100, 1, 100, 40
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                    font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                     characters "Player 1"
                 text "Player2":
                     box 200, 1, 100, 40
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                    font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                     characters "Player 2"
                 rectangle "hline":
                     box 0, 40, 300, 2
@@ -553,7 +552,7 @@ proc drawMainFrame() =
                     constraints cMin, cMin
                     fill "#000000"
                     strokeWeight 1
-                    font "IBM Plex Sans Regular", 24, 200, 0, hCenter, vCenter
+                    font "IBM Plex Sans", 24, 200, 0, hCenter, vCenter
                     characters "Match"
                 frame "tableContent":
                     box 0,82,300,500
