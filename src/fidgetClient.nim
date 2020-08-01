@@ -35,7 +35,8 @@ proc meld(text: string) =
     when defined(js):
         alert(text)
     else:
-        gtk2.nim_init()
+        when not defined(windows):
+            gtk2.nim_init()
         info(nil,text)
         
 
