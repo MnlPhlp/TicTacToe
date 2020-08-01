@@ -11,8 +11,10 @@ settings.setDefault()
 game.setup(settings)
 
 when not defined(js):
-    import typography,tables
+    import typography,tables,dialogs
     fonts["IBM Plex Sans"] = readFontSvg(getAppDir() & "/data/IBMPlexSans-Regular.svg")
+    when not defined(windows):
+        import gtk2
 
 proc startGame() = 
     game.setup(settings)
@@ -29,14 +31,28 @@ proc makeSquare() =
     current.box.x += parent.screenBox.x
     current.box.y += parent.screenBox.y
 
+proc meld(text: string) = 
+    when defined(js):
+        alert(text)
+    else:
+        gtk2.nim_init()
+        info(nil,text)
+        
+
 proc checkWinner() =
     if not winnerAnnounced:
         if game.winner_player_number != 0:
             if game.winner_player_number == -1:
-                echo "Draw"
+                meld("Draw")
             else:
-                echo game.getPlayerName() & " won the game!"
+                meld(game.getPlayerName() & " won the game!")
+            winnerAnnounced = true
             
+proc startNextRound() =            
+    game.setup(settings)
+    startingPlayer = if startingPlayer == 1: 2 else: 1
+    game.current_player_number = startingPlayer
+    winnerAnnounced = false
 
 proc drawGameField() =
     let fieldWidth = min(current.box.w,current.box.h)
@@ -57,7 +73,6 @@ proc drawGameField() =
                 if field == 0 and gameStarted:
                     onClick:
                         game.makeTurn($(i+1) & "." & $(j+1))
-                        checkWinner()
                 rectangle "symbol":
                     box 5,5,parent.box.w-10,parent.box.h-10
                     if field == 1:
@@ -107,9 +122,9 @@ proc drawInfo() =
                 fill "#000000"
                 font "IBM Plex Sans", 36, 200, 0, hCenter, vCenter
                 characters "current Game"
-        group "SettingButtons":
+        group "Settinginput.Buttons":
           box 45, 252, 200, 50
-          rectangle "resetButton":
+          rectangle "resetinput.Button":
             box 0, 0, 200, 50
             constraints cMin, cMin
             fill "#c4c4c4"
@@ -134,9 +149,7 @@ proc drawInfo() =
             cornerRadius 25
             strokeWeight 1
             onClick:
-                game.setup(settings)
-                startingPlayer = if startingPlayer == 1: 2 else: 1
-                game.current_player_number = startingPlayer
+                startNextRound()
             onHover:
                 fill colors.buttonHover
             onDown:
@@ -173,13 +186,10 @@ proc drawInfo() =
             strokeWeight 1
             font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
             characters "current symbol: "
-          text "curSymbol":
+          rectangle "curSymbol":
             box 182, 0, 32, 33
             constraints cMin, cMin
-            fill "#000000"
-            strokeWeight 1
-            font "IBM Plex Sans", 24, 200, 0, hLeft, vCenter
-            characters "X"
+            image if game.current_player_number == 1: "x.png" else: "0.png"
         group "winLength":
           box 0, 110, 267, 40
           text "line-length to win:":
@@ -217,9 +227,9 @@ proc drawSettings() =
                 strokeWeight 1
                 font "IBM Plex Sans", 36, 200, 0, hCenter,  vCenter
                 characters "Settings"
-        group "SettingButtons":
+        group "Settinginput.Buttons":
             box 45, 360, 200, 50
-            rectangle "startButton":
+            rectangle "startinput.Button":
                 box 0, 0, 200, 50
                 constraints cMin, cMin
                 fill colors.buttonColor
@@ -430,6 +440,16 @@ proc drawSettings() =
                     cornerRadius 0
                     strokeWeight 1
 
+proc handleButtonsSettings() =
+    if buttonPress[Letter_s]:
+        startGame()
+
+proc handleButtonsStarted() =
+   if buttonPress[Letter_r]:
+        gameStarted = false
+   elif buttonPress[Letter_n]:
+       startNextRound()
+
 proc drawMainFrame() =
     frame "Frame 1":
         orgBox 0,0,1280,720
@@ -560,7 +580,10 @@ proc drawMainFrame() =
                     drawLeaderboard()
         if gameStarted:
             drawInfo()
+            handleButtonsStarted()
+            checkWinner()
         else:
             drawSettings()
-                
+            handleButtonsSettings()
+
 startFidget(drawMainFrame)

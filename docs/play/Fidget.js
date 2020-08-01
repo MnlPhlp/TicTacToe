@@ -1468,16 +1468,6 @@ var ConstSet30 = setConstr(47, 47);
 var ConstSet31 = setConstr(47, 47);
 var ConstSet32 = setConstr(47, 47);
 var ConstSet33 = setConstr(47, 47);
-function rawEcho() {
-          var buf = "";
-      for (var i = 0; i < arguments.length; ++i) {
-        buf += toJSStr(arguments[i]);
-      }
-      console.log(buf);
-    
-
-  
-}
 function isObj(obj_270062, subclass_270063) {
   var result_270064 = false;
 
@@ -1505,6 +1495,16 @@ function isObj(obj_270062, subclass_270063) {
 
   return result_270064;
 
+}
+function rawEcho() {
+          var buf = "";
+      for (var i = 0; i < arguments.length; ++i) {
+        buf += toJSStr(arguments[i]);
+      }
+      console.log(buf);
+    
+
+  
 }
 var ConstSet34 = setConstr([48, 57]);
 var ConstSet35 = setConstr(0, 125);
@@ -8192,28 +8192,6 @@ function mouse_overlap_logic_14200081() {
   return result_14200083;
 
 }
-function check_winner_14435028() {
-  var F={procname:"fidgetClient.checkWinner",prev:framePtr,filename:"fidgetClient.nim",line:0};
-  framePtr = F;
-    if (!(winner_announced_14427452[0])) {
-    if (!((game_14427236.winner_player_number == 0))) {
-    if ((game_14427236.winner_player_number == -1)) {
-    F.line = 36;
-    rawEcho(makeNimstrLit("Draw"));
-    }
-    else {
-      F.line = 38;
-    rawEcho((get_player_name_14425221(game_14427236) || []).concat(makeNimstrLit(" won the game!") || []));
-    }
-    
-    }
-    
-    }
-    
-  framePtr = F.prev;
-
-  
-}
 function image_14215016(image_name_14215018) {
   var F={procname:"fidget.image",prev:framePtr,filename:"fidget.nim",line:0};
   framePtr = F;
@@ -8223,29 +8201,29 @@ function image_14215016(image_name_14215018) {
 
   
 }
-function draw_game_field_14440022() {
+function draw_game_field_14440029() {
     var Tmp1;
 
   var F={procname:"fidgetClient.drawGameField",prev:framePtr,filename:"fidgetClient.nim",line:0};
   framePtr = F;
-    F.line = 42;
-    var field_width_14440024 = min_75281(current_12582387[0].box.w, current_12582387[0].box.h);
-    F.line = 43;
-    var box_width_14440031 = (HEX2F_325648((((field_width_14440024 - 2.0000000000000000e+00))|0), ((Tmp1 = field_14425153(game_14427236), Tmp1) != null ? Tmp1.length : 0)) - 2.0000000000000000e+00);
-    F.line = 44;
-    var x_14440032 = [2.0000000000000000e+00];
-    F.line = 44;
-    var y_14440033 = [2.0000000000000000e+00];
-    F.line = 45;
-    var dark_14440034 = false;
+    F.line = 58;
+    var field_width_14440031 = min_75281(current_12582387[0].box.w, current_12582387[0].box.h);
+    F.line = 59;
+    var box_width_14440038 = (HEX2F_325648((((field_width_14440031 - 2.0000000000000000e+00))|0), ((Tmp1 = field_14425153(game_14427236), Tmp1) != null ? Tmp1.length : 0)) - 2.0000000000000000e+00);
+    F.line = 60;
+    var x_14440039 = [2.0000000000000000e+00];
+    F.line = 60;
+    var y_14440040 = [2.0000000000000000e+00];
+    F.line = 61;
+    var dark_14440041 = false;
     L2: do {
-      F.line = 46;
+      F.line = 62;
       var i_14450229 = 0;
-      F.line = 46;
+      F.line = 62;
       var row_14450230 = null;
       F.line = 115;
       var colontmp__15445270 = null;
-      F.line = 46;
+      F.line = 62;
       colontmp__15445270 = field_14425153(game_14427236);
       F.line = 117;
       var i_15445272 = 0;
@@ -8255,16 +8233,16 @@ function draw_game_field_14440022() {
         F.line = 119;
           L4: while (true) {
           if (!(i_15445272 < l_15445273)) break L4;
-            F.line = 46;
+            F.line = 62;
             i_14450229 = i_15445272;
             F.line = 120;
             row_14450230 = colontmp__15445270[chckIndx(i_15445272, 0, (colontmp__15445270 != null ? colontmp__15445270.length : 0)+0-1)-0];
-            F.line = 47;
-            x_14440032[0] = 2.0000000000000000e+00;
+            F.line = 63;
+            x_14440039[0] = 2.0000000000000000e+00;
             L5: do {
-              F.line = 48;
+              F.line = 64;
               var j_14460214 = 0;
-              F.line = 48;
+              F.line = 64;
               var field_14460215 = 0;
               F.line = 117;
               var i_15445267 = 0;
@@ -8274,55 +8252,53 @@ function draw_game_field_14440022() {
                 F.line = 119;
                   L7: while (true) {
                   if (!(i_15445267 < l_15445268)) break L7;
-                    F.line = 48;
+                    F.line = 64;
                     j_14460214 = i_15445267;
                     F.line = 120;
                     field_14460215 = row_14450230[chckIndx(i_15445267, 0, (row_14450230 != null ? row_14450230.length : 0)+0-1)-0];
                     F.line = 80;
                     pre_node_14156214(5, makeNimstrLit("field"));
-                    F.line = 50;
-                    box_14470001(x_14440032[0], y_14440033[0], box_width_14440031, box_width_14440031);
-                    if (dark_14440034) {
-                    F.line = 52;
+                    F.line = 66;
+                    box_14470001(x_14440039[0], y_14440040[0], box_width_14440038, box_width_14440038);
+                    if (dark_14440041) {
+                    F.line = 68;
                     fill_14215134(colors_14426026.fieldDark);
                     }
                     else {
-                      F.line = 54;
+                      F.line = 70;
                     fill_14215134(colors_14426026.fieldLight);
                     }
                     
-                    F.line = 55;
-                    dark_14440034 = !(dark_14440034);
+                    F.line = 71;
+                    dark_14440041 = !(dark_14440041);
                     if (((field_14460215 == 0) && game_started_14427453[0])) {
                     if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-                    F.line = 59;
+                    F.line = 75;
                     make_turn_14425249(game_14427236, (cstrToNimstr((addInt(i_14450229, 1))+"") || []).concat(makeNimstrLit(".") || [],cstrToNimstr((addInt(j_14460214, 1))+"") || []));
-                    F.line = 60;
-                    check_winner_14435028();
                     }
                     
                     }
                     
                     F.line = 80;
                     pre_node_14156214(5, makeNimstrLit("symbol"));
-                    F.line = 62;
+                    F.line = 77;
                     box_14215032(5.0000000000000000e+00, 5.0000000000000000e+00, (parent_12582382[0].box.w - 1.0000000000000000e+01), (parent_12582382[0].box.h - 1.0000000000000000e+01));
                     if ((field_14460215 == 1)) {
-                    F.line = 64;
+                    F.line = 79;
                     image_14215016(makeNimstrLit("x.png"));
                     }
                     
                     if ((field_14460215 == 2)) {
-                    F.line = 66;
+                    F.line = 81;
                     image_14215016(makeNimstrLit("0.png"));
                     }
                     
-                    F.line = 61;
+                    F.line = 76;
                     post_node_14180028();
-                    F.line = 49;
+                    F.line = 65;
                     post_node_14180028();
-                    F.line = 67;
-                    HEX2BHEX3D_9545021(x_14440032, 0, (box_width_14440031 + 2.0000000000000000e+00));
+                    F.line = 82;
+                    HEX2BHEX3D_9545021(x_14440039, 0, (box_width_14440038 + 2.0000000000000000e+00));
                     F.line = 121;
                     i_15445267 = addInt(i_15445267, 1);
                     if (!(((row_14450230 != null ? row_14450230.length : 0) == l_15445268))) {
@@ -8333,8 +8309,8 @@ function draw_game_field_14440022() {
                   }
               } while(false);
             } while(false);
-            F.line = 68;
-            HEX2BHEX3D_9545021(y_14440033, 0, (box_width_14440031 + 2.0000000000000000e+00));
+            F.line = 83;
+            HEX2BHEX3D_9545021(y_14440040, 0, (box_width_14440038 + 2.0000000000000000e+00));
             F.line = 121;
             i_15445272 = addInt(i_15445272, 1);
             if (!(((colontmp__15445270 != null ? colontmp__15445270.length : 0) == l_15445273))) {
@@ -8354,16 +8330,16 @@ function draw_leaderboard_14485030() {
 
   var F={procname:"fidgetClient.drawLeaderboard",prev:framePtr,filename:"fidgetClient.nim",line:0};
   framePtr = F;
-    F.line = 72;
+    F.line = 87;
     var history_14485032 = nimCopy(null, get_leaderboard_14306108(game_14427236).history, NTI14306040);
-    F.line = 73;
+    F.line = 88;
     var hist_len_14485038 = (history_14485032 != null ? history_14485032.length : 0);
     if ((0 < hist_len_14485038)) {
-    F.line = 75;
+    F.line = 90;
     var max_entries_14490002 = ((Math.floor((current_12582387[0].box.h / 4.0000000000000000e+01)))|0);
-    F.line = 76;
+    F.line = 91;
     var entries_14490003 = nimMin(max_entries_14490002, hist_len_14485038);
-    F.line = 77;
+    F.line = 92;
     if ((entries_14490003 == hist_len_14485038)) {
     Tmp1 = 0;
     }
@@ -8373,11 +8349,11 @@ function draw_leaderboard_14485030() {
     
     var start_entry_14490005 = Tmp1;
     L2: do {
-      F.line = 78;
+      F.line = 93;
       var i_14490011 = 0;
       F.line = 66;
       var colontmp__15445281 = 0;
-      F.line = 78;
+      F.line = 93;
       colontmp__15445281 = subInt(addInt(start_entry_14490005, entries_14490003), 1);
       F.line = 77;
       var res_15445282 = start_entry_14490005;
@@ -8385,47 +8361,47 @@ function draw_leaderboard_14485030() {
         F.line = 78;
           L4: while (true) {
           if (!(res_15445282 <= colontmp__15445281)) break L4;
-            F.line = 78;
+            F.line = 93;
             i_14490011 = res_15445282;
             F.line = 80;
             pre_node_14156214(2, makeNimstrLit("entry"));
-            F.line = 80;
+            F.line = 95;
             box_14500005(0, mulInt(subInt(i_14490011, start_entry_14490005), 40), 40, 300);
             F.line = 80;
             pre_node_14156214(4, makeNimstrLit("round"));
-            F.line = 82;
+            F.line = 97;
             box_14500005(0, 0, 99, 40);
-            F.line = 83;
+            F.line = 98;
             font_14210100(makeNimstrLit("IBM Plex Sans"), 3.2000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-            F.line = 84;
+            F.line = 99;
             fill_14215134(colors_14426026.lbText);
-            F.line = 85;
+            F.line = 100;
             characters_14210234(cstrToNimstr((addInt(i_14490011, 1))+""));
             if ((history_14485032[chckIndx(i_14490011, 0, (history_14485032 != null ? history_14485032.length : 0)+0-1)-0] == 1)) {
             F.line = 80;
             pre_node_14156214(5, makeNimstrLit("x"));
-            F.line = 88;
+            F.line = 103;
             box_14500005(134, 4, 32, 32);
-            F.line = 89;
+            F.line = 104;
             image_14215016(makeNimstrLit("x.png"));
-            F.line = 87;
+            F.line = 102;
             post_node_14180028();
             }
             
             if ((history_14485032[chckIndx(i_14490011, 0, (history_14485032 != null ? history_14485032.length : 0)+0-1)-0] == 2)) {
             F.line = 80;
             pre_node_14156214(5, makeNimstrLit("0"));
-            F.line = 92;
+            F.line = 107;
             box_14500005(234, 4, 32, 32);
-            F.line = 93;
+            F.line = 108;
             image_14215016(makeNimstrLit("0.png"));
-            F.line = 91;
+            F.line = 106;
             post_node_14180028();
             }
             
-            F.line = 81;
+            F.line = 96;
             post_node_14180028();
-            F.line = 79;
+            F.line = 94;
             post_node_14180028();
             F.line = 80;
             res_15445282 = addInt(res_15445282, 1);
@@ -8450,107 +8426,14 @@ function down_12590685(mouse_12590687) {
   return result_12590688;
 
 }
-function draw_info_14530044() {
+function start_next_round_14440014() {
     var Tmp1;
-    var Tmp2;
 
-  var F={procname:"fidgetClient.drawInfo",prev:framePtr,filename:"fidgetClient.nim",line:0};
+  var F={procname:"fidgetClient.startNextRound",prev:framePtr,filename:"fidgetClient.nim",line:0};
   framePtr = F;
-    F.line = 80;
-    pre_node_14156214(1, makeNimstrLit("Info"));
-    F.line = 97;
-    box_14500005(20, 40, 300, 655);
-    F.line = 98;
-    constraints_14215502(0, 3);
-    F.line = 80;
-    pre_node_14156214(5, makeNimstrLit("Rectangle 4"));
-    F.line = 100;
-    box_14500005(20, 10, 260, 50);
-    F.line = 101;
-    constraints_14215502(0, 0);
-    F.line = 102;
-    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 103;
-    corner_radius_14215285(2.5000000000000000e+01);
-    F.line = 104;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 80;
-    pre_node_14156214(4, makeNimstrLit("current Game"));
-    F.line = 106;
-    box_14500005(0, 0, 260, 50);
-    F.line = 107;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 108;
-    font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 109;
-    characters_14210234(makeNimstrLit("current Game"));
-    F.line = 105;
-    post_node_14180028();
-    F.line = 99;
-    post_node_14180028();
-    F.line = 80;
-    pre_node_14156214(2, makeNimstrLit("SettingButtons"));
-    F.line = 111;
-    box_14500005(45, 252, 200, 50);
-    F.line = 80;
-    pre_node_14156214(5, makeNimstrLit("resetButton"));
-    F.line = 113;
-    box_14500005(0, 0, 200, 50);
-    F.line = 114;
-    constraints_14215502(0, 0);
-    F.line = 115;
-    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 116;
-    corner_radius_14215285(2.5000000000000000e+01);
-    if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-    F.line = 118;
-    game_started_14427453[0] = false;
-    }
-    
-    if (mouse_overlap_logic_14200081()) {
-    F.line = 120;
-    fill_14215134(colors_14426026.buttonHover);
-    }
-    
-    if ((down_12590685(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-    F.line = 122;
-    fill_14215134(colors_14426026.buttonPressed);
-    }
-    
-    F.line = 80;
-    pre_node_14156214(4, makeNimstrLit("reset"));
-    F.line = 124;
-    box_14500005(0, 0, 200, 50);
-    F.line = 125;
-    constraints_14215502(0, 0);
-    F.line = 126;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 127;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 128;
-    font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 129;
-    characters_14210234(makeNimstrLit("reset"));
-    F.line = 123;
-    post_node_14180028();
-    F.line = 112;
-    post_node_14180028();
-    F.line = 80;
-    pre_node_14156214(5, makeNimstrLit("next"));
-    F.line = 131;
-    box_14500005(0, 60, 200, 50);
-    F.line = 132;
-    constraints_14215502(0, 0);
-    F.line = 133;
-    fill_14215134(colors_14426026.buttonColor);
-    F.line = 134;
-    corner_radius_14215285(2.5000000000000000e+01);
-    F.line = 135;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-    F.line = 137;
+    F.line = 52;
     setup_14425114(game_14427236, settings_14427451);
-    F.line = 138;
+    F.line = 53;
     if ((starting_player_14427455[0] == 1)) {
     Tmp1 = 2;
     }
@@ -8559,163 +8442,320 @@ function draw_info_14530044() {
     }
     
     starting_player_14427455[0] = Tmp1;
-    F.line = 139;
+    F.line = 54;
     game_14427236.current_player_number = starting_player_14427455[0];
+    F.line = 55;
+    winner_announced_14427452[0] = false;
+  framePtr = F.prev;
+
+  
+}
+function draw_info_14530044() {
+    var Tmp1;
+    var Tmp2;
+
+  var F={procname:"fidgetClient.drawInfo",prev:framePtr,filename:"fidgetClient.nim",line:0};
+  framePtr = F;
+    F.line = 80;
+    pre_node_14156214(1, makeNimstrLit("Info"));
+    F.line = 112;
+    box_14500005(20, 40, 300, 655);
+    F.line = 113;
+    constraints_14215502(0, 3);
+    F.line = 80;
+    pre_node_14156214(5, makeNimstrLit("Rectangle 4"));
+    F.line = 115;
+    box_14500005(20, 10, 260, 50);
+    F.line = 116;
+    constraints_14215502(0, 0);
+    F.line = 117;
+    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
+    F.line = 118;
+    corner_radius_14215285(2.5000000000000000e+01);
+    F.line = 119;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 80;
+    pre_node_14156214(4, makeNimstrLit("current Game"));
+    F.line = 121;
+    box_14500005(0, 0, 260, 50);
+    F.line = 122;
+    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
+    F.line = 123;
+    font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
+    F.line = 124;
+    characters_14210234(makeNimstrLit("current Game"));
+    F.line = 120;
+    post_node_14180028();
+    F.line = 114;
+    post_node_14180028();
+    F.line = 80;
+    pre_node_14156214(2, makeNimstrLit("Settinginput.Buttons"));
+    F.line = 126;
+    box_14500005(45, 252, 200, 50);
+    F.line = 80;
+    pre_node_14156214(5, makeNimstrLit("resetinput.Button"));
+    F.line = 128;
+    box_14500005(0, 0, 200, 50);
+    F.line = 129;
+    constraints_14215502(0, 0);
+    F.line = 130;
+    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
+    F.line = 131;
+    corner_radius_14215285(2.5000000000000000e+01);
+    if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
+    F.line = 133;
+    game_started_14427453[0] = false;
     }
     
     if (mouse_overlap_logic_14200081()) {
-    F.line = 141;
+    F.line = 135;
     fill_14215134(colors_14426026.buttonHover);
     }
     
     if ((down_12590685(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
+    F.line = 137;
+    fill_14215134(colors_14426026.buttonPressed);
+    }
+    
+    F.line = 80;
+    pre_node_14156214(4, makeNimstrLit("reset"));
+    F.line = 139;
+    box_14500005(0, 0, 200, 50);
+    F.line = 140;
+    constraints_14215502(0, 0);
+    F.line = 141;
+    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
+    F.line = 142;
+    stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 143;
+    font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
+    F.line = 144;
+    characters_14210234(makeNimstrLit("reset"));
+    F.line = 138;
+    post_node_14180028();
+    F.line = 127;
+    post_node_14180028();
+    F.line = 80;
+    pre_node_14156214(5, makeNimstrLit("next"));
+    F.line = 146;
+    box_14500005(0, 60, 200, 50);
+    F.line = 147;
+    constraints_14215502(0, 0);
+    F.line = 148;
+    fill_14215134(colors_14426026.buttonColor);
+    F.line = 149;
+    corner_radius_14215285(2.5000000000000000e+01);
+    F.line = 150;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
+    F.line = 152;
+    start_next_round_14440014();
+    }
+    
+    if (mouse_overlap_logic_14200081()) {
+    F.line = 154;
+    fill_14215134(colors_14426026.buttonHover);
+    }
+    
+    if ((down_12590685(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
+    F.line = 156;
     fill_14215134(colors_14426026.buttonPressed);
     }
     
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("start"));
-    F.line = 145;
+    F.line = 158;
     box_14215032(0.0, 0.0, parent_12582382[0].box.w, parent_12582382[0].box.h);
-    F.line = 146;
+    F.line = 159;
     constraints_14215502(0, 0);
-    F.line = 147;
+    F.line = 160;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 148;
+    F.line = 161;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 149;
+    F.line = 162;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 150;
+    F.line = 163;
     characters_14210234(makeNimstrLit("next round"));
-    F.line = 144;
+    F.line = 157;
     post_node_14180028();
-    F.line = 130;
+    F.line = 145;
     post_node_14180028();
-    F.line = 110;
+    F.line = 125;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(2, makeNimstrLit("current Player"));
-    F.line = 152;
+    F.line = 165;
     box_14500005(0, 155, 294, 40);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("player"));
-    F.line = 154;
+    F.line = 167;
     box_14500005(0, 0, 170, 40);
-    F.line = 155;
+    F.line = 168;
     constraints_14215502(0, 0);
-    F.line = 156;
+    F.line = 169;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 157;
+    F.line = 170;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 158;
+    F.line = 171;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 159;
+    F.line = 172;
     characters_14210234(makeNimstrLit("current player: "));
-    F.line = 153;
+    F.line = 166;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("curPlayer"));
-    F.line = 161;
+    F.line = 174;
     box_14500005(172, 0, 122, 40);
-    F.line = 162;
+    F.line = 175;
     constraints_14215502(0, 0);
-    F.line = 163;
+    F.line = 176;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 164;
+    F.line = 177;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 165;
+    F.line = 178;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 166;
+    F.line = 179;
     if ((game_14427236.current_player_number == 1)) {
-    Tmp2 = settings_14427451.name1;
+    Tmp1 = settings_14427451.name1;
     }
     else {
-    Tmp2 = settings_14427451.name2;
+    Tmp1 = settings_14427451.name2;
     }
     
-    characters_14210234(Tmp2);
-    F.line = 160;
+    characters_14210234(Tmp1);
+    F.line = 173;
     post_node_14180028();
-    F.line = 151;
+    F.line = 164;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(2, makeNimstrLit("current Symbol"));
-    F.line = 168;
+    F.line = 181;
     box_14500005(0, 204, 214, 33);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("symbol"));
-    F.line = 170;
+    F.line = 183;
     box_14500005(0, 0, 178, 33);
-    F.line = 171;
+    F.line = 184;
     constraints_14215502(0, 0);
-    F.line = 172;
+    F.line = 185;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 173;
+    F.line = 186;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 174;
+    F.line = 187;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 175;
+    F.line = 188;
     characters_14210234(makeNimstrLit("current symbol: "));
-    F.line = 169;
+    F.line = 182;
     post_node_14180028();
     F.line = 80;
-    pre_node_14156214(4, makeNimstrLit("curSymbol"));
-    F.line = 177;
+    pre_node_14156214(5, makeNimstrLit("curSymbol"));
+    F.line = 190;
     box_14500005(182, 0, 32, 33);
-    F.line = 178;
+    F.line = 191;
     constraints_14215502(0, 0);
-    F.line = 179;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 180;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 181;
-    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 182;
-    characters_14210234(makeNimstrLit("X"));
-    F.line = 176;
+    F.line = 192;
+    if ((game_14427236.current_player_number == 1)) {
+    Tmp2 = makeNimstrLit("x.png");
+    }
+    else {
+    Tmp2 = makeNimstrLit("0.png");
+    }
+    
+    image_14215016(Tmp2);
+    F.line = 189;
     post_node_14180028();
-    F.line = 167;
+    F.line = 180;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(2, makeNimstrLit("winLength"));
-    F.line = 184;
+    F.line = 194;
     box_14500005(0, 110, 267, 40);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("line-length to win:"));
-    F.line = 186;
+    F.line = 196;
     box_14500005(0, 0, 213, 40);
-    F.line = 187;
+    F.line = 197;
     constraints_14215502(0, 0);
-    F.line = 188;
+    F.line = 198;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 189;
+    F.line = 199;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 190;
+    F.line = 200;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 191;
+    F.line = 201;
     characters_14210234(makeNimstrLit("line-length to win: "));
-    F.line = 185;
+    F.line = 195;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("winLength"));
-    F.line = 193;
+    F.line = 203;
     box_14500005(213, 0, 54, 40);
-    F.line = 194;
+    F.line = 204;
     constraints_14215502(0, 0);
-    F.line = 195;
+    F.line = 205;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 196;
+    F.line = 206;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 197;
+    F.line = 207;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 198;
+    F.line = 208;
     characters_14210234(cstrToNimstr((settings_14427451.winCount)+""));
-    F.line = 192;
+    F.line = 202;
     post_node_14180028();
-    F.line = 183;
+    F.line = 193;
     post_node_14180028();
-    F.line = 96;
+    F.line = 111;
     post_node_14180028();
+  framePtr = F.prev;
+
+  
+}
+function handle_buttons_started_15225046() {
+  var F={procname:"fidgetClient.handleButtonsStarted",prev:framePtr,filename:"fidgetClient.nim",line:0};
+  framePtr = F;
+    if (HEX5BHEX5D_10316358(button_press_10316344[0], 82)) {
+    F.line = 449;
+    game_started_14427453[0] = false;
+    }
+    else {
+    if (HEX5BHEX5D_10316358(button_press_10316344[0], 78)) {
+    F.line = 451;
+    start_next_round_14440014();
+    }
+    }
+  framePtr = F.prev;
+
+  
+}
+function meld_14435028(text_14435030) {
+  var F={procname:"fidgetClient.meld",prev:framePtr,filename:"fidgetClient.nim",line:0};
+  framePtr = F;
+    F.line = 36;
+    alert(toJSStr(text_14435030));
+  framePtr = F.prev;
+
+  
+}
+function check_winner_14435214() {
+  var F={procname:"fidgetClient.checkWinner",prev:framePtr,filename:"fidgetClient.nim",line:0};
+  framePtr = F;
+    if (!(winner_announced_14427452[0])) {
+    if (!((game_14427236.winner_player_number == 0))) {
+    if ((game_14427236.winner_player_number == -1)) {
+    F.line = 46;
+    meld_14435028(makeNimstrLit("Draw"));
+    }
+    else {
+      F.line = 48;
+    meld_14435028((get_player_name_14425221(game_14427236) || []).concat(makeNimstrLit(" won the game!") || []));
+    }
+    
+    F.line = 49;
+    winner_announced_14427452[0] = true;
+    }
+    
+    }
+    
   framePtr = F.prev;
 
   
@@ -8723,11 +8763,11 @@ function draw_info_14530044() {
 function start_game_14427616() {
   var F={procname:"fidgetClient.startGame",prev:framePtr,filename:"fidgetClient.nim",line:0};
   framePtr = F;
-    F.line = 18;
-    setup_14425114(game_14427236, settings_14427451);
-    F.line = 19;
-    reset_leaderboard_14310249(game_14427236);
     F.line = 20;
+    setup_14425114(game_14427236, settings_14427451);
+    F.line = 21;
+    reset_leaderboard_14310249(game_14427236);
+    F.line = 22;
     game_started_14427453[0] = true;
   framePtr = F.prev;
 
@@ -8806,140 +8846,140 @@ function draw_settings_14730030() {
   framePtr = F;
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("Settings"));
-    F.line = 202;
+    F.line = 212;
     var button_color_14740001 = {r: 0.0, g: 0.0, b: 0.0, a: 0.0};
-    F.line = 203;
+    F.line = 213;
     box_14500005(20, 40, 300, 655);
-    F.line = 204;
+    F.line = 214;
     constraints_14215502(0, 3);
-    F.line = 205;
+    F.line = 215;
     corner_radius_14215285(0.0);
-    F.line = 206;
+    F.line = 216;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 4"));
-    F.line = 208;
+    F.line = 218;
     box_14500005(20, 10, 260, 50);
-    F.line = 209;
+    F.line = 219;
     constraints_14215502(0, 0);
-    F.line = 210;
+    F.line = 220;
     fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 211;
+    F.line = 221;
     corner_radius_14215285(2.5000000000000000e+01);
-    F.line = 212;
+    F.line = 222;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Settings"));
-    F.line = 214;
-    box_14500005(0, 0, 260, 50);
-    F.line = 215;
-    constraints_14215502(0, 0);
-    F.line = 216;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 217;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 218;
-    font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 219;
-    characters_14210234(makeNimstrLit("Settings"));
-    F.line = 213;
-    post_node_14180028();
-    F.line = 207;
-    post_node_14180028();
-    F.line = 80;
-    pre_node_14156214(2, makeNimstrLit("SettingButtons"));
-    F.line = 221;
-    box_14500005(45, 360, 200, 50);
-    F.line = 80;
-    pre_node_14156214(5, makeNimstrLit("startButton"));
-    F.line = 223;
-    box_14500005(0, 0, 200, 50);
     F.line = 224;
-    constraints_14215502(0, 0);
+    box_14500005(0, 0, 260, 50);
     F.line = 225;
-    fill_14215134(colors_14426026.buttonColor);
+    constraints_14215502(0, 0);
     F.line = 226;
-    corner_radius_14215285(2.5000000000000000e+01);
+    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
     F.line = 227;
     stroke_weight_14215233(1.0000000000000000e+00);
-    if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
+    F.line = 228;
+    font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
     F.line = 229;
+    characters_14210234(makeNimstrLit("Settings"));
+    F.line = 223;
+    post_node_14180028();
+    F.line = 217;
+    post_node_14180028();
+    F.line = 80;
+    pre_node_14156214(2, makeNimstrLit("Settinginput.Buttons"));
+    F.line = 231;
+    box_14500005(45, 360, 200, 50);
+    F.line = 80;
+    pre_node_14156214(5, makeNimstrLit("startinput.Button"));
+    F.line = 233;
+    box_14500005(0, 0, 200, 50);
+    F.line = 234;
+    constraints_14215502(0, 0);
+    F.line = 235;
+    fill_14215134(colors_14426026.buttonColor);
+    F.line = 236;
+    corner_radius_14215285(2.5000000000000000e+01);
+    F.line = 237;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
+    F.line = 239;
     start_game_14427616();
     }
     
     if (mouse_overlap_logic_14200081()) {
-    F.line = 231;
+    F.line = 241;
     fill_14215134(colors_14426026.buttonHover);
     }
     
     if ((down_12590685(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-    F.line = 233;
+    F.line = 243;
     fill_14215134(colors_14426026.buttonPressed);
     }
     
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("start"));
-    F.line = 235;
+    F.line = 245;
     box_14500005(0, 0, 200, 50);
-    F.line = 236;
+    F.line = 246;
     constraints_14215502(0, 0);
-    F.line = 237;
+    F.line = 247;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 238;
+    F.line = 248;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 239;
+    F.line = 249;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 240;
+    F.line = 250;
     characters_14210234(makeNimstrLit("start"));
-    F.line = 234;
+    F.line = 244;
     post_node_14180028();
-    F.line = 222;
+    F.line = 232;
     post_node_14180028();
-    F.line = 220;
+    F.line = 230;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(2, makeNimstrLit("P2Name"));
-    F.line = 242;
+    F.line = 252;
     box_14500005(0, 155, 276, 40);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Player 2:"));
-    F.line = 244;
+    F.line = 254;
     box_14500005(0, 0, 120, 40);
-    F.line = 245;
+    F.line = 255;
     constraints_14215502(0, 0);
-    F.line = 246;
+    F.line = 256;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 247;
+    F.line = 257;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 248;
+    F.line = 258;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 249;
+    F.line = 259;
     characters_14210234(makeNimstrLit("Player 2: "));
-    F.line = 243;
+    F.line = 253;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("P1Name"));
-    F.line = 251;
+    F.line = 261;
     box_14500005(121, 1, 154, 38);
-    F.line = 252;
+    F.line = 262;
     constraints_14215502(0, 0);
-    F.line = 253;
+    F.line = 263;
     fill_14215167(makeNimstrLit("#eeeeee"), 1.0000000000000000e+00);
-    F.line = 254;
+    F.line = 264;
     corner_radius_14215285(0.0);
-    F.line = 255;
+    F.line = 265;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("P2NameInput"));
-    F.line = 257;
+    F.line = 267;
     box_14500005(0, 0, 154, 38);
-    F.line = 258;
+    F.line = 268;
     constraints_14215502(0, 0);
-    F.line = 259;
+    F.line = 269;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 260;
+    F.line = 270;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 261;
+    F.line = 271;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
     F.line = 423;
     current_12582387[0].bindingSet = true;
@@ -8973,69 +9013,69 @@ function draw_settings_14730030() {
     
     }
     
-    F.line = 256;
+    F.line = 266;
     post_node_14180028();
-    F.line = 250;
+    F.line = 260;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("P1Name"));
-    F.line = 264;
+    F.line = 274;
     box_14500005(120, 0, 156, 40);
-    F.line = 265;
+    F.line = 275;
     constraints_14215502(0, 0);
-    F.line = 266;
+    F.line = 276;
     fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 267;
+    F.line = 277;
     corner_radius_14215285(0.0);
-    F.line = 268;
+    F.line = 278;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 263;
+    F.line = 273;
     post_node_14180028();
-    F.line = 241;
+    F.line = 251;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(2, makeNimstrLit("P1Name"));
-    F.line = 270;
+    F.line = 280;
     box_14500005(0, 110, 276, 40);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Player 1:"));
-    F.line = 272;
+    F.line = 282;
     box_14500005(0, 0, 120, 40);
-    F.line = 273;
+    F.line = 283;
     constraints_14215502(0, 0);
-    F.line = 274;
+    F.line = 284;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 275;
+    F.line = 285;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 276;
+    F.line = 286;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 277;
+    F.line = 287;
     characters_14210234(makeNimstrLit("Player 1: "));
-    F.line = 271;
+    F.line = 281;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("P1Name"));
-    F.line = 279;
+    F.line = 289;
     box_14500005(121, 1, 154, 38);
-    F.line = 280;
+    F.line = 290;
     constraints_14215502(0, 0);
-    F.line = 281;
+    F.line = 291;
     fill_14215167(makeNimstrLit("#eeeeee"), 1.0000000000000000e+00);
-    F.line = 282;
+    F.line = 292;
     corner_radius_14215285(0.0);
-    F.line = 283;
+    F.line = 293;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("P1NameInput"));
-    F.line = 285;
+    F.line = 295;
     box_14500005(0, 0, 154, 38);
-    F.line = 286;
+    F.line = 296;
     constraints_14215502(0, 0);
-    F.line = 287;
+    F.line = 297;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 288;
+    F.line = 298;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 289;
+    F.line = 299;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
     F.line = 423;
     current_12582387[0].bindingSet = true;
@@ -9069,359 +9109,371 @@ function draw_settings_14730030() {
     
     }
     
-    F.line = 284;
+    F.line = 294;
     post_node_14180028();
-    F.line = 278;
+    F.line = 288;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("P1Name"));
-    F.line = 292;
+    F.line = 302;
     box_14500005(120, 0, 156, 40);
-    F.line = 293;
+    F.line = 303;
     constraints_14215502(0, 0);
-    F.line = 294;
+    F.line = 304;
     fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 295;
+    F.line = 305;
     corner_radius_14215285(0.0);
-    F.line = 296;
+    F.line = 306;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 291;
+    F.line = 301;
     post_node_14180028();
-    F.line = 269;
+    F.line = 279;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(2, makeNimstrLit("FieldSize"));
-    F.line = 298;
+    F.line = 308;
     box_14500005(0, 225, 265, 40);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Field Size:"));
-    F.line = 300;
+    F.line = 310;
     box_14500005(0, 0, 130, 40);
-    F.line = 301;
+    F.line = 311;
     constraints_14215502(0, 0);
-    F.line = 302;
+    F.line = 312;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 303;
+    F.line = 313;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 304;
+    F.line = 314;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 305;
+    F.line = 315;
     characters_14210234(makeNimstrLit("Field Size:"));
-    F.line = 299;
+    F.line = 309;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("P1Name"));
-    F.line = 307;
+    F.line = 317;
     box_14500005(182, 1, 48, 38);
-    F.line = 308;
+    F.line = 318;
     constraints_14215502(0, 0);
-    F.line = 309;
+    F.line = 319;
     fill_14215167(makeNimstrLit("#eeeeee"), 1.0000000000000000e+00);
-    F.line = 310;
+    F.line = 320;
     corner_radius_14215285(0.0);
-    F.line = 311;
+    F.line = 321;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("FieldSizeInput"));
-    F.line = 313;
+    F.line = 323;
     box_14500005(0, 0, 48, 38);
-    F.line = 314;
+    F.line = 324;
     constraints_14215502(0, 0);
-    F.line = 315;
+    F.line = 325;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 316;
+    F.line = 326;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 317;
+    F.line = 327;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 318;
+    F.line = 328;
     characters_14210234(cstrToNimstr((settings_14427451.size)+""));
-    F.line = 312;
+    F.line = 322;
     post_node_14180028();
-    F.line = 306;
+    F.line = 316;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("P1Name"));
-    F.line = 320;
+    F.line = 330;
     box_14500005(181, 0, 50, 40);
-    F.line = 321;
+    F.line = 331;
     constraints_14215502(0, 0);
-    F.line = 322;
+    F.line = 332;
     fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 323;
+    F.line = 333;
     corner_radius_14215285(0.0);
-    F.line = 324;
+    F.line = 334;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 319;
+    F.line = 329;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("MinField"));
-    F.line = 326;
+    F.line = 336;
     box_14500005(145, 5, 30, 30);
-    F.line = 327;
+    F.line = 337;
     constraints_14215502(0, 0);
-    F.line = 328;
+    F.line = 338;
     nimCopy(button_color_14740001, colors_14426026.buttonColor, NTI9964003);
     if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
     if ((settings_14427451.winCount < settings_14427451.size)) {
-    F.line = 331;
+    F.line = 341;
     settings_14427451.size = subInt(settings_14427451.size, 1);
     }
     
     }
     
     if (mouse_overlap_logic_14200081()) {
-    F.line = 333;
+    F.line = 343;
     nimCopy(button_color_14740001, colors_14426026.buttonHover, NTI9964003);
     }
     
     if ((down_12590685(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-    F.line = 335;
+    F.line = 345;
     nimCopy(button_color_14740001, colors_14426026.buttonPressed, NTI9964003);
     }
     
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 8"));
-    F.line = 337;
+    F.line = 347;
     box_15045004(0, 1.2500000000000000e+01, 30, 5);
-    F.line = 338;
+    F.line = 348;
     constraints_14215502(0, 0);
-    F.line = 339;
+    F.line = 349;
     fill_14215134(button_color_14740001);
-    F.line = 340;
+    F.line = 350;
     corner_radius_14215285(0.0);
-    F.line = 336;
+    F.line = 346;
     post_node_14180028();
-    F.line = 325;
+    F.line = 335;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("plusField"));
-    F.line = 342;
+    F.line = 352;
     box_14500005(235, 5, 30, 30);
-    F.line = 343;
+    F.line = 353;
     constraints_14215502(0, 0);
     if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
     if ((settings_14427451.size < 9)) {
-    F.line = 346;
+    F.line = 356;
     settings_14427451.size = addInt(settings_14427451.size, 1);
     }
     
     }
     
-    F.line = 347;
+    F.line = 357;
     nimCopy(button_color_14740001, colors_14426026.buttonColor, NTI9964003);
     if (mouse_overlap_logic_14200081()) {
-    F.line = 349;
+    F.line = 359;
     nimCopy(button_color_14740001, colors_14426026.buttonHover, NTI9964003);
     }
     
     if ((down_12590685(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-    F.line = 351;
+    F.line = 361;
     nimCopy(button_color_14740001, colors_14426026.buttonPressed, NTI9964003);
     }
     
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 7"));
-    F.line = 353;
+    F.line = 363;
     box_15080004(1.2500000000000000e+01, 0, 5, 30);
-    F.line = 354;
+    F.line = 364;
     constraints_14215502(0, 0);
-    F.line = 355;
+    F.line = 365;
     fill_14215134(button_color_14740001);
-    F.line = 356;
+    F.line = 366;
     corner_radius_14215285(0.0);
-    F.line = 357;
+    F.line = 367;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 352;
+    F.line = 362;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 8"));
-    F.line = 359;
+    F.line = 369;
     box_15045004(0, 1.2500000000000000e+01, 30, 5);
-    F.line = 360;
+    F.line = 370;
     constraints_14215502(0, 0);
-    F.line = 361;
+    F.line = 371;
     fill_14215134(button_color_14740001);
-    F.line = 362;
+    F.line = 372;
     corner_radius_14215285(0.0);
-    F.line = 363;
+    F.line = 373;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 358;
+    F.line = 368;
     post_node_14180028();
-    F.line = 341;
+    F.line = 351;
     post_node_14180028();
-    F.line = 297;
+    F.line = 307;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(2, makeNimstrLit("Win Count"));
-    F.line = 365;
+    F.line = 375;
     box_14500005(0, 270, 265, 40);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Win Count:"));
-    F.line = 367;
+    F.line = 377;
     box_14500005(0, 0, 130, 40);
-    F.line = 368;
+    F.line = 378;
     constraints_14215502(0, 0);
-    F.line = 369;
+    F.line = 379;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 370;
+    F.line = 380;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 371;
+    F.line = 381;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 0, 1);
-    F.line = 372;
+    F.line = 382;
     characters_14210234(makeNimstrLit("Win Count: "));
-    F.line = 366;
+    F.line = 376;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("P1Name"));
-    F.line = 374;
+    F.line = 384;
     box_14500005(182, 1, 48, 38);
-    F.line = 375;
+    F.line = 385;
     constraints_14215502(0, 0);
-    F.line = 376;
+    F.line = 386;
     fill_14215167(makeNimstrLit("#eeeeee"), 1.0000000000000000e+00);
-    F.line = 377;
+    F.line = 387;
     corner_radius_14215285(0.0);
-    F.line = 378;
+    F.line = 388;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("WinCountInput"));
-    F.line = 380;
+    F.line = 390;
     box_14500005(0, 0, 48, 38);
-    F.line = 381;
+    F.line = 391;
     constraints_14215502(0, 0);
-    F.line = 382;
+    F.line = 392;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 383;
+    F.line = 393;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 384;
+    F.line = 394;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 385;
+    F.line = 395;
     characters_14210234(cstrToNimstr((settings_14427451.winCount)+""));
-    F.line = 379;
+    F.line = 389;
     post_node_14180028();
-    F.line = 373;
+    F.line = 383;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("P1Name"));
-    F.line = 387;
+    F.line = 397;
     box_14500005(181, 0, 50, 40);
-    F.line = 388;
+    F.line = 398;
     constraints_14215502(0, 0);
-    F.line = 389;
+    F.line = 399;
     fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 390;
+    F.line = 400;
     corner_radius_14215285(0.0);
-    F.line = 391;
+    F.line = 401;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 386;
+    F.line = 396;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("MinField"));
-    F.line = 393;
+    F.line = 403;
     box_14500005(145, 5, 30, 30);
-    F.line = 394;
+    F.line = 404;
     constraints_14215502(0, 0);
     if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
     if ((0 < settings_14427451.winCount)) {
-    F.line = 397;
+    F.line = 407;
     settings_14427451.winCount = subInt(settings_14427451.winCount, 1);
     }
     
     }
     
-    F.line = 398;
+    F.line = 408;
     nimCopy(button_color_14740001, colors_14426026.buttonColor, NTI9964003);
     if (mouse_overlap_logic_14200081()) {
-    F.line = 400;
+    F.line = 410;
     nimCopy(button_color_14740001, colors_14426026.buttonHover, NTI9964003);
     }
     
     if ((down_12590685(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-    F.line = 402;
+    F.line = 412;
     nimCopy(button_color_14740001, colors_14426026.buttonPressed, NTI9964003);
     }
     
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 8"));
-    F.line = 404;
+    F.line = 414;
     box_15045004(0, 1.2500000000000000e+01, 30, 5);
-    F.line = 405;
+    F.line = 415;
     constraints_14215502(0, 0);
-    F.line = 406;
+    F.line = 416;
     fill_14215134(button_color_14740001);
-    F.line = 407;
+    F.line = 417;
     corner_radius_14215285(0.0);
-    F.line = 408;
+    F.line = 418;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 403;
+    F.line = 413;
     post_node_14180028();
-    F.line = 392;
+    F.line = 402;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("plusField"));
-    F.line = 410;
+    F.line = 420;
     box_14500005(235, 5, 30, 30);
-    F.line = 411;
+    F.line = 421;
     constraints_14215502(0, 0);
     if ((click_12590664(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
     if ((settings_14427451.winCount < settings_14427451.size)) {
-    F.line = 414;
+    F.line = 424;
     settings_14427451.winCount = addInt(settings_14427451.winCount, 1);
     }
     
     }
     
-    F.line = 415;
+    F.line = 425;
     nimCopy(button_color_14740001, colors_14426026.buttonColor, NTI9964003);
     if (mouse_overlap_logic_14200081()) {
-    F.line = 417;
+    F.line = 427;
     nimCopy(button_color_14740001, colors_14426026.buttonHover, NTI9964003);
     }
     
     if ((down_12590685(mouse_12582391[0]) && mouse_overlap_logic_14200081())) {
-    F.line = 419;
+    F.line = 429;
     nimCopy(button_color_14740001, colors_14426026.buttonPressed, NTI9964003);
     }
     
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 7"));
-    F.line = 421;
+    F.line = 431;
     box_15080004(1.2500000000000000e+01, 0, 5, 30);
-    F.line = 422;
+    F.line = 432;
     constraints_14215502(0, 0);
-    F.line = 423;
+    F.line = 433;
     fill_14215134(button_color_14740001);
-    F.line = 424;
+    F.line = 434;
     corner_radius_14215285(0.0);
-    F.line = 425;
+    F.line = 435;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 420;
+    F.line = 430;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 8"));
-    F.line = 427;
+    F.line = 437;
     box_15045004(0, 1.2500000000000000e+01, 30, 5);
-    F.line = 428;
+    F.line = 438;
     constraints_14215502(0, 0);
-    F.line = 429;
+    F.line = 439;
     fill_14215134(button_color_14740001);
-    F.line = 430;
+    F.line = 440;
     corner_radius_14215285(0.0);
-    F.line = 431;
+    F.line = 441;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 426;
+    F.line = 436;
     post_node_14180028();
-    F.line = 409;
+    F.line = 419;
     post_node_14180028();
-    F.line = 364;
+    F.line = 374;
     post_node_14180028();
-    F.line = 201;
+    F.line = 211;
     post_node_14180028();
   framePtr = F.prev;
 
   
 }
-function draw_main_frame_15225027() {
+function handle_buttons_settings_15225027() {
+  var F={procname:"fidgetClient.handleButtonsSettings",prev:framePtr,filename:"fidgetClient.nim",line:0};
+  framePtr = F;
+    if (HEX5BHEX5D_10316358(button_press_10316344[0], 83)) {
+    F.line = 445;
+    start_game_14427616();
+    }
+    
+  framePtr = F.prev;
+
+  
+}
+function draw_main_frame_15225069() {
     var Tmp1;
     var Tmp2;
 
@@ -9429,316 +9481,322 @@ function draw_main_frame_15225027() {
   framePtr = F;
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("Frame 1"));
-    F.line = 435;
+    F.line = 455;
     org_box_15235007(0, 0, 1280, 720);
-    F.line = 436;
+    F.line = 456;
     box_14215078(root_12582383[0].box);
-    F.line = 437;
+    F.line = 457;
     constraints_14215502(0, 0);
-    F.line = 438;
+    F.line = 458;
     fill_14215167(makeNimstrLit("#ffffff"), 1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Heading"));
-    F.line = 440;
+    F.line = 460;
     box_14500005(400, 20, 480, 60);
-    F.line = 441;
+    F.line = 461;
     constraints_14215502(4, 0);
-    F.line = 442;
+    F.line = 462;
     fill_14215167(makeNimstrLit("#d7ba56"), 1.0000000000000000e+00);
-    F.line = 443;
+    F.line = 463;
     corner_radius_14215285(3.0000000000000000e+01);
-    F.line = 444;
+    F.line = 464;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Tic-Tac-Toe"));
-    F.line = 446;
+    F.line = 466;
     box_14500005(0, 0, 480, 60);
-    F.line = 447;
+    F.line = 467;
     constraints_14215502(0, 0);
-    F.line = 448;
+    F.line = 468;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 449;
+    F.line = 469;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 450;
+    F.line = 470;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 5.2000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 451;
+    F.line = 471;
     characters_14210234(makeNimstrLit("Tic-Tac-Toe"));
-    F.line = 445;
+    F.line = 465;
     post_node_14180028();
-    F.line = 439;
+    F.line = 459;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("GameFrame"));
-    F.line = 453;
+    F.line = 473;
     box_14500005(335, 90, 610, 610);
-    F.line = 454;
+    F.line = 474;
     constraints_14215502(4, 4);
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 2"));
-    F.line = 456;
+    F.line = 476;
     box_14215032(0.0, 0.0, parent_12582382[0].box.h, parent_12582382[0].box.w);
-    F.line = 457;
+    F.line = 477;
     fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 3"));
-    F.line = 459;
+    F.line = 479;
     box_14215032(5.0000000000000000e+00, 5.0000000000000000e+00, (parent_12582382[0].box.w - 1.0000000000000000e+01), (parent_12582382[0].box.h - 1.0000000000000000e+01));
-    F.line = 460;
+    F.line = 480;
     fill_14215167(makeNimstrLit("#eeeeee"), 1.0000000000000000e+00);
-    F.line = 461;
-    draw_game_field_14440022();
-    F.line = 458;
+    F.line = 481;
+    draw_game_field_14440029();
+    F.line = 478;
     post_node_14180028();
-    F.line = 455;
+    F.line = 475;
     post_node_14180028();
-    F.line = 452;
+    F.line = 472;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("Leaderboard"));
-    F.line = 463;
+    F.line = 483;
     box_14500005(960, 40, 300, 655);
-    F.line = 464;
+    F.line = 484;
     org_box_15235007(960, 40, 300, 655);
-    F.line = 465;
+    F.line = 485;
     constraints_14215502(1, 3);
-    F.line = 466;
+    F.line = 486;
     corner_radius_14215285(0.0);
-    F.line = 467;
+    F.line = 487;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 4"));
-    F.line = 469;
+    F.line = 489;
     box_14500005(20, 10, 260, 50);
-    F.line = 470;
+    F.line = 490;
     constraints_14215502(0, 0);
-    F.line = 471;
+    F.line = 491;
     fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 472;
+    F.line = 492;
     corner_radius_14215285(2.5000000000000000e+01);
-    F.line = 473;
+    F.line = 493;
     stroke_weight_14215233(1.0000000000000000e+00);
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Leaderboard"));
-    F.line = 475;
+    F.line = 495;
     box_14500005(0, 0, 260, 50);
-    F.line = 476;
+    F.line = 496;
     constraints_14215502(0, 0);
-    F.line = 477;
+    F.line = 497;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 478;
+    F.line = 498;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 479;
+    F.line = 499;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 3.6000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 480;
+    F.line = 500;
     characters_14210234(makeNimstrLit("Leaderboard"));
-    F.line = 474;
+    F.line = 494;
     post_node_14180028();
-    F.line = 468;
+    F.line = 488;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(2, makeNimstrLit("Table"));
-    F.line = 482;
+    F.line = 502;
     box_14500005(0, 70, 300, 585);
-    F.line = 483;
+    F.line = 503;
     org_box_15235007(0, 70, 300, 585);
-    F.line = 484;
+    F.line = 504;
     constraints_14215502(0, 3);
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("Rectangle 6"));
-    F.line = 486;
-    box_14500005(0, 41, 300, 40);
-    F.line = 487;
-    constraints_14215502(0, 0);
-    F.line = 488;
-    fill_14215167(makeNimstrLit("#d7ba56"), 1.0000000000000000e+00);
-    F.line = 489;
-    corner_radius_14215285(0.0);
-    F.line = 490;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 80;
-    pre_node_14156214(4, makeNimstrLit("Sum"));
-    F.line = 492;
-    box_14500005(0, 0, 100, 40);
-    F.line = 493;
-    constraints_14215502(0, 0);
-    F.line = 494;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 495;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 496;
-    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 497;
-    characters_14210234(makeNimstrLit("Sum"));
-    F.line = 491;
-    post_node_14180028();
-    F.line = 80;
-    pre_node_14156214(4, makeNimstrLit("Score1"));
-    F.line = 499;
-    box_14500005(100, 0, 100, 40);
-    F.line = 500;
-    constraints_14215502(0, 0);
-    F.line = 501;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 502;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 503;
-    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 504;
-    characters_14210234(cstrToNimstr(((Tmp1 = get_leaderboard_14306108(game_14427236).sum, Tmp1)[chckIndx(1, 0, (Tmp1 != null ? Tmp1.length : 0)+0-1)-0])+""));
-    F.line = 498;
-    post_node_14180028();
-    F.line = 80;
-    pre_node_14156214(4, makeNimstrLit("Score2"));
     F.line = 506;
-    box_14500005(200, 0, 100, 40);
+    box_14500005(0, 41, 300, 40);
     F.line = 507;
     constraints_14215502(0, 0);
     F.line = 508;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
+    fill_14215167(makeNimstrLit("#d7ba56"), 1.0000000000000000e+00);
     F.line = 509;
-    stroke_weight_14215233(1.0000000000000000e+00);
+    corner_radius_14215285(0.0);
     F.line = 510;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 80;
+    pre_node_14156214(4, makeNimstrLit("Sum"));
+    F.line = 512;
+    box_14500005(0, 0, 100, 40);
+    F.line = 513;
+    constraints_14215502(0, 0);
+    F.line = 514;
+    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
+    F.line = 515;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 516;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
+    F.line = 517;
+    characters_14210234(makeNimstrLit("Sum"));
     F.line = 511;
-    characters_14210234(cstrToNimstr(((Tmp2 = get_leaderboard_14306108(game_14427236).sum, Tmp2)[chckIndx(2, 0, (Tmp2 != null ? Tmp2.length : 0)+0-1)-0])+""));
-    F.line = 505;
     post_node_14180028();
-    F.line = 485;
+    F.line = 80;
+    pre_node_14156214(4, makeNimstrLit("Score1"));
+    F.line = 519;
+    box_14500005(100, 0, 100, 40);
+    F.line = 520;
+    constraints_14215502(0, 0);
+    F.line = 521;
+    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
+    F.line = 522;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 523;
+    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
+    F.line = 524;
+    characters_14210234(cstrToNimstr(((Tmp1 = get_leaderboard_14306108(game_14427236).sum, Tmp1)[chckIndx(1, 0, (Tmp1 != null ? Tmp1.length : 0)+0-1)-0])+""));
+    F.line = 518;
+    post_node_14180028();
+    F.line = 80;
+    pre_node_14156214(4, makeNimstrLit("Score2"));
+    F.line = 526;
+    box_14500005(200, 0, 100, 40);
+    F.line = 527;
+    constraints_14215502(0, 0);
+    F.line = 528;
+    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
+    F.line = 529;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 530;
+    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
+    F.line = 531;
+    characters_14210234(cstrToNimstr(((Tmp2 = get_leaderboard_14306108(game_14427236).sum, Tmp2)[chckIndx(2, 0, (Tmp2 != null ? Tmp2.length : 0)+0-1)-0])+""));
+    F.line = 525;
+    post_node_14180028();
+    F.line = 505;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Player1"));
-    F.line = 513;
-    box_14500005(100, 1, 100, 40);
-    F.line = 514;
-    constraints_14215502(0, 0);
-    F.line = 515;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 516;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 517;
-    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 518;
-    characters_14210234(makeNimstrLit("Player 1"));
-    F.line = 512;
-    post_node_14180028();
-    F.line = 80;
-    pre_node_14156214(4, makeNimstrLit("Player2"));
-    F.line = 520;
-    box_14500005(200, 1, 100, 40);
-    F.line = 521;
-    constraints_14215502(0, 0);
-    F.line = 522;
-    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 523;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 524;
-    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 525;
-    characters_14210234(makeNimstrLit("Player 2"));
-    F.line = 519;
-    post_node_14180028();
-    F.line = 80;
-    pre_node_14156214(5, makeNimstrLit("hline"));
-    F.line = 527;
-    box_14500005(0, 40, 300, 2);
-    F.line = 528;
-    constraints_14215502(0, 0);
-    F.line = 529;
-    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 530;
-    corner_radius_14215285(0.0);
-    F.line = 531;
-    stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 526;
-    post_node_14180028();
-    F.line = 80;
-    pre_node_14156214(5, makeNimstrLit("hline"));
     F.line = 533;
-    box_14500005(0, 80, 300, 2);
+    box_14500005(100, 1, 100, 40);
     F.line = 534;
     constraints_14215502(0, 0);
     F.line = 535;
-    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
+    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
     F.line = 536;
-    corner_radius_14215285(0.0);
-    F.line = 537;
     stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 537;
+    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
+    F.line = 538;
+    characters_14210234(makeNimstrLit("Player 1"));
     F.line = 532;
     post_node_14180028();
     F.line = 80;
-    pre_node_14156214(5, makeNimstrLit("vline1"));
-    F.line = 539;
-    box_14500005(99, 0, 2, 585);
+    pre_node_14156214(4, makeNimstrLit("Player2"));
     F.line = 540;
-    constraints_14215502(0, 3);
+    box_14500005(200, 1, 100, 40);
     F.line = 541;
-    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
+    constraints_14215502(0, 0);
     F.line = 542;
-    corner_radius_14215285(0.0);
+    fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
     F.line = 543;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 538;
+    F.line = 544;
+    font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
+    F.line = 545;
+    characters_14210234(makeNimstrLit("Player 2"));
+    F.line = 539;
+    post_node_14180028();
+    F.line = 80;
+    pre_node_14156214(5, makeNimstrLit("hline"));
+    F.line = 547;
+    box_14500005(0, 40, 300, 2);
+    F.line = 548;
+    constraints_14215502(0, 0);
+    F.line = 549;
+    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
+    F.line = 550;
+    corner_radius_14215285(0.0);
+    F.line = 551;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 546;
+    post_node_14180028();
+    F.line = 80;
+    pre_node_14156214(5, makeNimstrLit("hline"));
+    F.line = 553;
+    box_14500005(0, 80, 300, 2);
+    F.line = 554;
+    constraints_14215502(0, 0);
+    F.line = 555;
+    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
+    F.line = 556;
+    corner_radius_14215285(0.0);
+    F.line = 557;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 552;
+    post_node_14180028();
+    F.line = 80;
+    pre_node_14156214(5, makeNimstrLit("vline1"));
+    F.line = 559;
+    box_14500005(99, 0, 2, 585);
+    F.line = 560;
+    constraints_14215502(0, 3);
+    F.line = 561;
+    fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
+    F.line = 562;
+    corner_radius_14215285(0.0);
+    F.line = 563;
+    stroke_weight_14215233(1.0000000000000000e+00);
+    F.line = 558;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(5, makeNimstrLit("vline2"));
-    F.line = 545;
+    F.line = 565;
     box_14500005(199, 0, 2, 585);
-    F.line = 546;
+    F.line = 566;
     constraints_14215502(0, 3);
-    F.line = 547;
+    F.line = 567;
     fill_14215167(makeNimstrLit("#c4c4c4"), 1.0000000000000000e+00);
-    F.line = 548;
+    F.line = 568;
     corner_radius_14215285(0.0);
-    F.line = 549;
+    F.line = 569;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 544;
+    F.line = 564;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(4, makeNimstrLit("Match"));
-    F.line = 551;
+    F.line = 571;
     box_14500005(0, 1, 100, 40);
-    F.line = 552;
+    F.line = 572;
     constraints_14215502(0, 0);
-    F.line = 553;
+    F.line = 573;
     fill_14215167(makeNimstrLit("#000000"), 1.0000000000000000e+00);
-    F.line = 554;
+    F.line = 574;
     stroke_weight_14215233(1.0000000000000000e+00);
-    F.line = 555;
+    F.line = 575;
     font_14210100(makeNimstrLit("IBM Plex Sans"), 2.4000000000000000e+01, 2.0000000000000000e+02, 0.0, 1, 1);
-    F.line = 556;
+    F.line = 576;
     characters_14210234(makeNimstrLit("Match"));
-    F.line = 550;
+    F.line = 570;
     post_node_14180028();
     F.line = 80;
     pre_node_14156214(1, makeNimstrLit("tableContent"));
-    F.line = 558;
+    F.line = 578;
     box_14500005(0, 82, 300, 500);
-    F.line = 559;
+    F.line = 579;
     constraints_14215502(0, 3);
-    F.line = 560;
+    F.line = 580;
     draw_leaderboard_14485030();
-    F.line = 557;
+    F.line = 577;
     post_node_14180028();
-    F.line = 481;
+    F.line = 501;
     post_node_14180028();
-    F.line = 462;
+    F.line = 482;
     post_node_14180028();
     if (game_started_14427453[0]) {
-    F.line = 562;
+    F.line = 582;
     draw_info_14530044();
+    F.line = 583;
+    handle_buttons_started_15225046();
+    F.line = 584;
+    check_winner_14435214();
     }
     else {
-      F.line = 564;
-    draw_settings_14730030();
+      F.line = 586;
+      draw_settings_14730030();
+      F.line = 587;
+      handle_buttons_settings_15225027();
     }
     
-    F.line = 434;
+    F.line = 454;
     post_node_14180028();
   framePtr = F.prev;
 
   
 }
-start_fidget_14010103(draw_main_frame_15225027, 0, 0);
+start_fidget_14010103(draw_main_frame_15225069, 0, 0);
 function set_possible_moves_14226073(self_14226075, moves_14226102) {
   var F={procname:"turn_based_game.set_possible_moves",prev:framePtr,filename:"turn_based_game.nim",line:0};
   framePtr = F;
